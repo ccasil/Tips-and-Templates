@@ -11,6 +11,7 @@ Cheat sheets, references, guides, and random tips
 * JavaScript
 
 * C
+    * Makefile
 
 * Swift
 
@@ -28,5 +29,5 @@ Cheat sheets, references, guides, and random tips
     * MongoDB
 
 * Miscellaneous
-    *[Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#links)
-    *LaTeX
+    * [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#links)
+    * LaTeX
