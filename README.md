@@ -5,6 +5,7 @@ Cheat sheets, references, guides, and random tips
 ### Table of Contents
 
 * Terminal
+    * [Commands](Terminal_Commands.md)
 
 * Python
 
