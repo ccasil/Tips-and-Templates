@@ -1,7 +1,7 @@
 ### Terminal-Shell Commands
 
-[Reference1](https://ccrma.stanford.edu/guides/planetccrma/terminal.html)
-[Reference2](https://github.com/0nn0/terminal-mac-cheatsheet)
+* [Reference1](https://ccrma.stanford.edu/guides/planetccrma/terminal.html)
+* [Reference2](https://github.com/0nn0/terminal-mac-cheatsheet)
 
 # General and file manipulation commands:
 
@@ -30,10 +30,10 @@ grep    |   search for a string of text |
 
 Command |   Use |   Notes 
 --- |   --- |   --- 
-vim |   text editor |   ---
+vim |   text editor |   
 
 # Account Administration:
 
 Command |   Use |   Notes 
 --- |   --- |   --- 
-chmod |   change permissions on files and directories |   ---
+chmod |   change permissions on files and directories | 
