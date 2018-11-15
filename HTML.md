@@ -1,9 +1,9 @@
-### HTML
+# HTML
 
 * [Reference1](https://www.w3schools.com/html/html_head.asp)
 * [Reference2](https://html.com/tags/)
 
-## Head Template: 
+### Head Template: 
 
 ```HTML
 <!DOCTYPE HTML>
@@ -18,7 +18,7 @@
 	<title>Title</title>
 	<meta name="description" content="description example">
 	<meta name="keywords" content="HTML">
-	<meta name="author" content="Cesar Kyle Casil">
+	<meta name="author" content="">
 
 	<link rel="stylesheet" type="text/css" href="style.css">
 
@@ -26,8 +26,8 @@
 </head>
 ```
 
-# Tags:
+### Tags:
 
 Tag |   Use |   Notes 
 --- |   --- |   --- 
-    |       |   
+--- |   --- |   --- 

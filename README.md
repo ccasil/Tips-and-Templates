@@ -7,12 +7,12 @@ Cheat sheets, references, guides, and random tips
 * Terminal
     * [Commands](Terminal_Commands.md)
 
-* Python
+* [Python](Python.md)
 
-* JavaScript
+* [JavaScript](JavaScript.md)
 
 * C
-    * Makefile
+    * [Makefile](Makefile.md)
 
 * Swift
 
@@ -22,12 +22,11 @@ Cheat sheets, references, guides, and random tips
     * Angular
     * React
     * Bootstrap
-    * HTML
-    * CSS
+    * [HTML](HTML.md)
+    * [CSS](CSS.md)
 
 * Back-End
     * MySQL
-    * MongoDB
 
 * Miscellaneous
     * [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#links)
