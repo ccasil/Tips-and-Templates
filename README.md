@@ -6,6 +6,7 @@ Cheat sheets, references, guides, and random tips
 
 * Terminal
     * [Commands](Terminal_Commands.md)
+    * [Vim](Vim.md)
 
 * [Python](Python.md)
 
@@ -16,7 +17,7 @@ Cheat sheets, references, guides, and random tips
 
 * Swift
 
-* Git
+* [Git](Git.md)
 
 * Front-End
     * Angular
@@ -29,5 +30,5 @@ Cheat sheets, references, guides, and random tips
     * MySQL
 
 * Miscellaneous
-    * [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#links)
+    * [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
     * LaTeX

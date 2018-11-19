@@ -1,9 +1,9 @@
-### Terminal-Shell Commands
+# Terminal-Shell Commands
 
 * [Reference1](https://ccrma.stanford.edu/guides/planetccrma/terminal.html)
 * [Reference2](https://github.com/0nn0/terminal-mac-cheatsheet)
 
-# General and file manipulation commands:
+### General and file manipulation commands:
 
 Command |   Use |   Notes 
 --- |   --- |   --- 
@@ -16,7 +16,7 @@ cp  |   copy file    |
 mkdir   |   make directory   |
 rm  |   remove files and directories    |
 
-# General and file manipulation commands:
+### General and file manipulation commands:
 
 Command |   Use |   Notes 
 --- |   --- |   --- 
@@ -26,13 +26,13 @@ find |   	look for file    |
 cat |   output contents of a file    |
 grep    |   search for a string of text |
 
-# Editors and publishing:
+### Editors and publishing:
 
 Command |   Use |   Notes 
 --- |   --- |   --- 
 vim |   text editor |   
 
-# Account Administration:
+### Account Administration:
 
 Command |   Use |   Notes 
 --- |   --- |   --- 
