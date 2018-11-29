@@ -2,33 +2,34 @@
 
 Cheat sheets, references, guides, and random tips
 
-### Table of Contents
+## Table of Contents
 
 * Terminal
-    * [Commands](Terminal_Commands.md)
-    * [Vim](Vim.md)
+  * [Commands](Terminal_Commands.md)
+  * [Vim](Vim.md)
 
 * [Python](Python.md)
 
 * [JavaScript](JavaScript.md)
 
 * C
-    * [Makefile](Makefile.md)
+  * [Makefile](Makefile.md)
 
 * Swift
 
 * [Git](Git.md)
 
 * Front-End
-    * Angular
-    * React
-    * Bootstrap
-    * [HTML](HTML.md)
-    * [CSS](CSS.md)
+  * Angular
+  * React
+  * Bootstrap
+  * [HTML](HTML.md)
+  * [CSS](CSS.md)
 
 * Back-End
-    * MySQL
+  * MySQL
 
 * Miscellaneous
-    * [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
-    * LaTeX
+  * [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
+  * LaTeX
+  * [Big O Notation](BigO.md)

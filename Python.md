@@ -1,13 +1,16 @@
 # Python
 
-### Functions
+## Functions
 
-##### Function Template
+### Function Template
+
 ```Python
 def functionname():
     # code
 ```
-##### For Loop Template
+
+### For Loop Template
+
 ```Python
 fruits = ["apple", "banana", "cherry"]
 for x in fruits:

@@ -1,6 +1,8 @@
 # CSS
 
-### Shortcuts
+* [w3schools](https://www.w3schools.com/css/)
 
-Property Shortcut |   property: top right bottom left |   --- 
---- |   --- |   --- 
+## Shortcuts
+
+Property Shortcut |   property: top right bottom left |   ---
+--- |   --- |   ---

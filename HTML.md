@@ -1,9 +1,9 @@
 # HTML
 
-* [Reference1](https://www.w3schools.com/html/html_head.asp)
-* [Reference2](https://html.com/tags/)
+* [Referw3schoolsence1](https://www.w3schools.com/html/html_head.asp)
+* [html](https://html.com/tags/)
 
-### Head Template: 
+## Head Template
 
 ```HTML
 <!DOCTYPE HTML>
@@ -26,8 +26,8 @@
 </head>
 ```
 
-### Tags:
+### Tags
 
-Tag |   Use |   Notes 
---- |   --- |   --- 
-<div></div> |   --- |   --- 
+Tag |   Use |   Notes
+--- |   --- |   ---
+--- |   --- |   ---
