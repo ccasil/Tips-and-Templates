@@ -1,6 +1,6 @@
 # HTML
 
-* [Referw3schoolsence1](https://www.w3schools.com/html/html_head.asp)
+* [w3schools](https://www.w3schools.com/html/html_head.asp)
 * [html](https://html.com/tags/)
 
 ## Head Template

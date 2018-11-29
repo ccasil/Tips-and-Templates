@@ -1,5 +1,7 @@
 # Big O Notation
 
+* [rob-bell](https://rob-bell.net/2009/06/a-beginners-guide-to-big-o-notation/)
+
 O |   Description |   Notes
 --- |   --- |   ---
 O(1) |   describes an algorithm that will always execute in the same time (or space) regardless of the size of the input data set |
