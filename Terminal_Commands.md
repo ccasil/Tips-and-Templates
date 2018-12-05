@@ -1,9 +1,5 @@
 # Terminal-Shell Commands
 
-* [stanford.edu](https://ccrma.stanford.edu/guides/planetccrma/terminal.html)
-* [github](https://github.com/0nn0/terminal-mac-cheatsheet)
-* [chmod](https://ss64.com/bash/chmod.html)
-
 ## General and File Manipulation Commands
 
 Command |   Use |   Notes
@@ -38,3 +34,9 @@ vim |   Text editor |
 Command |   Use |   Notes
 --- |   --- |   ---
 chmod |   Change permissions on files and directories |
+
+## References  
+
+**[stanford.edu](https://ccrma.stanford.edu/guides/planetccrma/terminal.html)**  
+**[github](https://github.com/0nn0/terminal-mac-cheatsheet)**  
+**[chmod](https://ss64.com/bash/chmod.html)**  

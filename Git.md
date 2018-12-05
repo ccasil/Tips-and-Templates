@@ -41,8 +41,8 @@ git push  | Upload local repository content to a remote repository
 git init  | Turn current directory into an empty Git repository
 git status  |  Check status of files in directory
 git log | See history of commits
-git clone  [https://github.com/ccasil/Tips-and-Templates.git] |   Download (clone) a remote repository
-git remote add origin [https://github.com/ccasil/Tips-and-Templates.git]   |   Connect an already initialized local repository to the remote one
+git clone  <https://github.com/ccasil/Tips-and-Templates.git> |   Download (clone) a remote repository
+git remote add origin <https://github.com/ccasil/Tips-and-Templates.git>   |   Connect an already initialized local repository to the remote one
 git pull origin master   |   Check for changes on our GitHub repository and pull down any new changes
 git diff HEAD   |   Check within the files that have already been staged what is different from our last commit
 git reset 'file name'   |   Removes file from staged status
