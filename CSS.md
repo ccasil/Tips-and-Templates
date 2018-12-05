@@ -4,5 +4,5 @@
 
 ## Shortcuts
 
-Property Shortcut |   property: top right bottom left |   ---
---- |   --- |   ---
+Property Shortcut
+>property: top right bottom left

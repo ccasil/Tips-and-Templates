@@ -1,6 +1,6 @@
 # Tips and Templates
 
-Cheat sheets, references, guides, and random tips
+References, guides, and random tips
 
 ## Table of Contents
 
@@ -10,19 +10,20 @@ Cheat sheets, references, guides, and random tips
 
 * [Python](Python.md)
 
-* [JavaScript](JavaScript.md)
+* [JavaScript (ES6)](JavaScript.md)
+  * jQuery
 
 * C
   * [Makefile](Makefile.md)
 
-* Swift
+* Swift 4
 
 * [Git](Git.md)
 
 * Front-End
   * Angular
   * React
-  * Bootstrap
+  * Bootstrap 4
   * [HTML](HTML.md)
   * [CSS](CSS.md)
 
@@ -33,3 +34,4 @@ Cheat sheets, references, guides, and random tips
   * [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
   * LaTeX
   * [Big O Notation](BigO.md)
+  * Binary

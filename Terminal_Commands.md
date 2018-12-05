@@ -2,38 +2,39 @@
 
 * [stanford.edu](https://ccrma.stanford.edu/guides/planetccrma/terminal.html)
 * [github](https://github.com/0nn0/terminal-mac-cheatsheet)
+* [chmod](https://ss64.com/bash/chmod.html)
 
-## General and file manipulation commands:
-
-Command |   Use |   Notes
---- |   --- |   ---
-man |   get information or help about a command |
-ls  |   list directory contents |
-pwd |   path of working directory   |
-cd  |   change working directory    |
-mv  |   move file or change name    |
-cp  |   copy file    |
-mkdir   |   make directory   |
-rm  |   remove files and directories    |
-
-## General and file manipulation commands
+## General and File Manipulation Commands
 
 Command |   Use |   Notes
 --- |   --- |   ---
-ssh |   secure login on remote machine  |
-scp |   secure file copy from or to machine    |
-find |   look for file    |
-cat |   output contents of a file    |
-grep    |   search for a string of text |
+man |   Get information or help about a command |
+ls  |   List directory contents |
+pwd |   Path of working directory   |
+cd  |   Change working directory    |
+mv  |   Move file or change name    |
+cp  |   Copy file    |
+mkdir   |   Make directory   |
+rm  |   Remove files and directories    |
+
+## Other ommands
+
+Command |   Use |   Notes
+--- |   --- |   ---
+ssh |   Secure login on remote machine  |
+scp |   Secure file copy from or to machine    |
+find |   Look for file    |
+cat |   Output contents of a file    |
+grep    |   Search for a string of text |
 
 ## Editors and publishing
 
 Command |   Use |   Notes
 --- |   --- |   ---
-vim |   text editor |
+vim |   Text editor |
 
 ## Account Administration
 
 Command |   Use |   Notes
 --- |   --- |   ---
-chmod |   change permissions on files and directories |
+chmod |   Change permissions on files and directories |
