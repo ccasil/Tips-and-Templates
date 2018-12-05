@@ -1,8 +1,5 @@
 # HTML
 
-* [w3schools](https://www.w3schools.com/html/html_head.asp)
-* [html](https://html.com/tags/)
-
 ## Head Template
 
 ```HTML
@@ -26,7 +23,7 @@
 </head>
 ```
 
-### Tags
+## Tags
 
 Tag |   Use |   Notes
 --- |   --- |   ---
@@ -34,3 +31,8 @@ html |    |
 head |    |  
 body |    |  
 div |    |  
+
+## References
+
+**[w3schools](https://www.w3schools.com/html/html_head.asp)**  
+**[html](https://html.com/tags/)**  
