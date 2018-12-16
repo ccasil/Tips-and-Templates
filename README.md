@@ -7,6 +7,7 @@ References, guides, and random tips
 * Terminal
   * [Commands](Terminal_Commands.md)
   * [Vim](Vim.md)
+  * [Shell Scripts](ShellScripts.md)
 
 * [Python](Python.md)
 
@@ -32,6 +33,6 @@ References, guides, and random tips
 
 * Miscellaneous
   * [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
-  * LaTeX
+  * [LaTeX](LaTex.md)
   * [Big O Notation](BigO.md)
   * Binary

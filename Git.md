@@ -20,6 +20,14 @@ git checkout master
 git merge 'branch name'
 >Merge branch with current branch (master)
 
+## Pulling to Overwrite Local Files
+
+* [Stack Overflow](https://stackoverflow.com/questions/1125968/how-do-i-force-git-pull-to-overwrite-local-files)
+
+git fetch --all  
+git reset --hard origin/<branch_name>  
+git pull origin master
+
 ## Merge Conflicts
 
 Step |   Command    | Description
