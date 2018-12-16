@@ -33,6 +33,6 @@ References, guides, and random tips
 
 * Miscellaneous
   * [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
-  * [LaTeX](LaTex.md)
+  * [LaTeX](LaTeX.md)
   * [Big O Notation](BigO.md)
   * Binary

@@ -1,4 +1,4 @@
-# LaTex
+# LaTeX
 
 ## References
 
