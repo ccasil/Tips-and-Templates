@@ -22,7 +22,7 @@ References, guides, and random tips
 * [Git](Git.md)
 
 * Front-End
-  * Angular
+  * [Angular](Angular.md)
   * React
   * Bootstrap 4
   * [HTML](HTML.md)
