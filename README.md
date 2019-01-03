@@ -24,7 +24,9 @@ References, guides, and random tips
 
 * Front-End
   * [Angular](Angular.md)
+    * [Angular Deployment](AngularDeployment.md)
   * React
+    * [React Deployment](ReactDeployment.md)
   * Bootstrap 4
   * [HTML](HTML.md)
   * [CSS](CSS.md)
