@@ -10,6 +10,7 @@ References, guides, and random tips
   * [Shell Scripts](ShellScripts.md)
 
 * [Python](Python.md)
+  * [Django](Django.md)
 
 * [JavaScript (ES6)](JavaScript.md)
   * jQuery
