@@ -27,11 +27,11 @@ References, guides, and random tips
     * [Angular Deployment](AngularDeployment.md)
   * React
     * [React Deployment](ReactDeployment.md)
-  * Bootstrap 4
+  * [Bootstrap 4](https://getbootstrap.com/)
   * [HTML](HTML.md)
   * [CSS](CSS.md)
 
-* Back-End
+* Database
   * MySQL
 
 * Miscellaneous
