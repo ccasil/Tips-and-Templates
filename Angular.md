@@ -21,14 +21,14 @@ npm install _____ --save
 
 ## 1. Establish server.js
 
-1. Import middleware: 
+1. Import middleware:  
 
 ```JavaScript
-var express = require(‘express’);  
-var bodyParser = require(‘body-parser’);  
-var path = require(‘path’);  
-var mongoose = require(‘mongoose’);  
-var session = require(‘session’);  
+var express = require('express');  
+var bodyParser = require('body-parser');  
+var path = require('path');  
+var mongoose = require('mongoose');  
+var session = require('session');  
 ```
 
 2. Instantiate Express Application:  
@@ -40,8 +40,8 @@ var app = express()
 3. Attach the View Engine. Make a new directory in your project folder called views, and touch a file called index.ejs  
 
 ```JavaScript
-app.set(‘view engine’, ‘ejs’)  
-app.set(‘views’, path.join(__dirname + ‘/views’));
+app.set('view engine', 'ejs')  
+app.set('views', path.join(__dirname + '/views'));
 ```
 
 4. Allow yourself to access POST data  
@@ -53,24 +53,24 @@ app.use(bodyParser.urlencoded({extended: true}))
 5. Connect Mongoose to MongoDB  
 
 ```JavaScript
-mongoose.connect(‘mongodb://localhost/project_name’)
+mongoose.connect('mongodb://localhost/project_name')
 ```
 
 6. Create a Schema for your database objects  
 
 ```JavaScript
 var exampleSchema = new mongoose.Schema({ 
-    name: {type: String, required: [true, “You need a name”], minlength: 1}  
+    name: {type: String, required: [true, "You need a name"], minlength: 1}  
 })
-mongoose.model(‘Example’, exampleSchema)
-var Example = mongoose.model(‘Example’)
+mongoose.model('Example', exampleSchema)
+var Example = mongoose.model('Example')
 ```
 
 7. At the end of file, create a listen function that watches for HTTP requests
 
 ```JavaScript
 app.listen(8000, function(){  
-    console.log(“running this express project on port 8000”)
+    console.log("running this express project on port 8000")
 })
 ```
 
@@ -224,20 +224,17 @@ ng new client --routing
 
 2. Inside project directory, build Angular project (create dist folder)  
 
-
 ```shell
 ng build --watch
 ```
 
 3. Define Static route to the newly created dist folder 
 
-
 ```JavaScript
-app.use(express.static(__dirname + ‘/angular_Project/dist’))
+app.use(express.static(__dirname + '/angular_Project/dist'))
 ```
 
 4. Create a service  
-
 
 ```shell
 ng g s http
@@ -246,9 +243,9 @@ ng g s http
 5. Open app.module.ts
 
 ```JavaScript
-import { HttpService } from ‘./http.service’;
-import { HttpClientModule } from ‘@angular/common/http’;
-import { FormsModule } from ‘@angular/forms’;
+import { HttpService } from './http.service';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
     declarations: [
@@ -274,7 +271,7 @@ import { FormsModule } from ‘@angular/forms’;
 6. Open http.service.ts
 
 ```JavaScript
-import { HttpClient } from ‘@angular/common/http’;
+import { HttpClient } from '@angular/common/http';
 
 @Injectable()
 export class HttpService {
@@ -286,10 +283,10 @@ export class HttpService {
 7. Open app.component.ts
 
 ```JavaScript
-import { HttpService } from ‘./http.service’;
+import { HttpService } from './http.service';
 
 export class AppComponent {
-    title = “app”
+    title = "app"
     constructor(private _httpService: HttpService){ }
 }
 ```
@@ -337,7 +334,7 @@ export class AppComponent implements OnInit {
 }
 ```
 
-2. Create all the component functions that you’ll have triggered in the HTML and test them in the ngOnInit  
+2. Create all the component functions that you'll have triggered in the HTML and test them in the ngOnInit  
 3. Connect the http.service.ts to the server.js  
 4. Connect the app.component.ts to the http.service.ts  
 5. Make your server.js routes perform CRUD operations
@@ -354,35 +351,35 @@ ng g c component_name
 2. Open app.component.html  
 
 ```HTML
-<button [routerlink]=“[‘alpha’]”>Load Alpha</button>  
-<button [routerlink]=“[‘beta’]”>Load Beta</button>  
+<button [routerlink]="['alpha']">Load Alpha</button>  
+<button [routerlink]="['beta']">Load Beta</button>  
 <router-outlet></router-outlet>
 ```
 
 3. Open app-routing.module.ts  
 
 ```JavaScript
-import {AlphaComponent } from ‘./alpha/alpha.component’;
-import {BetaComponent } from ‘./beta/beta.component’;
-import {PagenotfoundComponent } from ‘./pagenotfound/
-pagenotfound.component’;
+import {AlphaComponent } from './alpha/alpha.component';
+import {BetaComponent } from './beta/beta.component';
+import {PagenotfoundComponent } from './pagenotfound/
+pagenotfound.component';
 
 const routes: Routes = [
-    { path: ‘alpha’, component: AlphaComponent },
-    { path: ‘beta’, component: BetaComponent },
-    { path: ‘’, pathMatch: ‘full’, redirectTo: ‘/alpha’ },
-    { path: ‘**’, component: PagenotfoundComponent },
+    { path: 'alpha', component: AlphaComponent },
+    { path: 'beta', component: BetaComponent },
+    { path: '', pathMatch: 'full', redirectTo: '/alpha' },
+    { path: '**', component: PagenotfoundComponent },
 ];
 ```
 
 4. Open app.module.ts
 
 ```JavaScript
-import {AlphaComponent } from ‘./alpha/alpha.component’;
-import {BetaComponent } from ‘./beta/beta.component’;
+import {AlphaComponent } from './alpha/alpha.component';
+import {BetaComponent } from './beta/beta.component';
 
-import {PagenotfoundComponent } from ‘./pagenotfound/
-pagenotfound.component’;
+import {PagenotfoundComponent } from './pagenotfound/
+pagenotfound.component';
 @NgModule({
     declarations: [
         AlphaComponent,
@@ -393,8 +390,8 @@ pagenotfound.component’;
 5. Open server.js  
 
 ```JavaScript
-app.all(‘*’, (req, res, next) => {  
-    res.sendFile(path.resolve(‘./AngularApp/dist/index.html’))
+app.all('*', (req, res, next) => {  
+    res.sendFile(path.resolve('./AngularApp/dist/index.html'))
 });
 ```
 
