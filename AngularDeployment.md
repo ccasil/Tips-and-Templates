@@ -38,10 +38,10 @@
     `sudo apt-get install -y nodejs nodejs-legacy`  
     `sudo apt-get install npm -y`  
     `sudo npm cache clean -f`  
-    (note: If node does not install properly, use `sudo apt install nodejs-legacy`)  
+    (note: If node does not install properly, use `sudo apt install nodejs-legacy` or `sudo apt install nodejs`)  
     (`node -v` to check node version)
 3. Install the node package manager __n__ and updated node  
-    `sudo npm install -g n`
+    `sudo npm install -g n`  
     `sudo n stable`
 4. Install Angular CLI  
     `sudo npm install -g @angular/cli`
@@ -78,7 +78,7 @@
 4. Remove the default from nginx's sites-available directory  
     `sudo rm default`
 5. Create a symbolic link from sites-enabled to sites-available  
-    `sudo ln -s /etc/nginx/sites-available/{{repo name}} /etc/nginx/sites-enabled/{{repo name}}`
+    `sudo ln -s /etc/nginx/sites-available/{{repo name}} /etc/nginx/sites-enabled/{{repo name}}`  
 6. Remove the default from nginx's sites-enabled directory (/etc/nginx/sites-enabled)  
     `sudo rm /etc/nginx/sites-enabled/default`
 
@@ -93,13 +93,13 @@
         * `sudo service nginx reload && sudo service nginx restart`  
 2. Navigate back to project and change permissions  
     `cd /var/www`  
-    `sudo chown -R ubuntu {{repo name}}`
+    `sudo chown -R ubuntu {{repo name}}`  
 3. Navigate back into project, install needed node modules, and build the dist folder  
     `cd {{repo name}}`  
     `npm install`  
-    `cd {{angular project name, we usually call it public (or client)}}`
-    `npm install`
-    `ng build`
+    `cd {{angular project name, we usually call it public (or client)}}`  
+    `npm install`  
+    `ng build`  
 
 ### 7. MongoDB
 
@@ -124,12 +124,6 @@
 8. Automatically start Mongo when the system starts  
     `sudo systemctl enable mongod && sudo systemctl start mongod`
 
-#### Restart pm2 project
-
-`pm2 stop 0`  
-`pm2 restart 0`  
-`sudo service nginx reload && sudo service nginx restart`  
-
 ### 8. Start Server
 
 1. Navigate to project  
@@ -143,6 +137,12 @@
 
 * `pm2 logs`: see logs of your different pm2 instances
 * `pm2 show {{pm2 instance id}}` will give you details of that instance
+
+#### Restart pm2 project
+
+`pm2 stop 0`  
+`pm2 restart 0`  
+`sudo service nginx reload && sudo service nginx restart`  
 
 ### __Replace Deployed Project__
 
