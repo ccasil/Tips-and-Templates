@@ -7,63 +7,63 @@ GitHub is a hosting service for your Git repositories.
 
 ## Create a New Repository on the Command Line
 
-git init  
-git add .  
-git commit -m "initial commit"  
-git remote add origin https://github.com/ccasil/repo-name.git  
-git push -u origin master  
+`git init`  
+`git add .`  
+`git commit -m "initial commit"`  
+`git remote add origin https://github.com/ccasil/repo-name.git`  
+`git push -u origin master`  
 >The name of our remote is origin and the default local branch name is master
 
 ## Merging Branches
 
-git checkout master  
-git merge 'branch name'
+`git checkout master`  
+`git merge {{branch name}}`
 >Merge branch with current branch (master)
 
 ## Pulling to Overwrite Local Files
 
 * [Stack Overflow](https://stackoverflow.com/questions/1125968/how-do-i-force-git-pull-to-overwrite-local-files)
 
-git fetch --all  
-git reset --hard origin/<branch_name>  
-git pull origin master
+`git fetch --all`  
+`git reset --hard origin/{{branch_name}}`  
+g`it pull origin master`
 
 ## Merge Conflicts
 
 Step |   Command    | Description
 --- |   --- |   ---
-1   |   git status |  Shows which file resulted to merge conflict  
+1   |   `git status` |  Shows which file resulted to merge conflict  
 2   |       |   Check file for indicators (<<<, ===, >>>)
 
 ## Push to an Existing Repository from the Command Line
 
-git add .  
-git commit -m "initial commit"  
-git push -u origin master  
+`git add .`  
+`git commit -m "initial commit"`  
+`git push -u origin master`  
 
 Command |   Notes
 --- |   ---
-git add . |   Add files to the staging area
-git commit -m " "  | Add files to the staging area with a message
-git push  | Upload local repository content to a remote repository
-git init  | Turn current directory into an empty Git repository
-git status  |  Check status of files in directory
-git log | See history of commits
-git clone  <https://github.com/ccasil/Tips-and-Templates.git> |   Download (clone) a remote repository
-git remote add origin <https://github.com/ccasil/Tips-and-Templates.git>   |   Connect an already initialized local repository to the remote one
-git pull origin master   |   Check for changes on our GitHub repository and pull down any new changes
-git diff HEAD   |   Check within the files that have already been staged what is different from our last commit
-git reset 'file name'   |   Removes file from staged status
-git checkout --'file name'  |   Reset the file to the latest commited version
-git branch 'branch name'    |   Create a new branch
-git checkout 'branch name'  |   Switch the the branch
-git stash   |   Temporarily caches any changes you've made to your working copy (Takes uncommitted changes, both staged and unstaged, and saves them for later use)
-git stash pop / git stash apply |   Reapply stashed changes (pop: remove stased changes from stashed state; apply: applies the same stashed changes to multiple branches)
-git rm  |   Remove actual files from disk and stage the removal of files
-git branch -d 'branch name' |   Remove a branch
+`git add .` |   Add files to the staging area
+`git commit -m " "`  | Add files to the staging area with a message
+`git push`  | Upload local repository content to a remote repository
+`git init`  | Turn current directory into an empty Git repository
+`git status`  |  Check status of files in directory
+`git log` | See history of commits
+`git clone`  <https://github.com/ccasil/Tips-and-Templates.git> |   Download (clone) a remote repository
+`git remote add origin` <https://github.com/ccasil/Tips-and-Templates.git>   |   Connect an already initialized local repository to the remote one
+`git pull origin master`   |   Check for changes on our GitHub repository and pull down any new changes
+`git diff HEAD`   |   Check within the files that have already been staged what is different from our last commit
+`git reset 'file name'`   |   Removes file from staged status
+`git checkout --'file name'`  |   Reset the file to the latest commited version
+`git branch 'branch name'`    |   Create a new branch
+`git checkout 'branch name'`  |   Switch the the branch
+`git stash`   |   Temporarily caches any changes you've made to your working copy (Takes uncommitted changes, both staged and unstaged, and saves them for later use)
+`git stash pop` / `git stash apply` |   Reapply stashed changes (pop: remove stased changes from stashed state; apply: applies the same stashed changes to multiple branches)
+`git rm`  |   Remove actual files from disk and stage the removal of files
+`git branch -d 'branch name'` |   Remove a branch
 
 ## Shortcuts
 
 Command |   Notes
 --- |   ---
-git checkout -b 'branch name'   |   Create and switch to a new branch
+`git checkout -b 'branch name'`   |   Create and switch to a new branch

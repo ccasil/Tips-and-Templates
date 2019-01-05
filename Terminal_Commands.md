@@ -4,36 +4,36 @@
 
 Command |   Use |   Notes
 --- |   --- |   ---
-man |   Get information or help about a command |
-ls  |   List directory contents |
-pwd |   Path of working directory   |
-cd  |   Change working directory    |
-mv  |   Move file or change name    |
-cp  |   Copy file    |
-mkdir   |   Make directory   |
-rm  |   Remove files and directories    |
+`man` |   Get information or help about a command |
+`ls`  |   List directory contents |
+`pwd` |   Path of working directory   |
+`cd`  |   Change working directory    |
+`mv`  |   Move file or change name    |
+`cp`  |   Copy file    |
+`mkdir`   |   Make directory   |
+`rm`  |   Remove files and directories    |
 
 ## Other ommands
 
 Command |   Use |   Notes
 --- |   --- |   ---
-ssh |   Secure login on remote machine  |
-scp |   Secure file copy from or to machine    |
-find |   Look for file    |
-cat |   Output contents of a file    |
-grep    |   Search for a string of text |
+`ssh` |   Secure login on remote machine  |
+`scp` |   Secure file copy from or to machine    |
+`find` |   Look for file    |
+`cat` |   Output contents of a file    |
+`grep`    |   Search for a string of text |
 
 ## Editors and publishing
 
 Command |   Use |   Notes
 --- |   --- |   ---
-vim |   Text editor |
+`vim` |   Text editor |
 
 ## Account Administration
 
 Command |   Use |   Notes
 --- |   --- |   ---
-chmod |   Change permissions on files and directories |
+`chmod` |   Change permissions on files and directories |
 
 ## References  
 

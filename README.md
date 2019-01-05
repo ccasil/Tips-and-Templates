@@ -33,9 +33,11 @@ References, guides, and random tips
 
 * Database
   * MySQL
+  * [MongoDB](MongoDB.md)
 
 * Miscellaneous
   * [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
   * [LaTeX](LaTeX.md)
   * [Big O Notation](BigO.md)
+  * [npm](npm.md)
   * Binary

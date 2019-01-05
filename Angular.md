@@ -363,8 +363,7 @@ ng g c component_name
 ```JavaScript
 import {AlphaComponent } from './alpha/alpha.component';
 import {BetaComponent } from './beta/beta.component';
-import {PagenotfoundComponent } from './pagenotfound/
-pagenotfound.component';
+import {PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 
 const routes: Routes = [
     { path: 'alpha', component: AlphaComponent },
@@ -380,8 +379,7 @@ const routes: Routes = [
 import {AlphaComponent } from './alpha/alpha.component';
 import {BetaComponent } from './beta/beta.component';
 
-import {PagenotfoundComponent } from './pagenotfound/
-pagenotfound.component';
+import {PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 @NgModule({
     declarations: [
         AlphaComponent,
