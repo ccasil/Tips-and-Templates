@@ -34,6 +34,7 @@ References, guides, and random tips
 * Database
   * MySQL
   * [MongoDB](MongoDB.md)
+  * [PostgreSQL](PostgreSQL.md)
 
 * Miscellaneous
   * [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
