@@ -41,4 +41,5 @@ References, guides, and random tips
   * [LaTeX](LaTeX.md)
   * [Big O Notation](BigO.md)
   * [npm](npm.md)
+  * Sorting Algorithms
   * Binary
