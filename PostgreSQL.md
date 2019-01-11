@@ -12,4 +12,9 @@ Command | Description
 `Delete from tablename` | Get rid of all tuples in tablename without deleting the table itself  
 `DROP SCHEMA myschema CASCADE;` | Drop a schema myschema  
 `\i myfile.sql` | Import the execution script myfile.sql  
+`\! pwd` | Prints current working directory  
+`\cd {{path name}}` | Change current working directory to {{path name}}  
+`\d` | Display all relations (tables) in current schema
+`\d {{table}}` | Display attributes of table  
+`\dn` | Display all available schema  
 `\q` | Exit psql  
