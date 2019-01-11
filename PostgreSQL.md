@@ -10,4 +10,6 @@ Command | Description
 `SHOW SEARCH_PATH;` | Verify your search path  
 `DROP TABLE tablename` | Get rid of table tablename  
 `Delete from tablename` | Get rid of all tuples in tablename without deleting the table itself  
-`DROP SCHEMA myschema CASCADE;` | Drop a schema myschema
+`DROP SCHEMA myschema CASCADE;` | Drop a schema myschema  
+`\i myfile.sql` | Import the execution script myfile.sql  
+`\q` | Exit psql  
