@@ -2,6 +2,13 @@
 
 __[PostgreSQL Official](https://www.postgresql.org/docs/)__
 
+Query  | Function  
+--- | ---  
+`SELECT timeofday();`  | Print out the current time  
+`CREATE TABLE ();` | Create Tables  
+`COPY attributes from stdin USING DELIMETERS '|';`  | Populate tables using '|' as a delimeter  
+`DROP TABLE tablename` | Drop table from schema
+
 Command | Description
 --- | ---
 `ALTER ROLE username WITH PASSWORD ‘newpassword’;` or `/password` | Change the password  of your PostgreSQL account  
@@ -18,3 +25,7 @@ Command | Description
 `\d {{table}}` | Display attributes of table  
 `\dn` | Display all available schema  
 `\q` | Exit psql  
+
+## References  
+
+**[Data Types](http://www.postgresqltutorial.com/postgresql-data-types/)**
