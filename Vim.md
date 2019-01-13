@@ -1,5 +1,23 @@
 # Vim
 
+## Keyboard Shortcuts
+
+Key | Function  
+--- | ---  
+Esc | Gets out of the current mode into the “command mode”. All keys are bound of commands  
+i | “Insert mode” for inserting text. Keys behave as expected  
+v |  Enter visual mode per character  
+V |  Enter visual mode per line
+: | “Last-line mode” where Vim expects you to enter a command such as to save the document.  
+:/search_text | Search document for search_text going forward  
+:?search_text | Search document for search_text going backward  
+:q | Quits Vim but fails when file has been changed  
+:w | Saves the file  
+:w new_name | Save the file with the new_name filename  
+:wq | Save the file and quit Vim 
+:q! | Quit Vim without saving the changes to the file  
+ZZ | Write file, if modified, and quit Vim
+
 ## Example .vimrc
 
 ```text

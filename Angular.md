@@ -9,17 +9,10 @@
 1. Create new project folder and change into its directory
 2. Touch a server.js file as an entry point for our server
 3. Initiate an empty package.json file  
-
-```shell
-npm init -y
-```
-
-4. Install all middleware needed for the project (all of the modules for the server)  
-    (note: Can detect dependencies by deleting node_modules folder and reinstalling modules 'npm install')
-
-```shell
-npm install _____ --save  
-```  
+`npm init -y`
+4. Install all middleware needed for the project (all of the modules for the server) 
+    (note: Can detect dependencies by deleting node_modules folder and reinstalling modules 'npm install')  
+`npm install _____ --save`  
 
 ## 1. Establish server.js
 
@@ -219,17 +212,9 @@ app.all("*", (req, res, next) => {
 ## 3. Build Angular Project
 
 1. Navigate to project directory and create a new angular project  
-
-```shell
-ng new client --routing
-```
-
+`ng new client --routing`
 2. Inside project directory, build Angular project (create dist folder)  
-
-```shell
-ng build --watch
-```
-
+`ng build --watch`
 3. Define Static route to the newly created dist folder 
 
 ```JavaScript
@@ -237,11 +222,7 @@ app.use(express.static(__dirname + '/angular_Project/dist'))
 ```
 
 4. Create a service  
-
-```shell
-ng g s http
-```
-
+`ng g s http`
 5. Open app.module.ts
 
 ```JavaScript
@@ -295,30 +276,15 @@ export class AppComponent {
 
 ## 4. Run the Web Application
 
-1. Start by turning on database (MongoDB) 
-
-```shell 
-sudo mongod
-```
-
+1. Start by turning on database (MongoDB)  
+`sudo mongod`
 * To kill database:  
-    * ps -ax | grep mongo
-    * sudo kill 'database number'
-
+  * ps -ax | grep mongo
+  * sudo kill 'database number'
 2. In another terminal window, start up the server (main project direcory)  
-
-
-```shell
-nodemon server.js
-```
-
+`nodemon server.js`
 3. Inside the Angular project directory, in another terminal window  
-
-
-```shell
-ng build --watch
-```
-
+`ng build --watch`
 ## 5. Connect App Components to Server
 
 1. Open app.component.ts  
@@ -344,11 +310,8 @@ export class AppComponent implements OnInit {
 
 ## 6. Routing Set Up
 
-1. Create a component (in client/src/app) 
-
-```shell
-ng g c component_name
-```
+1. Create a component (in client/src/app)  
+`ng g c component_name`
 
 2. Open app.component.html  
 

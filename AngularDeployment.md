@@ -144,13 +144,28 @@
 `pm2 restart 0`  
 `sudo service nginx reload && sudo service nginx restart`  
 
+### __Update Deployed Project__
+
+1. Go to EC2 console and check which instance is running; SSH into it  
+    `ssh -i {{mypem}}.pem ubuntu@ec2-54-67-21-6.us-west-1.compute.amazonaws.com`
+2. Pull from git repository located in /var/www  
+    `cd /var/www` then `git pull`
+3. In project directory (main and Angular folders) install node_modules  
+    `npm install`  
+4. Build project  
+    `sudo ng build`  
+5. Reload and restart nginx  
+    `sudo service nginx reload && sudo service nginx restart`  
+6. Check AWS and go to public IP to see new updated version of web application
+
+
 ### __Replace Deployed Project__
 
-1. Go to EC2 console and check whcih instance is running; SSH into it  
+1. Go to EC2 console and check which instance is running; SSH into it  
     `ssh -i {{mypem}}.pem ubuntu@ec2-54-67-21-6.us-west-1.compute.amazonaws.com`
 2. Check if nginx is running  
     `sudo service nginx status`  
-3. Chec kif pm2 is running server.js file  
+3. Check if pm2 is running server.js file  
     `sudo pm2 status`  
 4. Check if project was cloned properly  
     `cd /var/www`
