@@ -1,5 +1,17 @@
 # Vim
 
+## Example .vimrc
+
+```
+syntax enable
+set number
+set showcmd
+set autoindent
+set ruler
+set tabstop=4 
+set mouse=a
+```
+
 ## References
 
 **[dougblack](https://dougblack.io/words/a-good-vimrc.html)**  
