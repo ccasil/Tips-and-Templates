@@ -26,7 +26,7 @@ GitHub is a hosting service for your Git repositories.
 
 `git fetch --all`  
 `git reset --hard origin/{{branch_name}}`  
-g`it pull origin master`
+`git pull origin master`
 
 ## Merge Conflicts
 

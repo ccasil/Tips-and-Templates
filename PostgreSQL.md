@@ -8,6 +8,9 @@ Query  | Function
 `CREATE TABLE ();` | Create Tables  
 `COPY attributes FROM stdin USING DELIMETERS "\|";`  | Populate tables using "\|" as a delimeter  
 `DROP TABLE tablename` | Drop table from schema  
+`ALTER TABLE tablename ADD attribute DATATYPE(#);` | Adds attribute 'attribute' with type DATATYPE(#) to the table 'tablename'  
+`ALTER TABLE tablename DROP attribute;` | Drops attribute from tablename  
+`SELECT [DISTINCT] <list of attributes> FROM R1, R2, ..., Rn WHERE [condition] ORDER BY <list of attributes>` | Presents result in sorted order
 `SELECT * FROM attr1, attr2, ... FROM relation1, relation2, ... WHERE [CONDITION]` | Select all (*) from attribute from relation where a condition  
 __Example:__ `SELECT * FROM Movies` |  Displays all Movies
 __Example:__ `SELECT * FROM Movies WHERE studioName = 'Disney' AND year = 1990` |  Displays all Disney movies where the release date is 1994  
@@ -26,10 +29,13 @@ Command | Description
 `\i myfile.sql` | Import the execution script myfile.sql  
 `\! pwd` | Prints current working directory  
 `\cd {{path name}}` | Change current working directory to {{path name}}  
+`\l` | List all databases
 `\dn` | Display all available schema  
 `\d` | Display all relations (tables) in current schema
 `\d {{table}}` | Display attributes of table  
 `\q` | Exit psql  
+
+![SQL's Three-Valued Logic: Truth Table](sqllogic.png)
 
 ## References  
 
