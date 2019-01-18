@@ -10,10 +10,10 @@ Query  | Function
 `DROP TABLE tablename` | Drop table from schema  
 `ALTER TABLE tablename ADD attribute DATATYPE(#);` | Adds attribute 'attribute' with type DATATYPE(#) to the table 'tablename'  
 `ALTER TABLE tablename DROP attribute;` | Drops attribute from tablename  
-`SELECT [DISTINCT] <list of attributes> FROM R1, R2, ..., Rn WHERE [condition] ORDER BY <list of attributes>` | Presents result in sorted order
+`SELECT [DISTINCT] <list of attributes> FROM R1, R2, ..., Rn WHERE [condition] ORDER BY <list of attributes [ASC\|DESC]>` | Presents result in sorted order default is ascending  
 `SELECT * FROM attr1, attr2, ... FROM relation1, relation2, ... WHERE [CONDITION]` | Select all (*) from attribute from relation where a condition  
 __Example:__ `SELECT * FROM Movies` |  Displays all Movies
-__Example:__ `SELECT * FROM Movies WHERE studioName = 'Disney' AND year = 1990` |  Displays all Disney movies where the release date is 1994  
+__Example:__ `SELECT * FROM Movies WHERE studioName = 'Disney' AND year = 1990 ORDER BY length, title;` |  Displays all Disney movies where the release date is 1990 ordered by ascending length, then by ascending title   
 __Example:__ `SELECT title, year FROM Movies`  | Display titles and years of all Movies  
 __Aliasing Attributes:__ `SELECT title AS name, length AS duration FROM Movies;`  | Return the title and length of all movies as attributes name and duration
 
