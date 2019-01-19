@@ -11,9 +11,10 @@ Command |   Use |   Notes
 `mv`  |   Move file or change name    |
 `cp`  |   Copy file    |
 `mkdir`   |   Make directory   |
-`rm`  |   Remove files and directories    |
+`rm`  |   Remove files and directories    |  
+`echo` | |
 
-## Other ommands
+## Other Commands
 
 Command |   Use |   Notes
 --- |   --- |   ---
