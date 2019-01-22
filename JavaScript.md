@@ -20,3 +20,27 @@ for (var i = 0; i < numberarray.length; i++) {
     // loop 10 times
 }
 ```
+
+## Dictionaries
+
+Create dictionary  
+
+```JavaScript
+var dict = {};
+```
+
+Populate Dictionary
+
+```JavaScript
+dict["key"] = value;
+// or
+dict.key = "value";
+```
+
+Iterating Key/Value Pairs
+
+```JavaScript
+for (var key in dict) {
+    var value = dict[key];
+}
+```
