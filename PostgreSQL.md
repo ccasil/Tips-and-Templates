@@ -32,7 +32,15 @@ Query  | Function
 __Example:__ `SELECT * FROM Movies` |  Displays all Movies
 __Example:__ `SELECT * FROM Movies WHERE studioName = 'Disney' AND year = 1990 ORDER BY length, title;` |  Displays all Disney movies where the release date is 1990 ordered by ascending length, then by ascending title  
 __Example:__ `SELECT title, year FROM Movies`  | Display titles and years of all Movies  
+__Tuple Variable Binding:__ <br>`Select * From Movies, StarsIn WHERE movietitle = title` OR<br>`SELECT * FROM Movies m, StarsIn s WHERE m.title = s.title`| m binds to a tuple (row) in the Movies relation<br>s binds to a tuple (row) in StarsIn relation
 __Aliasing Attributes:__ `SELECT title AS name, length AS duration FROM Movies;`  | Return the title and length of all movies as attributes name and duration  
+__JOIN..ON..:__ R(A, B, C) and S(C, D, E)<br>`R JOIN S ON R.B=S.D AND R.A=S.E;` OR<br>`SELECT * FROM R, S WHERE R.B=S.D AND R.A=S.E`; | Selects only tuples from R and S where R.B=S.D and R.A=S.E<br>(R.A, R.B, R.C, S.C, S.D, S.E);  
+__CROSS JOIN:__ R(A, B, C) and S(C, D, E)<br>`R CROSS JOIN S;` OR<br>`SELECT *FROM R, S;` | Product of the two relations R and S<br>(R.A, R.B, R.C, S.C, S.D, S.E);  
+__NATURAL JOIN:__ R(A, B, C) and S(C, D, E)<br>`R NATURAL JOIN S;` OR<br>`SELECT R.A, R.B, R.C, S.D, S.E FROM R, S WHERE R.C = S.C;`  | (A, B, C, D, E)  
+__Set Union:__ R(A, B, C) and S(A, B, C)<br>`(SELECT * FROM R) UNION (SELECT * FROM S);` | Output of UNION has the same schema as R or S<br>"UNION DISTICT"  
+__Bag Union:__ R(A, B, C) and S(A, B, C)<br>`(SELECT * FROM R) UNION ALL (SELECT * FROM S);`  | Output of UNION has the same schema as R or S<br>Attributes/column names may be different; R’s are used  
+__Set Intersection, Bag Intersection:__ <br>`<Query1> INTERSECT <Query2>,  <Query1> INTERSECT ALL <Query2>` | Find all tuples that are in the results of both Query1 and Query2  
+__Set Difference, Bag Difference:__ <br>`<Query1> EXCEPT <Query2>,  <Query1> EXCEPT ALL <Query2>`  | Find all tuples that are in the result of Query1, but not in the result of Query2
 
 ## Environment Commands
 
@@ -41,8 +49,9 @@ Command | Description
 `ALTER ROLE username WITH PASSWORD ‘newpassword’;` or `/password` | Change the password  of your PostgreSQL account  
 `\i myfile.sql` | Import the execution script myfile.sql  
 `\! pwd` | Prints current working directory  
+`\! ls` | Lists all files in the current working directory 
 `\cd {{path name}}` | Change current working directory to {{path name}}  
-`\l` | List all databases
+`\l` | List all databases  
 `\dn` | Display all available schema  
 `\d` | Display all relations (tables) in current schema
 `\d {{table}}` | Display attributes of table  
