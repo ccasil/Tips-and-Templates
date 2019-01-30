@@ -28,7 +28,7 @@ Command |   Use |   Notes
 
 Command |   Use |   Notes
 --- |   --- |   ---
-`vim` |   Text editor |
+`vim` |   Text editor | [Vim](Vim.md)
 
 ## Account Administration
 

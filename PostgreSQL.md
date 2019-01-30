@@ -26,6 +26,8 @@ Query  | Function
 
 Query  | Function  
 --- | ---  
+`--- comment` | One line comment  
+`/* comment */` | Block comment
 `SELECT timeofday();`  | Print out the current time  
 `SELECT [DISTINCT] <list of attributes> FROM R1, R2, ..., Rn WHERE [condition] ORDER BY <list of attributes [ASC\|DESC]>` | Presents result in sorted order default is ascending  
 `SELECT * FROM attr1, attr2, ... FROM relation1, relation2, ... WHERE [CONDITION]` | Select all (*) from attribute from relation where a condition  
@@ -40,7 +42,11 @@ __NATURAL JOIN:__ R(A, B, C) and S(C, D, E)<br>`R NATURAL JOIN S;` OR<br>`SELECT
 __Set Union:__ R(A, B, C) and S(A, B, C)<br>`(SELECT * FROM R) UNION (SELECT * FROM S);` | Output of UNION has the same schema as R or S<br>"UNION DISTICT"  
 __Bag Union:__ R(A, B, C) and S(A, B, C)<br>`(SELECT * FROM R) UNION ALL (SELECT * FROM S);`  | Output of UNION has the same schema as R or S<br>Attributes/column names may be different; R’s are used  
 __Set Intersection, Bag Intersection:__ <br>`<Query1> INTERSECT <Query2>,  <Query1> INTERSECT ALL <Query2>` | Find all tuples that are in the results of both Query1 and Query2  
-__Set Difference, Bag Difference:__ <br>`<Query1> EXCEPT <Query2>,  <Query1> EXCEPT ALL <Query2>`  | Find all tuples that are in the result of Query1, but not in the result of Query2
+__Set Difference, Bag Difference:__ <br>`<Query1> EXCEPT <Query2>,  <Query1> EXCEPT ALL <Query2>`  | Find all tuples that are in the result of Query1, but not in the result of Query2  
+__Subqueries:__ `SELECT...FROM... (SELECT...) WHERE... (SELECT...)`  | SELECT statement can be replaced with the table it creates and uses it as a variable in the main query
+IN, NOT IN<br>`x IN Q` | Subquery that returns a relation (true if x occurs in collection Q)
+EXISTS, NOT EXISTS<br>`EXISTS Q` | Returns true if Q is a non-empty collection
+`x op ANY Q` and `x op ALL Q` | x is a scalar expression; Q is a SQL query; op is { <, <=, >, >=, <>, = }
 
 ## Environment Commands
 
