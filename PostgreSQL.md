@@ -48,6 +48,16 @@ IN, NOT IN<br>`x IN Q` | Subquery that returns a relation (true if x occurs in c
 EXISTS, NOT EXISTS<br>`EXISTS Q` | Returns true if Q is a non-empty collection
 `x op ANY Q` and `x op ALL Q` | x is a scalar expression; Q is a SQL query; op is { <, <=, >, >=, <>, = }
 
+## Aggregates
+
+Query  | Function  
+--- | ---  
+`COUNT([DISTINCT] A)`  | Returns the number of [different] values in the A column  
+`SUM([DISTINCT] A)`  | Returns the sum of all [different] values in the A column  
+`AVG([DISTINCT] A)`  | Returns the average of all [different] values in the A column  
+`MAX(A)` / `MIN(A)`  | Returns maximum or minimum value in the A column    
+
+
 ## Environment Commands
 
 Command | Description
@@ -55,7 +65,7 @@ Command | Description
 `ALTER ROLE username WITH PASSWORD ‘newpassword’;` or `/password` | Change the password  of your PostgreSQL account  
 `\i myfile.sql` | Import the execution script myfile.sql  
 `\! pwd` | Prints current working directory  
-`\! ls` | Lists all files in the current working directory 
+`\! ls` | Lists all files in the current working directory  
 `\cd {{path name}}` | Change current working directory to {{path name}}  
 `\l` | List all databases  
 `\dn` | Display all available schema  
