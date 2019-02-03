@@ -29,7 +29,7 @@ Query  | Function
 `--- comment` | One line comment  
 `/* comment */` | Block comment
 `SELECT timeofday();`  | Print out the current time  
-`SELECT [DISTINCT] <list of attributes> FROM R1, R2, ..., Rn WHERE [condition] ORDER BY <list of attributes [ASC\|DESC]>` | Presents result in sorted order default is ascending  
+`SELECT [DISTINCT] <list of attributes c1, c2,.., cm> AGGREGATEOP(...)`<br>`FROM R1, R2, ..., Rn`<br>`[WHERE condition]`<br>`[GROUP BY <list of grouping attributes>]`<br>`[HAVING condition]`<br>`ORDER BY <list of attributes [ASC\|DESC]>` |
 `SELECT * FROM attr1, attr2, ... FROM relation1, relation2, ... WHERE [CONDITION]` | Select all (*) from attribute from relation where a condition  
 __Example:__ `SELECT * FROM Movies` |  Displays all Movies
 __Example:__ `SELECT * FROM Movies WHERE studioName = 'Disney' AND year = 1990 ORDER BY length, title;` |  Displays all Disney movies where the release date is 1990 ordered by ascending length, then by ascending title  
@@ -48,15 +48,14 @@ IN, NOT IN<br>`x IN Q` | Subquery that returns a relation (true if x occurs in c
 EXISTS, NOT EXISTS<br>`EXISTS Q` | Returns true if Q is a non-empty collection
 `x op ANY Q` and `x op ALL Q` | x is a scalar expression; Q is a SQL query; op is { <, <=, >, >=, <>, = }
 
-## Aggregates
+## Aggregate Operations
 
 Query  | Function  
 --- | ---  
 `COUNT([DISTINCT] A)`  | Returns the number of [different] values in the A column  
 `SUM([DISTINCT] A)`  | Returns the sum of all [different] values in the A column  
 `AVG([DISTINCT] A)`  | Returns the average of all [different] values in the A column  
-`MAX(A)` / `MIN(A)`  | Returns maximum or minimum value in the A column    
-
+`MAX(A)` / `MIN(A)`  | Returns maximum or minimum value in the A column  
 
 ## Environment Commands
 

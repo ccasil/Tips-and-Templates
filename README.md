@@ -43,3 +43,4 @@ References, guides, and random tips
   * [npm](npm.md)
   * Sorting Algorithms
   * Binary
+  * [Important Terms](Resume.md)
