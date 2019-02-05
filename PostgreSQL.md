@@ -46,7 +46,9 @@ __Set Difference, Bag Difference:__ <br>`<Query1> EXCEPT <Query2>,  <Query1> EXC
 __Subqueries:__ `SELECT...FROM... (SELECT...) WHERE... (SELECT...)`  | SELECT statement can be replaced with the table it creates and uses it as a variable in the main query
 IN, NOT IN<br>`x IN Q` | Subquery that returns a relation (true if x occurs in collection Q)
 EXISTS, NOT EXISTS<br>`EXISTS Q` | Returns true if Q is a non-empty collection
-`x op ANY Q` and `x op ALL Q` | x is a scalar expression; Q is a SQL query; op is { <, <=, >, >=, <>, = }
+`x op ANY Q` and `x op ALL Q` | x is a scalar expression; Q is a SQL query; op is { <, <=, >, >=, <>, = }  
+HAVING Clause | Choose groups based on some aggregate property of the group; like a WHERE clause applied to groups  
+`ANY, SOME, EVERY, ALL` |
 
 ## Aggregate Operations
 
