@@ -59,6 +59,20 @@ Query  | Function
 `AVG([DISTINCT] A)`  | Returns the average of all [different] values in the A column  
 `MAX(A)` / `MIN(A)`  | Returns maximum or minimum value in the A column  
 
+## Order of Execution of a Query
+
+1. FROM
+2. WHERE
+3. GROUP BY
+4. AGG OP
+5. HAVING
+6. SELECT
+7. DISTINCT
+8. ORDER BY
+9. LIMIT
+
+**[Order of Execution](https://sqlbolt.com/lesson/select_queries_order_of_execution)**  
+
 ## Environment Commands
 
 Command | Description
