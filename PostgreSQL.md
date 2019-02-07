@@ -50,6 +50,14 @@ EXISTS, NOT EXISTS<br>`EXISTS Q` | Returns true if Q is a non-empty collection
 HAVING Clause | Choose groups based on some aggregate property of the group; like a WHERE clause applied to groups  
 `ANY, SOME, EVERY, ALL` |
 
+## Database Modification Statements
+
+Statement | Description 
+--- | ---
+`INSERT INTO R(A1,..,An)`<br>`VALUES(V1,..,Vn);` | A tuple v is inserted into the relation R, where attribute A = v and default values (perhaps NULL) are entered for all missing attributes  
+`DELETE FROM R`<br>`WHERE <condition>;` | Delete rows with condition
+`UPDATE R`<br>`SET <new value assignments>`<br>`WHERE<condition>;` | Updates a rows with condition with new values
+
 ## Aggregate Operations
 
 Query  | Function  
@@ -58,6 +66,21 @@ Query  | Function
 `SUM([DISTINCT] A)`  | Returns the sum of all [different] values in the A column  
 `AVG([DISTINCT] A)`  | Returns the average of all [different] values in the A column  
 `MAX(A)` / `MIN(A)`  | Returns maximum or minimum value in the A column  
+
+# Transactions  
+
+Atomicity: all or nothing  
+Consistency  
+Isolation  
+Durability : permanently in database
+
+Statement | Function  
+--- | ---
+`START TRANSACTION` or `Begin Transaction` | Marks beginning of transaction, followed by one or more SQL statements
+`COMMIT` | Ends transaction. All changes to the database caused by the SQL statements within the transaction are committed and visible in the database
+`ROLLBACK` | Causes the transaction to abort or terminate.  Any changes made by SQL statements within the transaction are undone
+`SET TRANSCATION READ ONLY;` | Stated before transaction begins. Tells SQL system next transaction is read-only.
+`SET TRANSACTION READ WRITE;` | Default option
 
 ## Order of Execution of a Query
 
