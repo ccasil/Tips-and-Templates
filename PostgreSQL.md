@@ -67,7 +67,20 @@ Query  | Function
 `AVG([DISTINCT] A)`  | Returns the average of all [different] values in the A column  
 `MAX(A)` / `MIN(A)`  | Returns maximum or minimum value in the A column  
 
-# Transactions  
+## Pattern Matching
+
+If pattern does not contain percent signs or underscores, then the pattern only represents the string itself; in that case LIKE acts like the equals operator. An underscore (_) in pattern stands for (matches) any single character; a percent sign (%) matches any sequence of zero or more characters.
+
+Example | Result
+--- | ---
+`attribute LIKE 'Hedgehog'` | String must be and contain 'Hedgehog in its entirety'
+`attribute LIKE 'Z%'` | First letter must be Z, but any other letter may follow in the attribute column
+`attribute LIKE '%l_'` | Anything may come before 'l', but it must be the second to last letter in the attribute column
+`attribute LIKE '% %'` | 2 strings
+`attribute LIKE '_a_'` | 'a' must be the letter between the first and last letter (i.e. cat, bat, fat...etc.)
+`attribute LIKE '%ol%'` | Return any string in attribute column containing 'ol'
+
+## Transactions  
 
 Atomicity: all or nothing  
 Consistency  
