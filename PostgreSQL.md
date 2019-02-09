@@ -49,6 +49,7 @@ EXISTS, NOT EXISTS<br>`EXISTS Q` | Returns true if Q is a non-empty collection
 `x op ANY Q` and `x op ALL Q` | x is a scalar expression; Q is a SQL query; op is { <, <=, >, >=, <>, = }  
 HAVING Clause | Choose groups based on some aggregate property of the group; like a WHERE clause applied to groups  
 `ANY, SOME, EVERY, ALL` |
+`CREATE VIEW <view name> AS <view definition>` | Logical data independence, allows you to retrieve data if it matches the description in the view
 
 ## Database Modification Statements
 
@@ -94,6 +95,13 @@ Statement | Function
 `ROLLBACK` | Causes the transaction to abort or terminate.  Any changes made by SQL statements within the transaction are undone
 `SET TRANSCATION READ ONLY;` | Stated before transaction begins. Tells SQL system next transaction is read-only.
 `SET TRANSACTION READ WRITE;` | Default option
+`SET TRANSACTION READ WRITE ISOLATION LEVEL READ UNCOMMITTED;` | The transaction can run with isolation level "Read Uncommitted", allowing Dirty Reads
+`SET TRANSACTION ISOLATION LEVEL READ COMMITTED;` | Only clean (committed) reads, no dirty reads.<br> note: might read data committed by different transactions
+`SET TRANSACTION ISOLATION LEVEL REPEATABLE READ;` | Repeated queries of a tuple during a transaction will retrieve the same value, even if its value was changed by another transaction
+`SET TRANSACTION ISOLATION LEVEL SERIALIZABLE;` |
+
+__Isolation Levels:__
+![Isolation Levels](isolationlevels.jpg)
 
 ## Order of Execution of a Query
 
@@ -125,6 +133,18 @@ Command | Description
 `\q` | Exit psql  
 
 ![SQL's Three-Valued Logic: Truth Table](sqllogic.png)
+
+### SQL Language
+
+* Data Manipulation Language (DML)
+  * Access and modify data
+  * SELECT, INSERT, DELETE, UPDATE
+* Data Definition Language (DDL)
+  * Modify structure of data
+  * CREATE, DROP, ALTER
+* Data Control Language (DCL)
+  * Control access to the data (security)
+  * GRANT, REVOKE
 
 ## References  
 
