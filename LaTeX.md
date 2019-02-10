@@ -7,7 +7,7 @@ Syntax | Description
 \begin{itemize}<br>\item <br>\end{itemize} | Unordered list  
 \begin{enumerate}<br>\item <br>\end{enumerate} | Ordered list  
 \textbf{bolded} | Bolds contents  
-\hfill | Right justifies 
+\hfill | Right justifies
 \\\ | New line
 
 ## References

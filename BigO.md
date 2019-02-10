@@ -10,6 +10,9 @@ O(N2) |   Represents an algorithm whose performance is directly proportional to 
 O(2N)  |   Denotes an algorithm whose growth doubles with each addition to the input data set. The growth curve of an O(2N) function is exponential - starting off very shallow, then rising meteorically    |
 O(log N)  |   Iterative halving of data sets described in the binary search example produces a growth curve that peaks at the beginning and slowly flattens out as the size of the data sets increase    | An input data set containing 10 items takes one second to complete, a data set containing 100 items takes two seconds, and a data set containing 1000 items will take three seconds
 
+![Running Time](runningtime.jpg)
+
 ## References
 
 **[rob-bell](https://rob-bell.net/2009/06/a-beginners-guide-to-big-o-notation/)**
+**[Algorithm Analysis](https://www.geeksforgeeks.org/fundamentals-of-algorithms/#AnalysisofAlgorithms)**
