@@ -14,5 +14,5 @@ O(log N)  |   Iterative halving of data sets described in the binary search exam
 
 ## References
 
-**[rob-bell](https://rob-bell.net/2009/06/a-beginners-guide-to-big-o-notation/)**
+**[rob-bell](https://rob-bell.net/2009/06/a-beginners-guide-to-big-o-notation/)**  
 **[Algorithm Analysis](https://www.geeksforgeeks.org/fundamentals-of-algorithms/#AnalysisofAlgorithms)**

@@ -15,12 +15,14 @@ Query  | Function
 
 Query  | Function  
 --- | ---  
-`CREATE TABLE ();` | Create Tables  
+`CREATE TABLE ();` | Create Tables<br>[Data Types](http://www.postgresqltutorial.com/postgresql-data-types/) 
 `DROP TABLE tablename` | Drop table from schema  
 `DELETE FROM tablename;` | Get rid of all tuples in tablename without deleting the table itself  
 `ALTER TABLE tablename ADD attribute DATATYPE(#);` | Adds attribute 'attribute' with type DATATYPE(#) to the table 'tablename'  
 `ALTER TABLE tablename DROP attribute;` | Drops attribute from tablename  
-`COPY attributes FROM stdin USING DELIMETERS "\|";`  | Populate tables using "\|" as a delimeter  
+`COPY attributes FROM stdin USING DELIMETERS "\|";`  | Populate tables using "\|" as a delimeter
+`PRIMARY KEY` | Can not be null, rows are uniquely identified by primary key value, can be at most one primary key for a table
+`UNIQUE` |Rows can contain NULL unique values, rows with non-null unique values are uniquely identified by the unique values values, can have multiple unique constraints for a table, in addition to a primary key
 
 ## Queries  
 
@@ -29,7 +31,7 @@ Query  | Function
 `--- comment` | One line comment  
 `/* comment */` | Block comment
 `SELECT timeofday();`  | Print out the current time  
-`SELECT [DISTINCT] <list of attributes c1, c2,.., cm> AGGREGATEOP(...)`<br>`FROM R1, R2, ..., Rn`<br>`[WHERE condition]`<br>`[GROUP BY <list of grouping attributes>]`<br>`[HAVING condition]`<br>`ORDER BY <list of attributes [ASC\|DESC]>` |
+`SELECT [DISTINCT] <list of attributes c1, c2,.., cm> AGGREGATEOP(...)`<br>`FROM R1, R2, ..., Rn`<br>`[WHERE condition]`<br>`[GROUP BY <list of grouping attributes>]`<br>`[HAVING condition]`<br>`ORDER BY <list of attributes [ASC\|DESC]>` | DISTINCT: remove duplicate rows from the result set; keeps one row for each group of duplicates
 `SELECT * FROM attr1, attr2, ... FROM relation1, relation2, ... WHERE [CONDITION]` | Select all (*) from attribute from relation where a condition  
 __Example:__ `SELECT * FROM Movies` |  Displays all Movies
 __Example:__ `SELECT * FROM Movies WHERE studioName = 'Disney' AND year = 1990 ORDER BY length, title;` |  Displays all Disney movies where the release date is 1990 ordered by ascending length, then by ascending title  
@@ -40,14 +42,15 @@ __JOIN..ON..:__ R(A, B, C) and S(C, D, E)<br>`R JOIN S ON R.B=S.D AND R.A=S.E;` 
 __CROSS JOIN:__ R(A, B, C) and S(C, D, E)<br>`R CROSS JOIN S;` OR<br>`SELECT *FROM R, S;` | Product of the two relations R and S<br>(R.A, R.B, R.C, S.C, S.D, S.E);  
 __NATURAL JOIN:__ R(A, B, C) and S(C, D, E)<br>`R NATURAL JOIN S;` OR<br>`SELECT R.A, R.B, R.C, S.D, S.E FROM R, S WHERE R.C = S.C;`  | (A, B, C, D, E)  
 __Set Union:__ R(A, B, C) and S(A, B, C)<br>`(SELECT * FROM R) UNION (SELECT * FROM S);` | Output of UNION has the same schema as R or S<br>"UNION DISTICT"  
-__Bag Union:__ R(A, B, C) and S(A, B, C)<br>`(SELECT * FROM R) UNION ALL (SELECT * FROM S);`  | Output of UNION has the same schema as R or S<br>Attributes/column names may be different; R’s are used  
+__Bag Union:__ R(A, B, C) and S(A, B, C)<br>`(SELECT * FROM R) UNION ALL (SELECT * FROM S);`  | Output of UNION has the same schema as R or S<br>Attributes/column names may be different; R’s are used<br>Output consists of the collection of all tuples from R and from S, including duplicate tuples
 __Set Intersection, Bag Intersection:__ <br>`<Query1> INTERSECT <Query2>,  <Query1> INTERSECT ALL <Query2>` | Find all tuples that are in the results of both Query1 and Query2  
 __Set Difference, Bag Difference:__ <br>`<Query1> EXCEPT <Query2>,  <Query1> EXCEPT ALL <Query2>`  | Find all tuples that are in the result of Query1, but not in the result of Query2  
 __Subqueries:__ `SELECT...FROM... (SELECT...) WHERE... (SELECT...)`  | SELECT statement can be replaced with the table it creates and uses it as a variable in the main query
+AND, OR, NOT | Logical connectives
 IN, NOT IN<br>`x IN Q` | Subquery that returns a relation (true if x occurs in collection Q)
 EXISTS, NOT EXISTS<br>`EXISTS Q` | Returns true if Q is a non-empty collection
-`x op ANY Q` and `x op ALL Q` | x is a scalar expression; Q is a SQL query; op is { <, <=, >, >=, <>, = }  
-HAVING Clause | Choose groups based on some aggregate property of the group; like a WHERE clause applied to groups  
+`x op ANY Q` and `x op ALL Q` | x is a scalar expression; Q is a SQL query; comparison op is { <, <=, >, >=, <>, = }  
+HAVING | Choose groups based on some aggregate property of the group; like a WHERE clause applied to groups  
 `ANY, SOME, EVERY, ALL` |
 `CREATE VIEW <view name> AS <view definition>` | Logical data independence, allows you to retrieve data if it matches the description in the view
 
@@ -57,20 +60,34 @@ Statement | Description
 --- | ---
 `INSERT INTO R(A1,..,An)`<br>`VALUES(V1,..,Vn);` | A tuple v is inserted into the relation R, where attribute A = v and default values (perhaps NULL) are entered for all missing attributes  
 `DELETE FROM R`<br>`WHERE <condition>;` | Delete rows with condition
+`DELETE FROM R` | Without stating a WHERE clause, statement will delete all tuples from R
 `UPDATE R`<br>`SET <new value assignments>`<br>`WHERE<condition>;` | Updates a rows with condition with new values
 
 ## Aggregate Operations
 
+* NULLs are ignored in any aggregation
+  * They do not contribute to the SUM, AVG, COUNT, MIN, MAX of an attribute. 
+
 Query  | Function  
 --- | ---  
-`COUNT([DISTINCT] A)`  | Returns the number of [different] values in the A column  
-`SUM([DISTINCT] A)`  | Returns the sum of all [different] values in the A column  
-`AVG([DISTINCT] A)`  | Returns the average of all [different] values in the A column  
-`MAX(A)` / `MIN(A)`  | Returns maximum or minimum value in the A column  
+`COUNT([DISTINCT] A)`  | Returns the number of [different] values in the A column
+`SUM([DISTINCT] A)`  | Returns the sum of all [different] values in the A column
+`AVG([DISTINCT] A)`  | Returns the average of all [different] values in the A column
+`MAX(A)` / `MIN(A)`  | Returns maximum or minimum value in the A column
 
 ## Pattern Matching
 
 If pattern does not contain percent signs or underscores, then the pattern only represents the string itself; in that case LIKE acts like the equals operator. An underscore (_) in pattern stands for (matches) any single character; a percent sign (%) matches any sequence of zero or more characters.
+
+* '%'(stands for 0 or more arbitrary chars)
+* '_'(stands for exactly one arbitrary char)
+
+[Pattern Matching](https://www.postgresql.org/docs/9.3/functions-matching.html)
+
+### s is a string, p is a pattern
+
+>s LIKE p  
+s NOT LIKE p
 
 Example | Result
 --- | ---
@@ -80,6 +97,7 @@ Example | Result
 `attribute LIKE '% %'` | 2 strings
 `attribute LIKE '_a_'` | 'a' must be the letter between the first and last letter (i.e. cat, bat, fat...etc.)
 `attribute LIKE '%ol%'` | Return any string in attribute column containing 'ol'
+`attribute
 
 ## Transactions  
 
@@ -117,7 +135,7 @@ __Isolation Levels:__
 
 **[Order of Execution](https://sqlbolt.com/lesson/select_queries_order_of_execution)**  
 
-## Environment Commands
+## Meta Commands
 
 Command | Description
 --- | ---
@@ -129,7 +147,7 @@ Command | Description
 `\l` | List all databases  
 `\dn` | Display all available schema  
 `\d` | Display all relations (tables) in current schema
-`\d {{table}}` | Display attributes of table  
+`\d {{table}}` | Display attributes of table (columns)
 `\q` | Exit psql  
 
 ![SQL's Three-Valued Logic: Truth Table](sqllogic.png)
@@ -147,6 +165,3 @@ Command | Description
   * GRANT, REVOKE
 
 ## References  
-
-**[Data Types](http://www.postgresqltutorial.com/postgresql-data-types/)**  
-**[Pattern Matching](https://www.postgresql.org/docs/9.3/functions-matching.html)**
