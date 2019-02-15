@@ -97,7 +97,6 @@ Example | Result
 `attribute LIKE '% %'` | 2 strings
 `attribute LIKE '_a_'` | 'a' must be the letter between the first and last letter (i.e. cat, bat, fat...etc.)
 `attribute LIKE '%ol%'` | Return any string in attribute column containing 'ol'
-`attribute
 
 ## Transactions  
 

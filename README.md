@@ -45,3 +45,4 @@ References, guides, and random tips
   * Binary
   * [Rubik's Cube](Rubiks.md)
   * [Important Terms](Resume.md)
+  * [Math Symbols](Math.md)
