@@ -53,6 +53,10 @@ EXISTS, NOT EXISTS<br>`EXISTS Q` | Returns true if Q is a non-empty collection
 HAVING | Choose groups based on some aggregate property of the group; like a WHERE clause applied to groups  
 `ANY, SOME, EVERY, ALL` |
 `CREATE VIEW <view name> AS <view definition>` | Logical data independence, allows you to retrieve data if it matches the description in the view
+`CREATE INDEX indexname ON tablename(attribute)` | Create index named indexname On the table tablename's column 'attribute'
+`DROP INDEX indexname` | Drop index named indexname
+`ALTER TABLE tablename ALTER COLUMN attribute SET NOT NULL` OR<br>`ALTER TABLE tablename ALTER COLUMN attribute DROP NOT NULL` | If the CREATE statement didn't include NOT NULL for price
+`FOREIGN KEY (<list of attributes>)`<br>`REFERENCES <relation> (<attributes>)` | Use keyword REFERENCES as an element of the schema, or after an attribute
 
 ## Database Modification Statements
 
