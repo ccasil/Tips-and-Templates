@@ -29,12 +29,12 @@
 
 ## Tags
 
-Tag |   Use |   Notes
---- |   --- |   ---
-html |    |  
-head |    |  
-body |    |  
-div |    |  
+| Tag  | Use | Notes |
+| ---- | --- | ----- |
+| html |     |
+| head |     |
+| body |     |
+| div  |     |
 
 ## References
 

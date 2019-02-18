@@ -2,39 +2,39 @@
 
 ## General and File Manipulation Commands
 
-Command |   Use |   Notes
---- |   --- |   ---
-`man` |   Get information or help about a command |
-`ls`  |   List directory contents |
-`pwd` |   Path of working directory   |
-`cd`  |   Change working directory    |
-`mv`  |   Move file or change name    |
-`cp`  |   Copy file    |
-`mkdir`   |   Make directory   |
-`rm`  |   Remove files and directories    |  
-`echo` | |
+| Command | Use                                     | Notes |
+| ------- | --------------------------------------- | ----- |
+| `man`   | Get information or help about a command |
+| `ls`    | List directory contents                 |
+| `pwd`   | Path of working directory               |
+| `cd`    | Change working directory                |
+| `mv`    | Move file or change name                |
+| `cp`    | Copy file                               |
+| `mkdir` | Make directory                          |
+| `rm`    | Remove files and directories            |
+| `echo`  |                                         |
 
 ## Other Commands
 
-Command |   Use |   Notes
---- |   --- |   ---
-`ssh` |   Secure login on remote machine  |
-`scp` |   Secure file copy from or to machine    |
-`find` |   Look for file    |
-`cat` |   Output contents of a file    |
-`grep`    |   Search for a string of text |
+| Command | Use                                 | Notes |
+| ------- | ----------------------------------- | ----- |
+| `ssh`   | Secure login on remote machine      |
+| `scp`   | Secure file copy from or to machine |
+| `find`  | Look for file                       |
+| `cat`   | Output contents of a file           |
+| `grep`  | Search for a string of text         |
 
 ## Editors and publishing
 
-Command |   Use |   Notes
---- |   --- |   ---
-`vim` |   Text editor | [Vim](Vim.md)
+| Command | Use         | Notes         |
+| ------- | ----------- | ------------- |
+| `vim`   | Text editor | [Vim](Vim.md) |
 
 ## Account Administration
 
-Command |   Use |   Notes
---- |   --- |   ---
-`chmod` |   Change permissions on files and directories |
+| Command | Use                                         | Notes |
+| ------- | ------------------------------------------- | ----- |
+| `chmod` | Change permissions on files and directories |
 
 ## References  
 
