@@ -1,8 +1,8 @@
 # Resume Terms
 
-| Skill                                 | Description |
-| ------------------------------------- | ----------- |
-| jQuery                                |
+| Skill                                 | Description | Official Website |
+| ------------------------------------- | ----------- | ---------------- |
+| jQuery                                | Event handling | https://api.jquery.com/
 | AJAX                                  |
 | Bootstrap                             |
 | JSON                                  |
