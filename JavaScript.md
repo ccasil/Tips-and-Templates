@@ -73,3 +73,21 @@ for (var key in dict) {
     var value = dict[key];
 }
 ```
+
+## Terms
+
+| Term        | Definition |
+| ----------- | ---------- |
+| Prototype   |
+| Inheritance |
+| Classes     |
+| Closure     |
+| Object      |
+| Arity       |
+| Hoisting    |
+
+## References
+
+**[JS Glossary](https://www.codecademy.com/articles/glossary-javascript)**  
+**[JS Vocab](https://trothman.com/ACES/javascript/Jsvocab.htm)**
+**[JS Jargon](https://www.hongkiat.com/blog/javascript-jargon/)**

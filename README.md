@@ -37,11 +37,10 @@ References, guides, and random tips
   * [PostgreSQL](PostgreSQL.md)
 
 * Miscellaneous
+  * [Algorithms](Algorithms.md)
   * [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
   * [LaTeX](LaTeX.md)
-  * [Big O Notation](BigO.md)
   * [npm](npm.md)
-  * Sorting Algorithms
   * Binary
   * [Rubik's Cube](Rubiks.md)
   * [Important Terms](Resume.md)
