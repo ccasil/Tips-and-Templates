@@ -56,7 +56,10 @@ __[PostgreSQL Official](https://www.postgresql.org/docs/)__
 | `CREATE INDEX indexname ON tablename(attribute)`                                                                                                                                                                                              | Create index named indexname On the table tablename's column 'attribute'                                                                                                                                  |
 | `DROP INDEX indexname`                                                                                                                                                                                                                        | Drop index named indexname                                                                                                                                                                                |
 | `ALTER TABLE tablename ALTER COLUMN attribute SET NOT NULL` OR<br>`ALTER TABLE tablename ALTER COLUMN attribute DROP NOT NULL`                                                                                                                | If the CREATE statement didn't include NOT NULL for price                                                                                                                                                 |
-| `FOREIGN KEY (<list of attributes>)`<br>`REFERENCES <relation> (<attributes>)`                                                                                                                                                                | Use keyword REFERENCES as an element of the schema, or after an attribute                                                                                                                                 |
+| `FOREIGN KEY (<list of attributes>)`<br>`REFERENCES <relation> (<attributes>)`                                                                                                                                                                | Use keyword REFERENCES as an element of the schema, or after an attribute<br>note: referenced attributes must be decalred as either PRIMARY KEY or UNIQUE                                                 |
+| `ON [UPDATE, DELETE][SET NULL, CASCADE]`                                                                                                                                                                                                      | Foreign-key declaration                                                                                                                                                                                   |
+| `CHECK (<condition>)`                                                                                                                                                                                                                         | Condition must evaluate to TRUE or UNKNOWN; can't be FALSE                                                                                                                                                |
+| `CREATE ASSERTION <name> CHECK (<condition>)`                                                                                                                                                                                                 | Database-schema elements, like relations or views<br>Condition may refer to any relation or attribute in the database schema                                                                              |
 
 ## Database Modification Statements
 
@@ -123,6 +126,69 @@ Durability : permanently in database
 
 __Isolation Levels:__
 ![Isolation Levels](isolationlevels.jpg)
+
+## Relation Algebra Operators
+
+| Operation | Name                     | Function                                                                        |
+| --------- | ------------------------ | ------------------------------------------------------------------------------- |
+| σ         | Selection                | Takes a relation R and extracts only the rows from R that satisfy the condition |
+| π         | Projection               |
+| ⋃         | Union                    |
+| \-        | Set-Difference           |
+| x         | Cross-Product            |
+| ⋂         | Intersection             |
+| ρ         | Renaming                 |
+|           | Natural Join, Theta-Join |
+| / or ÷    | Division                 |
+
+
+## Event-Condition-Action Rules
+
+* Another name for 'trigger' is an ECA Rule, or Event-Condition-Action Rule
+  * Event: typically a type of database modification
+  * Condition: any SQL boolean-valued expression
+  * Action: any SQL statements
+
+### CREATE TRIGGER
+
+* `CREATE TRIGGER <name>`
+* `CREATE OR REPLACE TRIGGER <name>`
+  * note: useful if there is a trigger that name and you want to modify the trigger
+
+### The Event
+* `AFTER INSERT` can be `BEFORE INSERT`
+  * Can be `INSTEAD OF` if the relation is a view
+* `INSERT` can be `DELETE` or `UPDATE`
+  * `UPDATE` can be `UPDATE ON` a particular attribute
+
+### FOR EACH ROW
+
+* Triggers are either "row-level" or "statement-level"
+* `FOR EACH ROW` indicates row-level; its absence indicates statement-level
+* Row level triggers: Execute once for each modified tuple
+* Statement-level triggers: Execute once for a SQL statement, regardless of how many tuples are modified
+
+### REFERENCING
+
+* `INSERT` statements imply a new tuple (for row-level) or new table (for statement-level)
+  * The "table" is the set of inserted tuples
+* `DELETE` implies an old tuple or table
+* `UPDATE` implies both
+* Refer to these by `[NEW OLD] [TUPLE TABLE] AS <name>`
+
+### The Condition
+
+* Any boolean-valued condition
+* Evaluated on the database as it would exist before or after the triggering event, depending on whether `BEFORE` or `AFTER` is used
+  * But always before the changes take effect
+* Access the new/old tuple/table through the names in the `REFERENCING` clause
+
+### The Action
+
+* There can be more than one SQL statement in the action
+  * Surround by `BEGIN . . . END` if there is more than one
+
+![The Trigger](trigger.png)
 
 ## Order of Execution of a Query
 

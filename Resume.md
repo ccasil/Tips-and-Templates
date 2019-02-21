@@ -25,3 +25,9 @@
 | Object Oriented Programming (OOP)     |
 | Model View Controller (MVC)           |
 | Document Object Model (DOM)           |
+
+__Data Model__ (psql): a mathematical formalism that consists of three parts:  
+
+    1. A notation for describing and representing data (structure of the data)  
+    2. A set of operations for manipulating data  
+    3. A set of constraints on the data
