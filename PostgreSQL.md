@@ -56,7 +56,7 @@ __[PostgreSQL Official](https://www.postgresql.org/docs/)__
 | `CREATE INDEX indexname ON tablename(attribute)`                                                                                                                                                                                              | Create index named indexname On the table tablename's column 'attribute'                                                                                                                                  |
 | `DROP INDEX indexname`                                                                                                                                                                                                                        | Drop index named indexname                                                                                                                                                                                |
 | `ALTER TABLE tablename ALTER COLUMN attribute SET NOT NULL` OR<br>`ALTER TABLE tablename ALTER COLUMN attribute DROP NOT NULL`                                                                                                                | If the CREATE statement didn't include NOT NULL for price                                                                                                                                                 |
-| `FOREIGN KEY (<list of attributes>)`<br>`REFERENCES <relation> (<attributes>)`                                                                                                                                                                | Use keyword REFERENCES as an element of the schema, or after an attribute<br>note: referenced attributes must be decalred as either PRIMARY KEY or UNIQUE                                                 |
+| `FOREIGN KEY (<list of attributes>)`<br>`REFERENCES <relation> (<attributes>)`                                                                                                                                                                | Use keyword REFERENCES as an element of the schema, or after an attribute<br>note: referenced attributes must be declared as either PRIMARY KEY or UNIQUE                                                 |
 | `ON [UPDATE, DELETE][SET NULL, CASCADE]`                                                                                                                                                                                                      | Foreign-key declaration                                                                                                                                                                                   |
 | `CHECK (<condition>)`                                                                                                                                                                                                                         | Condition must evaluate to TRUE or UNKNOWN; can't be FALSE                                                                                                                                                |
 | `CREATE ASSERTION <name> CHECK (<condition>)`                                                                                                                                                                                                 | Database-schema elements, like relations or views<br>Condition may refer to any relation or attribute in the database schema                                                                              |
@@ -125,22 +125,36 @@ Durability : permanently in database
 | `SET TRANSACTION ISOLATION LEVEL SERIALIZABLE;`                |
 
 __Isolation Levels:__
-![Isolation Levels](isolationlevels.jpg)
+![Isolation Levels](./assets/isolationlevels.jpg)
+
+* Dirty Data:  data that is written by a transaction but has not
+yet been committed by the transaction
+* Dirty Reads: the read of dirty data written by another
+transaction
+* Repeatable reads:  Repeated queries of a tuple during a
+transaction will retrieve the same value, even if its value was
+changed by another transaction
+* Phantoms: tuples newly inserted while the transaction is
+running
 
 ## Relation Algebra Operators
 
-| Operation | Name                     | Function                                                                        |
-| --------- | ------------------------ | ------------------------------------------------------------------------------- |
-| σ         | Selection                | Takes a relation R and extracts only the rows from R that satisfy the condition |
-| π         | Projection               |
-| ⋃         | Union                    |
-| \-        | Set-Difference           |
-| x         | Cross-Product            |
-| ⋂         | Intersection             |
-| ρ         | Renaming                 |
-|           | Natural Join, Theta-Join |
-| / or ÷    | Division                 |
+| Operation                                                                                                      | Name             | Function                                                                                                                                                                                                                                |
+| -------------------------------------------------------------------------------------------------------------- | ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| σ<br>`σ`<sub>`condition`</sub>`(R)`                                                                            | Selection        | Takes a relation R and extracts only the rows from R that satisfy the condition                                                                                                                                                         |
+| π<br>`π`<sub>`<attribute list>`</sub>`(R)`                                                                     | Projection       | For every tuple in relation R, output only the attributes appearing in attribute list<br>May be duplicates; for Codd’s Relational Algebra, duplicates are always eliminated                                                            |
+| ⋃<br>`R⋃S`                                                                                                     | Set Union        | The output consists of the setof all tuples in either R or S (or both)                                                                                                                                                                  |
+| \-<br>`R-S`                                                                                                    | Set-Difference   | Output consists of all tuples in R but not in S                                                                                                                                                                                         |
+| x<br>`RxS={(a1,...,am,b1,...,bn)|(a1,...,am)∈R and (b1, ..., bn)∈S)}`                                          | Cross-Product    | Relation of arity m + n                                                                                                                                                                                                                 |
+| ⋂<br>`R⋂S`                                                                                                     | Set Intersection | `R⋂S = R-(R-S) = S-(S-R)`                                                                                                                                                                                                               |
+| ρ<br>`ρ`<sub>`s(A1,...,An)`</sub>`(R)`                                                                         | Renaming         | Rename relation R to S with attributes A1, ..., An                                                                                                                                                                                       |
+| ⋈<br>`R⋈S=π`<sub>`(attr(R)⋃attr(S))`</sub>`(σ`<sub>`R.A1=S.A1 AND R.A2=S.A2 AND...AND R.Ak=SA.k`</sub>`(RxS))` | Natural Join     | 1. Compute RxS<br>2. Keep only those tuples in RxS satisfying: `R.A1=S.A1 AND R.A2=S.A2 AND...AND R.Ak=SA.k`<br>3. Output is projection on the set of attributes in R U S (without repeats of the attributes that appear in both)       |
+| ⋈<sub>⊝</sub><br>`R⋈`<sub>`⊝`</sub>`S`<br>`σ`<sub>`⊝`</sub>`(R x S)`                                           | Theta-Join       | The θ-Join outputs those tuples from R x S that satisfy the condition θ. Compute R x S, then keep only those tuples in R x S that satisfy θ<br>If ⊝ always evaluates to TRUE, then `R⋈`<sub>`⊝`</sub>`S = σ`<sub>`⊝`</sub>`(RxS) = RxS` |
+| ⋉<br>`R⋉S`                                                                                                     | Semi Join        | 1. Compute Natural Join of R and S<br>2. Output the projection of that on just the attributes of R                                                                                                                                      |
+| / or ÷<br>`R/S = π`<sub>`A1...Am`</sub>`(R) - π`<sub>`A1...Am`</sub>`((π`<sub>`A1...Am`</sub>`(R)xS)-R)`       | Division         | Input: Two Relations R and S, where both:<br> * attr(S) ⊂ attr(R)<br> * attr(S) is non-empty<br>Output:  Relation whose attributes are in attr(R) –attr(S)                                                                              |
 
+![Cross Product 1](./assets/crossproduct1.png)
+![Cross Product 1](./assets/crossproduct2.png)
 
 ## Event-Condition-Action Rules
 
@@ -188,7 +202,7 @@ __Isolation Levels:__
 * There can be more than one SQL statement in the action
   * Surround by `BEGIN . . . END` if there is more than one
 
-![The Trigger](trigger.png)
+![The Trigger](./assets/trigger.png)
 
 ## Order of Execution of a Query
 
@@ -219,7 +233,7 @@ __Isolation Levels:__
 | `\d {{table}}`                                                      | Display attributes of table (columns)             |
 | `\q`                                                                | Exit psql                                         |
 
-![SQL's Three-Valued Logic: Truth Table](sqllogic.png)
+![SQL's Three-Valued Logic: Truth Table](./assets/sqllogic.png)
 
 ### SQL Language
 

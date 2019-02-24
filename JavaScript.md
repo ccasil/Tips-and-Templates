@@ -85,6 +85,7 @@ for (var key in dict) {
 | Object      |
 | Arity       |
 | Hoisting    |
+| Scoping     |
 
 ## References
 

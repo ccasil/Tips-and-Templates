@@ -13,4 +13,4 @@
 
 Twisting the Cube: A letter with an “i” after it means an inverted or counter-clockwise move when looking at the face directly
 
-![Twisting](twisting.jpg)
+![Twisting](./assets/twisting.png)

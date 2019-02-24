@@ -5,7 +5,7 @@
 Git is a version control system for managing your source code history.
 GitHub is a hosting service for your Git repositories.
 
-![Git Workflow](gitworkflow.png)
+![Git Workflow](./assets/gitworkflow.png)
 
 ## Create a New Repository on the Command Line
 
