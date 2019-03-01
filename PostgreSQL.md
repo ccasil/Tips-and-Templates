@@ -60,19 +60,36 @@ __[PostgreSQL Official](https://www.postgresql.org/docs/)__
 | `ON [UPDATE, DELETE][SET NULL, CASCADE]`                                                                                                                                                                                                      | Foreign-key declaration                                                                                                                                                                                   |
 | `CHECK (<condition>)`                                                                                                                                                                                                                         | Condition must evaluate to TRUE or UNKNOWN; can't be FALSE                                                                                                                                                |
 | `CREATE ASSERTION <name> CHECK (<condition>)`                                                                                                                                                                                                 | Database-schema elements, like relations or views<br>Condition may refer to any relation or attribute in the database schema                                                                              |
-| `CREATE PROCEDURE <name>(`<br>`<parameter list>) RETURNS <type>`<br>`<optional local declarations>`<br>`<body>;`                                                                                                                              | Basic Persistent Stored Modules (PSM) form                                                                                                                                                                |
-| `DECLARE c CURSOR FOR <query>`                                                                                                                                                                                                                | Declare a cursor c                                                                                                                                                                                        |
-| `OPEN c`<br>`CLOSE c`                                                                                                                                                                                                                         | To use c, we first open the cursor c. The query of c is evaluated, and c is set to point to the first tuple of the result. When finished with c, we close it                                              |
-| `FETCH FROM c INTO x1, x2, ...,xn`                                                                                                                                                                                                            | To get the next tuple from cursor c. x = list of variables, one for each component of the tuples referred to by c                                                                                         |
+
+## Embedded SQL
+
+| Statement                                                                                          | Description                                                                           |
+| -------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `EXEC SQL BEGIN DECLARE SECTION;`<br>`<host-language declarations>`<br>`EXEC SQL END DECLARATION;` | To connect SQL and the host-language program, the two parts must share some variables |
 
 ## Persistent Stored Modules (PSM) Statements
 
-| Statement                        | Description                         |
-| -------------------------------- | ----------------------------------- |
-| `RETURN <expression>`            | sets the return value of a function |
-| `DECLARE <name> <type>`          | used to declare local variables     |
-| `BEGIN . . . END`                | for groups of statements            |
-| `SET <variable> = <expression>;` | assignment                          |
+| Statement                                                                                                        | Description                                                                                                                                                  |
+| ---------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `CREATE PROCEDURE <name>(`<br>`<parameter list>) RETURNS <type>`<br>`<optional local declarations>`<br>`<body>;` | Basic Persistent Stored Modules (PSM) form                                                                                                                   |
+| `DECLARE c CURSOR FOR <query>`                                                                                   | Declare a cursor c                                                                                                                                           |
+| `OPEN c`<br>`CLOSE c`                                                                                            | To use c, we first open the cursor c. The query of c is evaluated, and c is set to point to the first tuple of the result. When finished with c, we close it |
+| `FETCH FROM c INTO x1, x2, ...,xn`                                                                               | To get the next tuple from cursor c. x = list of variables, one for each component of the tuples referred to by c                                            |
+| `RETURN <expression>`                                                                                            | sets the return value of a function                                                                                                                          |
+| `DECLARE <name> <type>`                                                                                          | used to declare local variables                                                                                                                              |
+| `BEGIN . . . END`                                                                                                | for groups of statements                                                                                                                                     |
+| `SET <variable> = <expression>;`                                                                                 | assignment                                                                                                                                                   |
+## Cursor
+
+* Cursor: A tuple-variable that ranges over all tuples in the result of some query
+* If c is a cursor, you may use ...WHERE CURRENT OF c, just as in Stored Procedures
+
+| Statement | Description |
+| --------- | ----------- |
+`EXEC SQL DECLARE cCURSOR FOR <query>;` | Declare a cursor c
+`EXEC SQL OPEN CURSOR c;`<br>`EXEC SQL CLOSE CURSOR c;` | Open and close cursor
+`EXEC SQL FETCH c INTO <variable(s)>;` | Fetch from c<br>You can write a macro NOT_FOUND that is true if and only if the FETCH fails to find a tuple
+
 
 ![IF Statments](./assets/sqlifstatements.png)
 ![Loops 1](./assets/sqlloops1.png)
