@@ -38,6 +38,12 @@ where n/b means either ⌊n/b⌋or ⌈n/b⌉
 >Case 2: If c = log<sub>b</sub>a, then T(n) = Θ(n<sup>c</sup>log n)  
 >Case 3: If c > log<sub>b</sub>a,then T(n) = Θ(n<sup>c</sup>)
 
+## Algorithmic Paradigms
+
+* Greed: Build up a solution incrementally, myopically optimizing some local criterion
+* Divide-and-Conquer: Break up a problem into independent subproblems; solve each subproblem; combine solutions to subproblems to form solution to original problem
+* Dynamic Programming: Break up a problem into a series of overlapping subproblems; combine solutions to smaller subproblems to form solution to large subproblem
+
 ## References
 
 **[rob-bell](https://rob-bell.net/2009/06/a-beginners-guide-to-big-o-notation/)**  
