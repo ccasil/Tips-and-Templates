@@ -79,22 +79,46 @@ __[PostgreSQL Official](https://www.postgresql.org/docs/)__
 | `DECLARE <name> <type>`                                                                                          | used to declare local variables                                                                                                                              |
 | `BEGIN . . . END`                                                                                                | for groups of statements                                                                                                                                     |
 | `SET <variable> = <expression>;`                                                                                 | assignment                                                                                                                                                   |
+
+## Dynamic SQL
+
+* Specific queries and modification statements to interact with the database
+
+| Query                                                          | Description                                                                                           |
+| -------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| `EXEC SQL PREPARE <query-name>`<br>`FROM <text of the query>;` | Preparing a Query, (note: prepare means optimize)                                                     |
+| `EXEC SQL EXECUTE <query-name>;`                               | Executing a query. "Prepare once, Execute many times"                                                 |
+| `EXEC SQL EXECUTE IMMEDIATE <text>;`                           | If we are only going to execute the query once, we can combine the PREPARE and EXECUTE steps into one |
+
 ## Cursor
 
 * Cursor: A tuple-variable that ranges over all tuples in the result of some query
 * If c is a cursor, you may use ...WHERE CURRENT OF c, just as in Stored Procedures
 
-| Statement | Description |
-| --------- | ----------- |
-`EXEC SQL DECLARE cCURSOR FOR <query>;` | Declare a cursor c
-`EXEC SQL OPEN CURSOR c;`<br>`EXEC SQL CLOSE CURSOR c;` | Open and close cursor
-`EXEC SQL FETCH c INTO <variable(s)>;` | Fetch from c<br>You can write a macro NOT_FOUND that is true if and only if the FETCH fails to find a tuple
-
+| Statement                                               | Description                                                                                                 |
+| ------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| `EXEC SQL DECLARE c CURSOR FOR <query>;`                | Declare a cursor c                                                                                          |
+| `EXEC SQL OPEN CURSOR c;`<br>`EXEC SQL CLOSE CURSOR c;` | Open and close cursor                                                                                       |
+| `EXEC SQL FETCH c INTO <variable(s)>;`                  | Fetch from c<br>You can write a macro NOT_FOUND that is true if and only if the FETCH fails to find a tuple |
 
 ![IF Statments](./assets/sqlifstatements.png)
 ![Loops 1](./assets/sqlloops1.png)
 ![Loops 2](./assets/sqlloops2.png)
 ![CursorLoop](./assets/sqlcursorloop.png)
+
+## Java Database Connectivity (JDBC)
+
+| Statement                                                                                                                     | Description                                                                                                                                                                                                                                    |
+| ----------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `import java.sql.*;`<br>`Class.forName(com.mysql.jdbc.Driver);`<br>`Connection myCon=`<br>`DriverManager.getConnection(...);` | Making a Connection(note: (...) = URL of the database. your name and password go here)                                                                                                                                                         |
+| `Statement stat1 = myCon.createStatement();`                                                                                  | Statement is an object that can accept a string that is a SQL statement and can execute such a string                                                                                                                                          |
+| `PreparedStatementstat2 =`<br>`myCon.prepareStatement(`<br>`"SELECT beer, price FROM Sells "+"WHERE bar = 'Joe''s Bar'");`    | PreparedStatement is an object that has an associated SQL statement ready to execute                                                                                                                                                           |
+| `executeQuery`<br>`executeUpdate`                                                                                             | For Statement: one argument: the query or modification to be executed<br>For PreparedStatement: no argument                                                                                                                                    |
+| `executeQuery()`                                                                                                              | Executes a SQL SELECT statement, and returns a ResultSetobject                                                                                                                                                                                 |
+| `executeUpdate()`                                                                                                             | Executes a SQL UPDATE, INSERT or DELETE statement, and returns the number of affected rows                                                                                                                                                     |
+| `execute()`                                                                                                                   | Executes either query or modification, and returns TRUE if query and FALSE if modification<br>`stat.getResultSet` for query result<br>`stat.getUpdateCount` for modification                                                                   |
+| `next()`                                                                                                                      | Method next()advances the 'cursor' to the next tuple<br>The first time next() is applied, it gets the first tuple<br>If there are no more tuples, next()returns the value false                                                                |
+| `getX(i)`                                                                                                                     | When a ResultSet refers to a tuple, we can get the components of that tuple by applying certain methods to the ResultSet. Where X is some type, and i is the component number, returns the value of that component. The value must have type X |
 
 ## Database Modification Statements
 
