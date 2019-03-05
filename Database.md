@@ -1,9 +1,64 @@
 # Database
 
-### Table Relationships
+## Table Relationships
 
 | Relationship | Notes                                           |
 | ------------ | ----------------------------------------------- |
 | One-to-One   | A user has ONE address                          |
-| One-to -Many | A book has MANY reviews                         |
+| One-to-Many  | A book has MANY reviews                         |
 | Many-to-Many | A user has MANY books and a book has MANY users |
+
+## Relational Database Theory
+
+### Functional Dependency
+
+* Let `R` be a relation schema. A functional dependency (FD) is an integrity constraint of the form:
+  * `X → Y`  (read as 'X determines Y or X functionally determines Y')
+  * Where X and Y are non-empty subsets of attributes of R
+* A relation instance r of R satisfies the FD `X → Y` if for every pair of tuples t and t' in r, if t[X] = t'[X], then t[Y] = t'[Y]
+* Relation R satisfies `X → Y`
+  * Pick any two (not necessarily distinct) tuples t and t' of an instance r of R.  If t and t' agree on the X attributes, then they must also agree on the Y attributes
+  * The above must hold for every possible instance r of R
+* An FD is a statement about all possible legal instances of a schema. We cannot just look at an instance (or even at a set of instances) to determine which FDs hold
+
+#### Armstrong's Axioms
+
+Use Armstrong's Axioms to infer all the functional dependencies on a relational database
+
+* Let X, Y, and Z denote sets of attributes over a relation schema R
+  * Reflexivity: If Y ⊆ X, then X → Y
+  * Augmentation: If X → Y, then XZ → YZ for any set Z of attributes
+  * Transitivity: If X →Y and Y → Z, then X → Z
+  * Union: If X → Y and X → Z, then X → YZ
+  * Decomposition: If X → YZ, then X → Y and X → Z
+  * Pseudo-Transitivity:  If X  → Y and WY → Z, then XW → Z
+* If F ⊢ F, then F ⊨ F
+  * Completeness: If a set F of FDs implies F, then F can be derived from F by applying Armstrong's axioms
+  * Soundness: If F can be derived from a set of FDs F through Armstrong's axioms, then F implies F
+
+#### Closure of a Set of FDs F
+
+* Let F+ denote the set of all FDs implied by a given set F of FDs
+  * To decide whether F implies F, first compute F+, then see whether F is a member of F+
+
+__Example__
+
+Compute F+ for the set { A → B, B → C} of FDs
+
+* Trivial FDs
+  * A → A, B → B, C → C, AB → A, AB → B, BC → B, BC → C, AC → A, AC → C, ABC → A, ABC → B, ABC → C, ABC → AB , ABC → AC , ABC → BC, ABC → ABC
+* Augmentation and transitivity (non-trivial FDs)
+  * AC → B, AB → C
+* Transitivity
+  * A → C
+
+Question: Does A → C?  
+Computer A+
+
+Closure = { A }  
+Closure = { A, B }  (due to A → B)  
+Closure = { A, B, C }  (due to B → C)  
+Closure = { A, B, C } –no change, stop  
+Therefore A+ = {A, B, C }  
+Since C ∈ A+
+Answer: YES  

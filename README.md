@@ -41,6 +41,7 @@ References, guides, and random tips
   * [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
   * [LaTeX](LaTeX.md)
   * [npm](npm.md)
+  * [Operating Systems](OperatingSystems.md)
   * Binary
   * [Rubik's Cube](Rubiks.md)
   * [Important Terms](Resume.md)
