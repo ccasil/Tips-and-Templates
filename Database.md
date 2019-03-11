@@ -41,9 +41,9 @@ Use Armstrong's Axioms to infer all the functional dependencies on a relational 
 * Let F+ denote the set of all FDs implied by a given set F of FDs
   * To decide whether F implies F, first compute F+, then see whether F is a member of F+
 
-__Example__
+### Examples
 
-Compute F+ for the set { A → B, B → C} of FDs
+#### Compute F+ for the set { A → B, B → C} of FDs
 
 * Trivial FDs
   * A → A, B → B, C → C, AB → A, AB → B, BC → B, BC → C, AC → A, AC → C, ABC → A, ABC → B, ABC → C, ABC → AB , ABC → AC , ABC → BC, ABC → ABC
@@ -61,4 +61,56 @@ Closure = { A, B, C }  (due to B → C)
 Closure = { A, B, C } –no change, stop  
 Therefore A+ = {A, B, C }  
 Since C ∈ A+
-Answer: YES  
+Answer: YES
+
+## First Normal Form (1NF)
+
+* A relation schema is in first normal form (1NF)if the type of every attribute is atomic
+
+## Second Normal Form (2NF)
+
+## Boyce-Codd Normal Form (BCNF)
+
+* Let R be a relation schema, F be a set of FDs that holds for R, with A as an attribute in R, and X as a subset of the attributes in R
+* R is in Boyce-Codd Normal Form (BCNF) if:
+  * For every FD X → A in F, at least one of following is true:
+    * X → A is a trivial FD (i.e., A ∈ X)
+    * X is a superkey
+* BCNF is desirable for avoiding redundancy
+* Any BCNF relation must also be a 3NF relation
+
+## Third Normal Form (3NF)
+
+* Let R be a relation schema, F be a set of FDs that holds for R, with A as an attribute in R, and X as a subset of the attributes in R
+* R is in third normal form (3NF) if:
+  * For every FD X → A in F, at least one of following is true:
+    * X → A is a trivial FD (i.e., A ∈ X)
+    * X is a superkey
+    * A is part of some key of R
+* A 3NF relation is not always in BCNF
+
+### Algorithm for Testing Whether a Relation is in BCNF using Attribute Closure
+
+* Given R and F, determine whether R is in BCNF
+  * For each FD X → Y ∈ F such that Y ⊈ X (i.e., the FD is non-trivial), compute X+
+    * If every such X is a superkey (i.e., X+ = attr(R)), then R is in BCNF
+    * If there is a set X of attributes such that X+ ≠ attr(R), then R is not in BCNF
+
+### Decomposition of a Relation
+
+* A decompositionof a relation R is defined by sets of attributes X<sub>1</sub>, ..., X<sub>k</sub>(which don’t have to be disjoint) such that:  
+    1. Each X<sub>i</sub> ⊆ attr(R)
+    2. X<sub>1</sub> ∪ X<sub>2</sub> ∪... ∪ X<sub>k</sub> = attr(R)
+* For a decomposition, we will write π<sub>Xi</sub>(R) as Ri, with instances of R written as r and instances of R<sub>i</sub> written as r<sub>i</sub>
+
+## Decomposition and Normalization
+
+* Given a relation schema and functional dependencies, it is always possible to decompose schema into a set of BCNF relations that:
+    1. Eliminates Anomalies
+    2. Lossless Join decomposition
+    3. However, the schema might not always be Dependency-Preserving
+
+* Given a relation schema and functional dependencies, it is always possible to decompose schema into a set of 3NF relations that:  
+    1. Lossless Join decomposition  
+    2. Dependency-Preserving  
+    3. However, the schema might not always Eliminate Anomalies  
