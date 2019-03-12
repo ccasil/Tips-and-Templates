@@ -61,6 +61,19 @@ __[PostgreSQL Official](https://www.postgresql.org/docs/)__
 | `CHECK (<condition>)`                                                                                                                                                                                                                         | Condition must evaluate to TRUE or UNKNOWN; can't be FALSE                                                                                                                                                |
 | `CREATE ASSERTION <name> CHECK (<condition>)`                                                                                                                                                                                                 | Database-schema elements, like relations or views<br>Condition may refer to any relation or attribute in the database schema                                                                              |
 
+## Outer Joins
+
+`R OUTER JOIN S` is the core part of an Outer Join expression
+
+It can be modified by:
+
+1. Optional `ON <condition>` after `JOIN`
+2. Optional `LEFT`, `RIGHT`, or `FULL` before `OUTER`
+   * `LEFT` means pad dangling tuples of `R` only
+   * `RIGHT` means pad dangling tuples of `S` only
+   * `FULL` means pad both; this choice is the default
+     * `OUTER JOIN` means `FULL OUTER JOIN`
+
 ## Embedded SQL
 
 | Statement                                                                                          | Description                                                                           |

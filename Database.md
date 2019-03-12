@@ -8,6 +8,25 @@
 | One-to-Many  | A book has MANY reviews                         |
 | Many-to-Many | A user has MANY books and a book has MANY users |
 
+## Star Schemas
+
+* A Star Schema is a common organization for data in a Warehouse.  A Star Schema consists of Dimension Tables and a Fact Table
+    1. Dimension Tables:  Smaller, largely static (unchanging) information describing the data that’s in the Facts
+    2. Fact Table:  A very large accumulation of Facts, such as Sales
+        * A Fact gives the Sales of a specific product to a specific customer in a specific store on a specific date
+        * The key  for a Fact Table consists of values from its Dimension Tables (foreign keys)
+        * Facts may be 'insert-mostly', with some updates
+* Dimension and Dependent Attributes
+  * Two classes of Fact Table attributes:
+    1. Dimension Attribute:  the key of a dimension table
+    2. Dependent Attribute:  a fact value determined by the dimension attributes of the tuple
+* Fact Table
+  * The key of a Fact Table is the combination of the keys of its dimensions
+    * Values of dimension attributes in any Fact must match dimension attribute values in the Dimension Tables
+    * But there don’t have to be Facts for every combination of Dimension values
+* Data Cubes
+  * Keys of dimension tables are the dimensions of a hypercube
+
 ## Relational Database Theory
 
 ### Functional Dependency
