@@ -106,7 +106,7 @@ It can be modified by:
 ## Cursor
 
 * Cursor: A tuple-variable that ranges over all tuples in the result of some query
-* If c is a cursor, you may use ...WHERE CURRENT OF c, just as in Stored Procedures
+* If c is a cursor, you may use `...WHERE CURRENT OF c`, just as in Stored Procedures
 
 | Statement                                               | Description                                                                                                 |
 | ------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |

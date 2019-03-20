@@ -35,6 +35,8 @@ References, guides, and random tips
   * MySQL
   * [MongoDB](MongoDB.md)
   * [PostgreSQL](PostgreSQL.md)
+  * [XML](XML.md)
+  * [JSON](JSON.md)
 
 * Miscellaneous
   * [Algorithms](Algorithms.md)

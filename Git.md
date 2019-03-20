@@ -76,4 +76,5 @@ GitHub is a hosting service for your Git repositories.
 
 ## References
 
-**[freeCodeCamp](https://medium.freecodecamp.org/learn-the-basics-of-git-in-under-10-minutes-da548267cc91?fbclid=IwAR26svmMfO4MK4iWiqYpepnZm3zRy1_VeXwmu5wjgP-0iwecib-b3iwNdfg)**
+**[freeCodeCamp](https://medium.freecodecamp.org/learn-the-basics-of-git-in-under-10-minutes-da548267cc91?fbclid=IwAR26svmMfO4MK4iWiqYpepnZm3zRy1_VeXwmu5wjgP-0iwecib-b3iwNdfg)**  
+**[gitignore](https://git-scm.com/docs/gitignore)**
