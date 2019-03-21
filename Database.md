@@ -82,13 +82,34 @@ Therefore A+ = {A, B, C }
 Since C ∈ A+
 Answer: YES
 
+## Definitions
+
+* Primary Key: A column or a group of columns that can uniquely identify a single row in a table
+* Functional Dependency: prime attribute → non-prime attribute
+* Partial Dependency: part of primary key → non-prime attribute
+* Transitive Dependency: non-prime attribute → non-prime attribute
+* Composite/Super Key: Primary key made up of 2 attributes
+
 ## First Normal Form (1NF)
 
-* A relation schema is in first normal form (1NF)if the type of every attribute is atomic
+* Rule 1: Each column should contain atomic values
+* Rule 2: A column should contain values that are of the same type
+  * Do not inter-mix different types of values in any column
+* Rule 3: Each column should have a unique name
+  * Same names leads to confusion at the time of data retrieval
+* Rule 4: Order in which data is saved doesn't matter
 
 ## Second Normal Form (2NF)
 
+* Must be in 1NF
+* Should not have any partial dependencies
+  * Column only depends on one column and not another
+
 ## Boyce-Codd Normal Form (BCNF)
+
+* Must be in 3NF
+* For any dependency A → B, A should be a superkey
+  * If A is non-prime and B is a prime attribute (NOT BCNF)
 
 * Let R be a relation schema, F be a set of FDs that holds for R, with A as an attribute in R, and X as a subset of the attributes in R
 * R is in Boyce-Codd Normal Form (BCNF) if:
@@ -99,6 +120,10 @@ Answer: YES
 * Any BCNF relation must also be a 3NF relation
 
 ## Third Normal Form (3NF)
+
+* Must be in 2NF
+* Should not have transitive dependency
+  * When an attribute in a table that depends on some non-primary attribute
 
 * Let R be a relation schema, F be a set of FDs that holds for R, with A as an attribute in R, and X as a subset of the attributes in R
 * R is in third normal form (3NF) if:
@@ -117,7 +142,7 @@ Answer: YES
 
 ### Decomposition of a Relation
 
-* A decompositionof a relation R is defined by sets of attributes X<sub>1</sub>, ..., X<sub>k</sub>(which don’t have to be disjoint) such that:  
+* A decomposition of a relation R is defined by sets of attributes X<sub>1</sub>, ..., X<sub>k</sub>(which don’t have to be disjoint) such that:  
     1. Each X<sub>i</sub> ⊆ attr(R)
     2. X<sub>1</sub> ∪ X<sub>2</sub> ∪... ∪ X<sub>k</sub> = attr(R)
 * For a decomposition, we will write π<sub>Xi</sub>(R) as Ri, with instances of R written as r and instances of R<sub>i</sub> written as r<sub>i</sub>
