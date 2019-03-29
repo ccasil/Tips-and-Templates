@@ -1,5 +1,9 @@
 # Database
 
+"In the world of database technology, there are two main types of databases: SQL and NoSQL—or, relational databases and non-relational databases. The difference speaks to how they’re built, the type of information they store, and how they store it. Relational databases are structured, like phone books that store phone numbers and addresses. Non-relational databases are document-oriented and distributed, like file folders that hold everything from a person’s address and phone number to their Facebook likes and online shopping preferences.
+
+We call them SQL and NoSQL, referring to whether or not they’re written solely in structured query language (SQL)." - [UpWork](https://www.upwork.com/hiring/data/sql-vs-nosql-databases-whats-the-difference/)
+
 ## Table Relationships
 
 | Relationship | Notes                                           |
