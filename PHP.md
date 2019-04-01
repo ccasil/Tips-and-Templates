@@ -182,3 +182,50 @@ rsort ($colors);
 $age = array("Peter"=>"35", "Ben"=>"37", "Joe"=>"43");
 asort($age);
 ```
+
+> Output value from first name field from HTML form
+```HTML
+<form action="welcome.php" method="get">
+    First name: <input type="text" name="fname">
+</form>
+```
+
+```PHP
+<html>
+    <body>
+        Welcome <?php echo $_GET["fname"]; ?>
+    </body>
+</html>
+```
+```PHP
+<html>
+    <body>
+        Welcome <?php echo $_POST["fname"]; ?>
+    </body>
+</html>
+```
+
+## Dates
+
+| Example                | Description                                                            |
+| ---------------------- | ---------------------------------------------------------------------- |
+| `echo date("1");`      | Output todays day of the week (monday, tuesday etc.).                  |
+| `echo date ("Y.m.d");` | Output date with correct format parameter to look like this YYYY.mm.dd |
+| `echo date ("H:i:s");` | Output the time like 16:29:30 (with hour as a 24-hour format)          |
+
+## Advanced
+
+| Example                                                                                                                   | Description                                                   |
+| ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
+| `<?php include 'footer.php'; ?>`                                                                                          | include a file named footer.php                               |
+| `echo readfile("file.txt");`                                                                                              | Open and read content of file.txt                             |
+| `$myfile = fopen("file.txt", "r");`<br>`while(!feof($myfile)) {`<br>&nbsp;&nbsp;&nbsp;&nbsp;`echo fgetc($myfile);`<br>`}` | Open a file, output one character at a time until end-of-file |
+| `setcookie("username", "Kyle", time() + (86400 * 30), "/");`                                                              | Create a cookie named 'username'                              |
+| `session_start();`<br>`$_SESSION['favcolor'] = 'green';`                                                                  | Create a session variable named 'favcolor'                    |
+| `echo $_SESSION["favcolor"];`                                                                                             | Output the value of the session variable 'favcolor'           |
+
+
+## References
+
+**[w3schools PHP Examples](https://www.w3schools.com/php/php_examples.asp)**  
+**[w3schools PHP 7](https://www.w3schools.com/php7/default.asp)**
