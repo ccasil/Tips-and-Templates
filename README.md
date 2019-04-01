@@ -20,6 +20,8 @@ References, guides, and random tips
 
 * Swift 4
 
+* [PHP](PHP.md)
+
 * [Git](Git.md)
 
 * Front-End
