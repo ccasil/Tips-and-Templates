@@ -1,11 +1,116 @@
 # PHP
 
+### Data Types
+
+* String
+* Integer (non-decimal number between -2,147,483,648 and 2,147,483,647)
+* Float (double)
+* Boolean
+* Array
+* Object
+* NULL
+* Resource
+
+## Keywords and Common Functions
+
+| Keyword                                 | Definition                                                                                                                                                                                                                                  |
+| --------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `$`                                     | A variable starts with the `$` sign, followed by the name of the variable                                                                                                                                                                   |
+| `global`                                | Used to access a global variable from within a function<br>Use the `global` keyword before the variables (inside the function)                                                                                                              |
+| `$GLOBALS[index]`                       | PHP stores all global variables in an array called `$GLOBALS[index]`. The index holds the name of the variable. This array is also accessible from within functions and can be used to update global variables directly                     |
+| `static`                                | When a function is completed/executed, all of its variables are deleted. However, sometimes we want a local variable NOT to be deleted. We need it for a further job                                                                        |
+| `echo`  and `print`                     | Output data to the screen<br>`echo` has no return value and can take multiple parameters<br>`print` has a return value of 1 so it can be used in expressions but can only take one argument<br>(note: echo is marginally faster than print) |
+| `strlen()`                              | Returns the length of a string                                                                                                                                                                                                              |
+| `str_word_count()`                      | Counts the number of words in a string                                                                                                                                                                                                      |
+| `strrev()`                              | Reverses a string                                                                                                                                                                                                                           |
+| `strpos()`                              | Searches for a specific text within a string<br>If a match is found, the function returns the character position of the first match. If no match is found, it will return FALSE                                                             |
+| `str_replace()`                         | Replaces some characters with some other characters in a string                                                                                                                                                                             |
+| `define(name, value, case-insensitive)` | name: Specifies name of constant<br>value: Specifies value of constant<br>case-insensitive: Specifies whether the constant name should be case-insensitive. Default is false                                                                |
+
+## Operators
+
+| Operation | Example        | Result                                                                                                                                           |
+| --------- | -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `+`       | `$x + $y`      | Sum of $x and $y                                                                                                                                 |
+| `-`       | `$x - $y`      | Difference of $x and $y                                                                                                                          |
+| `*`       | `$x * $y`      | Product of $x and $y                                                                                                                             |
+| `/`       | `$x / $y`      | Quotient of $x and $y                                                                                                                            |
+| `%`       | `$x % $y`      | Remainder of $x divided by $y                                                                                                                    |
+| `**`      | `$x ** $y`     | Result of raising $x to the $y'th power                                                                                                          |
+| `x = y`   |                | The left operand gets set to the value of the expression on the right                                                                            |
+| `x += y`  | `x = x + y`    | Addition                                                                                                                                         |
+| `x -= y`  | `x = x - y`    | Subtraction                                                                                                                                      |
+| `x *= y`  | `x = x * y`    | Multiplication                                                                                                                                   |
+| `x /= y`  | `x = x / y`    | Division                                                                                                                                         |
+| `x %= y`  | `x = x % y`    | Modulus                                                                                                                                          |
+| `==`      | `$x == $y`     | Returns true if $x is equal to $y                                                                                                                |
+| `===`     | `$x === $y`    | Returns true if $x is equal to $y, and they are of the same type                                                                                 |
+| `!=`      | `$x != $y`     | Returns true if $x is not equal to $y                                                                                                            |
+| `<>`      | `$x <> $y`     | Returns true if $x is not equal to $y                                                                                                            |
+| `!==`     | `$x !== $y`    | Returns true if $x is not equal to $y, or they are not of the same type                                                                          |
+| `>`       | `$x > $y`      | Returns true if $x is greater than $y                                                                                                            |
+| `<`       | `$x < $y`      | Returns true if $x is less than $y                                                                                                               |
+| `>=`      | `$x >= $y`     | Returns true if $x is greater than or equal to $y                                                                                                |
+| `<=`      | `$x <= $y`     | Returns true if $x is less than or equal to $y                                                                                                   |
+| `<=>`     | `$x <=> $y`    | Returns an integer less than, equal to, or greater than zero, depending on if $x is less than, equal to, or greater than $y. Introduced in PHP 7 |
+| `++$x`    | Pre-increment  | Increments $x by one, then returns $x                                                                                                            |
+| `$x++`    | Post-increment | Returns $x, then increments $x by one                                                                                                            |
+| `--$x`    | Pre-decrement  | Decrements $x by one, then returns $x                                                                                                            |
+| `$x--`    | Post-decrement | Returns $x, then decrements $x by one                                                                                                            |
+
+## Logical Operators
+
+| Operator | Name | Example     | Result                                         |
+| -------- | ---- | ----------- | ---------------------------------------------- |
+| `and`    | And  | `$x and $y` | True if both $x and $y are true                |
+| `or`     | Or   | `$x or $y`  | True if either $x or $y are true               |
+| `xor`    | Xor  | `$x xor $y` | True if either $x or $y are true, but not both |
+| `&&`     | And  | `$x && $y`  | True if both $x and $y are true                |
+| `||`     | Or   | `$x || $y`  | True if either $x or $y are true               |
+| `!`      | Not  | `!$x`       | True if $x is not true                         |
+
+## String Operators
+
+| Operator | Name                     | Example          | Result                           |
+| -------- | ------------------------ | ---------------- | -------------------------------- |
+| `.`      | Concatenation            | `$txt1 . $txt2`  | Concatenation of $txt1 and $txt2 |
+| `.=`     | Concatenation Assignment | `$txt1 .= $txt2` | Appends $txt2 to $txt1           |
+
+## Array Operators
+
+* Indexed arrays - Arrays with a numeric index
+* Associative arrays - Arrays with named keys
+* Multidimensional arrays - Arrays containing one or more arrays
+
+
+| Operator   | Name         | Example     | Result                                                                                          |
+| ---------- | ------------ | ----------- | ----------------------------------------------------------------------------------------------- |
+| `+`        | Union        | `$x + $y`   | Union of $x and $y                                                                              |
+| `==`       | Equality     | `$x == $y`  | Returns true if $x and $y have the same key/value pairs                                         |
+| `===`      | Identity     | `$x === $y` | Returns true if $x and $y have the same key/value pairs in the same order and of the same types |
+| `!=`       | Inequality   | `$x != $y`  | Returns true if $x is not equal to $y                                                           |
+| `<>`       | Inequality   | `$x <> $y`  | Returns true if $x is not equal to $y                                                           |
+| `!==`      | Non-identity | `$x !== $y` | Returns true if $x is not identical to $y                                                       |
+| `sort()`   |              |             | sort arrays in ascending order                                                                  |
+| `rsort()`  |              |             | sort arrays in descending order                                                                 |
+| `asort()`  |              |             | sort associative arrays in ascending order, according to the value                              |
+| `ksort()`  |              |             | sort associative arrays in ascending order, according to the key                                |
+| `arsort()` |              |             | sort associative arrays in descending order, according to the value                             |
+| `krsort()` |              |             | sort associative arrays in descending order, according to the key                               |
+
+## Conditional Assignment Operators
+
+| Operator | Name            | Example                      | Result                                                                                                                                                                 |
+| -------- | --------------- | ---------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `?:`     | Ternary         | `$x = expr1 ? expr2 : expr3` | Returns the value of $x. The value of $x is expr2 if expr1 = TRUE. The value of $x is expr3 if expr1 = FALSE                                                           |
+| `??`     | Null Coalescing | `$x = expr1 ?? expr2`        | Returns the value of $x. The value of $x is expr1 if expr1 exists, and is not NULL. If expr1 does not exist, or is NULL, the value of $x is expr2. Introduced in PHP 7 |
+
 ## Examples
 
 | Code Snippet                                                                      | Output                                                                     |
 | --------------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
 | `echo 'Hello World';`                                                             | Outputs "Hello World"                                                      |
-| `<?php`<br>`echo 'This is PHP`<br>`?>`                                            | Opening and closing tags for PHP scripts                                   |
+| `<?php`<br>`echo 'This is PHP'`<br>`?>`                                           | Opening and closing tags for PHP scripts                                   |
 | `// Single-line comment`                                                          |
 | `/* Multi-line comment */`                                                        |
 | `$txt = 'Hello';`                                                                 | Variable named txt with value 'Hello'                                      |
@@ -13,6 +118,17 @@
 | `echo strlen ('Hello World!');`                                                   | Get length of the string "Hello World!"                                    |
 | `echo strrev ('Hello World!');`                                                   | Reverse the string "Hello World!"                                          |
 | `$oldtxt = "Hello World!";`<br>`$newtxt = str_replace("World", "Kyle", $oldtxt);` | Replace the word "World" with the word "Kyle"                              |
+
+## General
+
+> Both examples produce the same output
+```PHP
+<?php
+$txt = "myself";
+echo "I love $txt!";
+echo "I love " . $txt . "!";
+?> 
+```
 
 ## Operators
 
@@ -86,6 +202,13 @@ switch ($color) {
 
 ## Loops
 
+
+* while - loops through a block of code as long as the specified condition is true
+* do...while - loops through a block of code once, and then repeats the loop as long as the specified condition is true
+* for - loops through a block of code a specified number of times
+* foreach - loops through a block of code for each element in an array
+
+
 > Output `$i` as long as `$i` is less than 6.
 ```PHP
 $i = 1;
@@ -119,6 +242,12 @@ foreach ($colors as $x) {
 ```
 
 ## Functions
+
+* Function names are NOT case-sensitive
+* PHP automatically associates a data type to the variable, depending on its value. Since the data types are not set in a strict sense, you can do things like adding a string to an integer without causing and error.
+* In PHP 7, type declarations were added. This gives us an option to specify the data type expected when declaring a function, and by enabling the strict requirement, it will throw a "Fatal Error" on a type mismatch.
+  * To specify strict we need to set declare(strict_types=1);. This must be the on the very first line of the PHP file. Declaring strict specifies that function calls made in that file must strictly adhere to the specified data types
+  * The strict declaration can make code easier to read, and it forces things to be used in the intended way.
 
 > Create a function named `myFunction` and call (execute) it
 ```PHP
@@ -204,6 +333,20 @@ asort($age);
     </body>
 </html>
 ```
+
+## Superglobals
+
+| Variable    | Use                                                                                                                                                                                                                       |
+| ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `$GLOBALS`  | Used to access global variables from anywhere in the PHP script (also from within functions or methods).<br>PHP stores all global variables in an array called $GLOBALS[index]. The index holds the name of the variable. |
+| `$_SERVER`  | Holds information about headers, paths, and script locations                                                                                                                                                              |
+| `$_REQUEST` | Used to collect data after submitting an HTML form                                                                                                                                                                        |
+| `$_POST`    | Used to collect form data after submitting an HTML form with method="post". $_POST is also widely used to pass variables                                                                                                  |
+| `$_GET`     | Can be used to collect form data after submitting an HTML form with method="get".<br>$_GET can also collect data sent in the URL.                                                                                         |
+| `$_FILES`   |
+| `$_ENV`     |
+| `$_COOKIE`  |
+| `$_SESSION` |
 
 ## Dates
 
