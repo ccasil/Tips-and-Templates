@@ -25,7 +25,7 @@
 
 ## If...Else
 
-> Output "Hello World" if $a is greater than $b.
+> Output "Hello World" if `$a` is greater than `$b`.
 ```PHP
 $a = 50;
 $b = 10;
@@ -34,7 +34,7 @@ if ($a > $b) {
 }
 ```
 
-> Output "Hello World" if $a is NOT equal to $b.
+> Output "Hello World" if `$a` is NOT equal to `$`b.
 ```PHP
 $a = 50;
 $b = 10;
@@ -43,7 +43,7 @@ if ($a != $b) {
 }
 ```
 
-> Output "Yes" if $a is equal to $b, otherwise output "No".
+> Output "Yes" if `$a` is equal to `$b`, otherwise output "No".
 ```PHP
 $a = 50;
 $b = 10;
@@ -55,7 +55,7 @@ if ($a == $b) {
 ```
 
 > Print "1" if a is equal to b, print "2" if a is greater than b, otherwise print "3".
-> Output "1" if $a is equal to $b, print "2" if $a is greater than $b, otherwise output "No".
+> Output "1" if `$a` is equal to `$b`, print "2" if `$a` is greater than `$b`, otherwise output "No".
 ```PHP
 $a = 50;
 $b = 10;
@@ -70,7 +70,7 @@ if ($a == $b) {
 
 ## Switch
 
-> A switch statement that will output "Hello" if $color is "red", "welcome" if $color is "green", and will output "Neither" if $color is neither "red" nor "green".
+> A switch statement that will output "Hello" if `$color` is "red", "welcome" if `$color` is "green", and will output "Neither" if `$color` is neither "red" nor "green".
 ```PHP
 switch ($color) {
     case "red":
@@ -86,7 +86,7 @@ switch ($color) {
 
 ## Loops
 
-> Output $i as long as $i is less than 6.
+> Output `$i` as long as `$i` is less than 6.
 ```PHP
 $i = 1;
 while ($i < 6) {
@@ -110,7 +110,7 @@ for ($i = 0; $i < 10; $i++) {
 }
 ```
 
-> Loop through items in the $colors array
+> Loop through items in the `$colors` array
 ```PHP
 $colors = array("red", "green", "blue", "yellow");
 foreach ($colors as $x) {
@@ -118,4 +118,67 @@ foreach ($colors as $x) {
 }
 ```
 
-test
+## Functions
+
+> Create a function named `myFunction` and call (execute) it
+```PHP
+function myFunction() {
+    echo "Hello World!";
+}
+
+myFunction();
+```
+
+> Function with two parameters, print the first parameter and return the second value
+```PHP
+function myFunction($fname, $lname) {
+    echo $fname;
+    return $lname;
+}
+```
+
+## Arrays
+
+> Output the number of items in an array
+```PHP
+$fruits = array("Apple", "Banana" "Orange");
+echo count($fruits);
+```
+
+> Output the second item in the `$fruits` array
+```PHP
+$fruits = array("Apple", "Banana" "Orange");
+echo $fruits[1];
+```
+
+> Create an associative array containing the age of Peter, Ben and Joe
+> Output Ben's age
+```PHP
+$age = array ("Peter"=>"35", "Ben"=>"37", "Joe"=>"43");
+echo "Ben is " . $age['Ben'] . " years old.";
+```
+
+> Loop through an associative array and output the key and the value.
+```PHP
+foreach($age as $x => $y) {
+    echo "Key=" . $x . ", Value=" . $y;
+}
+```
+
+> Sort `$colors` array alphabetically
+```PHP
+$colors = array("red", "green", "blue", "yellow");
+sort ($colors);
+```
+
+> Sort `$colors` array descending alphabetically
+```PHP
+$colors = array("red", "green", "blue", "yellow");
+rsort ($colors);
+```
+
+> Sort `$age` array according to the values
+```PHP
+$age = array("Peter"=>"35", "Ben"=>"37", "Joe"=>"43");
+asort($age);
+```
