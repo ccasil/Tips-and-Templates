@@ -51,3 +51,4 @@ References, guides, and random tips
   * [Rubik's Cube](Rubiks.md)
   * [Important Terms](Resume.md)
   * [Math Symbols](Math.md)
+  * [Random](Random.md)
