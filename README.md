@@ -13,19 +13,20 @@ References, guides, and random tips
   * [Django](Django.md)
 
 * [JavaScript (ES6)](JavaScript.md)
-  * jQuery
+  * [jQuery](jQuery.md)
 
 * C
   * [Makefile](Makefile.md)
 
-* Swift 4
+* Swift 4/5
 
 * [PHP](PHP.md)
 
 * [Git](Git.md)
 
 * Front-End
-  * [Angular](Angular.md)
+  * [Angular5](Angular5.md)
+  * [Angular7](Angular7.md)
     * [Angular Deployment](AngularDeployment.md)
   * React
     * [React Deployment](ReactDeployment.md)
@@ -52,3 +53,5 @@ References, guides, and random tips
   * [Important Terms](Resume.md)
   * [Math Symbols](Math.md)
   * [Random](Random.md)
+
+[TOOLS](Tools.md)
