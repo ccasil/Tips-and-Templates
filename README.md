@@ -44,6 +44,7 @@ References, guides, and random tips
 * Miscellaneous
   * [Algorithms](Algorithms.md)
   * [Search Engine Optimization](SEO.md)
+  * [Regular Expressions](Regex.md)
   * [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
   * [LaTeX](LaTeX.md)
   * [npm](npm.md)
