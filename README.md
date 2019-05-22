@@ -18,19 +18,22 @@ References, guides, and random tips
 * C
   * [Makefile](Makefile.md)
 
-* Swift 4/5
+* Swift 4/5 [Website](https://developer.apple.com/swift/)
 
 * [PHP](PHP.md)
+
+* [Haskell](Haskell.md)
 
 * [Git](Git.md)
 
 * Front-End
-  * [Angular5](Angular5.md)
-  * [Angular7](Angular7.md)
+  * Angular [Website](https://angular.io/)
+    * [Angular5](Angular5.md)
+    * [Angular7](Angular7.md)
     * [Angular Deployment](AngularDeployment.md)
-  * React
+  * React [Website](https://reactjs.org/)
     * [React Deployment](ReactDeployment.md)
-  * [Bootstrap 4](https://getbootstrap.com/)
+  * Bootstrap 4 [Website](https://getbootstrap.com/)
   * [HTML](HTML.md)
   * [CSS](CSS.md)
 
