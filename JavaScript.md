@@ -76,16 +76,16 @@ for (var key in dict) {
 
 ## Terms
 
-| Term        | Definition | Link |
-| ----------- | ---------- | ---- |
-| Prototype   |
-| Inheritance |
+| Term        | Definition                                                                                                                                                                                                                                                                                        | Link                                                                                                       |
+| ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| Prototype   | Allows you to add new properties/methods to object constructors.                                                                                                                                                                                                                                  | https://www.w3schools.com/js/js_object_prototypes.asp                                                      |
+| Inheritance | inheritance is the process by which objects of one class acquire the properties of objects of another class. It supports the concept of hierarchical classification. Inheritance provides re usability. This means that we can add additional features to an existing class without modifying it. | https://www.freecodecamp.org/news/a-guide-to-prototype-based-class-inheritance-in-javascript-84953db26df0/ |
 | Classes     |
 | Closure     |
 | Object      |
 | Arity       |
-| Hoisting    |
-| Scoping     |
+| Hoisting    | Hoisting is JavaScript's default behavior of moving all declarations to the top of the current scope (to the top of the current script or the current function).                                                                                                                                  | https://www.w3schools.com/js/js_hoisting.asp                                                               |
+| Scoping     | Variables declared within a JavaScript function, become LOCAL to the function.<br> Local variables have Function scope: They can only be accessed from within the function.                                                                                                                       | https://www.w3schools.com/js/js_scope.asp                                                                  |
 
 ## References
 
