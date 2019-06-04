@@ -161,4 +161,4 @@ Answer: YES
 * Given a relation schema and functional dependencies, it is always possible to decompose schema into a set of 3NF relations that:  
     1. Lossless Join decomposition  
     2. Dependency-Preserving  
-    3. However, the schema might not always Eliminate Anomalies  
+    3. However, the schema might not always Eliminate Anomalies

@@ -369,4 +369,4 @@ constructor(
 ) {}
 ```
 
-**[FINALCRUDMEANWalkthrough.pages](https://github.com/ccasil/DojoAssignments/blob/master/MEAN/Angular/FINALCRUDMEANWalkthrough.pages)**  
+**[CRUD MEAN Walkthrough](https://github.com/ccasil/DojoAssignments/blob/master/MEAN/Angular/FINALCRUDMEANWalkthrough.pages)**  

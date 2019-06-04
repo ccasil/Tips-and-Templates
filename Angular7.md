@@ -7,4 +7,3 @@ If you cannot see the "ng serve" command running, then you can do the following 
 From this, find out the PID of the process and then kill it with the following command.
 
 `kill -9 <PID>`
-

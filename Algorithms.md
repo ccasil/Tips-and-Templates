@@ -40,7 +40,7 @@ where n/b means either ⌊n/b⌋or ⌈n/b⌉
 
 ## Algorithmic Paradigms
 
-* Greed: Build up a solution incrementally, myopically optimizing some local criterion
+* Greedy: Build up a solution incrementally, myopically optimizing some local criterion
 * Divide-and-Conquer: Break up a problem into independent subproblems; solve each subproblem; combine solutions to subproblems to form solution to original problem
 * Dynamic Programming: Break up a problem into a series of overlapping subproblems; combine solutions to smaller subproblems to form solution to large subproblem
 
