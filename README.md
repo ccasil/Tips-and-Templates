@@ -9,6 +9,8 @@ References, guides, and random tips
   * [Vim](Vim.md)
   * [Shell Scripts](ShellScripts.md)
 
+* [Programming Languages](Programming.md)
+
 * [Python](Python.md)
   * [Django](Django.md)
 
