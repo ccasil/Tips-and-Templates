@@ -52,13 +52,13 @@ return fibonacci(num - 1) + fibonacci(num - 2);
 
 ## Dictionaries
 
-Create dictionary  
+### Create dictionary  
 
 ```JavaScript
 var dict = {};
 ```
 
-Populate Dictionary
+### Populate Dictionary
 
 ```JavaScript
 dict["key"] = value;
@@ -66,12 +66,37 @@ dict["key"] = value;
 dict.key = "value";
 ```
 
-Iterating Key/Value Pairs
+### Iterating Key/Value Pairs
 
 ```JavaScript
 for (var key in dict) {
     var value = dict[key];
 }
+```
+
+### Dictionary Example
+
+```JavaScript
+var numberOfOccurences = function(array) {
+    var dict = {};
+    // check number of occurrences in array
+    for(var i = 0; i < array.length; i++) {
+        if (array[i] in dict){
+        // if the key (array value) is in dict, add
+            dict[array[i]]++;
+        } else {
+        // if the key isn't already in dict, give it the value 1
+            dict[array[i]] = 1;
+        }
+    }
+    // display dict with key:value pairs
+    console.log(dict);
+    for(var key in dict){
+        var value = dict[key];
+        // console.log the values only
+        console.log(value);
+    }
+};
 ```
 
 ## Terms
