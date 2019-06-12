@@ -105,6 +105,7 @@ One reason to use binary tree or tree in general is for the things that form a h
 * BST provide moderate insertion/deletion (quicker than Arrays and slower than Linked Lists).
 
 Time Complexities:
+
 |             |                   |
 | ----------- | ----------------- |
 | Search      | O(h)              |
@@ -182,13 +183,15 @@ Hashing can be used to remove duplicates from a set of elements. Can also be use
 > V -> Number of Vertices  
 > E -> Number of Edges
 
-Time Complexities in case of Adjacency Matrix :
+Time Complexities in case of Adjacency Matrix:
+
 |           |                        |
 | --------- | ---------------------- |
 | Traversal | (By BFS or DFS) O(V^2) |
 | Space     | O(V^2)                 |
 
-Time Complexities in case of Adjacency List :
+Time Complexities in case of Adjacency List:
+
 |           |                          |
 | --------- | ------------------------ |
 | Traversal | (By BFS or DFS) O(ElogV) |
