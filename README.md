@@ -2,6 +2,12 @@
 
 References, guides, and random tips
 
+*If you see any errors or would like to contribute feel free to submit a pull request!*  
+
+[Portfolio](https://cesarkylecasil.me/)  
+[Resume](https://cesarkylecasil.me/cesar-kyle-casil-resume.pdf)  
+[LinkedIn](https://cesarkylecasil.me/cesar-kyle-casil-resume.pdf)
+
 ## Table of Contents
 
 * C
@@ -12,7 +18,7 @@ References, guides, and random tips
   * MySQL
   * [PostgreSQL](PostgreSQL.md)
   * [XML](XML.md)
-* Front-End
+* Front-End [MEN Boilerplate](https://github.com/ccasil/MEN_Boilerplate)
   * Angular [Website](https://angular.io/)
     * [Angular 5](Angular5.md)
     * [Angular 7](Angular7.md)
@@ -29,7 +35,7 @@ References, guides, and random tips
 * Miscellaneous
   * [Algorithms](Algorithms.md)
   * Binary
-  * [Important Terms](Resume.md)
+  * [Important Terms](Terms.md)
   * [LaTeX](LaTeX.md)
   * [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
   * [Math Symbols](Math.md)
@@ -50,3 +56,5 @@ References, guides, and random tips
   * [Vim](Vim.md)
 
 [TOOLS](Tools.md)
+
+© 2018 - 2019 Cesar Kyle Casil

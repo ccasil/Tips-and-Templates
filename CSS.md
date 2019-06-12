@@ -1,5 +1,22 @@
 # CSS
 
+## Terms
+
+**Specificity**: If there are two or more conflicting CSS rules that point to the same element, the browser follows some rules to determine which one is most specific and therefore wins out.
+
+* The universal selector (*) has low specificity, while ID selectors are highly specific!
+* Specificity Hierarchy:
+  * Inline styles - An inline style is attached directly to the element to be styled
+  * IDs - An ID is a unique identifier for the page elements
+  * Classes, attributes and pseudo-classes - This category includes .classes, [attributes] and pseudo-classes such as :hover, :focus etc
+  * Elements and pseudo-elements - This category includes element names and pseudo-elements, such as h1, div, :before and :after
+* Calculate Specificity: Start at 0, add 1000 for style attribute, add 100 for each ID, add 10 for each attribute, class or pseudo-class, add 1 for each element name or pseudo-element
+* Equal specificity: the latest rule counts - If the same rule is written twice into the external style sheet, then the lower rule in the style sheet is closer to the element to be styled
+* ID selectors have a higher specificity than attribute selectors
+* Contextual selectors are more specific than a single element selector - The embedded style sheet is closer to the element to be styled
+* A class selector beats any number of element selectors - a class selector such as .intro beats h1, p, div, etc
+* The universal selector and inherited values have a specificity of 0 - \*, body \* and similar have a zero specificity. Inherited values also have a specificity of 0
+
 ## Shortcuts
 
 Property Shortcut
@@ -46,6 +63,25 @@ Property Shortcut
     display: none;
   }
 }
+```
+
+## [Bootstrap Breakpoints](https://getbootstrap.com/docs/4.3/layout/overview/#responsive-breakpoints)
+
+```CSS
+/* Extra small devices (portrait phones, less than 576px) */
+/* No media query for `xs` since this is the default in Bootstrap */
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) { ... }
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) { ... }
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { ... }
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { ... }
 ```
 
 ## Units
