@@ -1,6 +1,6 @@
 # PHP
 
-### Data Types
+## Data Types
 
 * String
 * Integer (non-decimal number between -2,147,483,648 and 2,147,483,647)
@@ -82,7 +82,6 @@
 * Associative arrays - Arrays with named keys
 * Multidimensional arrays - Arrays containing one or more arrays
 
-
 | Operator   | Name         | Example     | Result                                                                                          |
 | ---------- | ------------ | ----------- | ----------------------------------------------------------------------------------------------- |
 | `+`        | Union        | `$x + $y`   | Union of $x and $y                                                                              |
@@ -122,6 +121,7 @@
 ## General
 
 > Both examples produce the same output
+
 ```PHP
 <?php
 $txt = "myself";
@@ -130,7 +130,7 @@ echo "I love " . $txt . "!";
 ?> 
 ```
 
-## Operators
+## Operator Examples
 
 | Example               | Description                    |
 | --------------------- | ------------------------------ |
@@ -142,6 +142,7 @@ echo "I love " . $txt . "!";
 ## If...Else
 
 > Output "Hello World" if `$a` is greater than `$b`.
+
 ```PHP
 $a = 50;
 $b = 10;
@@ -151,6 +152,7 @@ if ($a > $b) {
 ```
 
 > Output "Hello World" if `$a` is NOT equal to `$`b.
+
 ```PHP
 $a = 50;
 $b = 10;
@@ -160,6 +162,7 @@ if ($a != $b) {
 ```
 
 > Output "Yes" if `$a` is equal to `$b`, otherwise output "No".
+
 ```PHP
 $a = 50;
 $b = 10;
@@ -172,6 +175,7 @@ if ($a == $b) {
 
 > Print "1" if a is equal to b, print "2" if a is greater than b, otherwise print "3".
 > Output "1" if `$a` is equal to `$b`, print "2" if `$a` is greater than `$b`, otherwise output "No".
+
 ```PHP
 $a = 50;
 $b = 10;
@@ -187,6 +191,7 @@ if ($a == $b) {
 ## Switch
 
 > A switch statement that will output "Hello" if `$color` is "red", "welcome" if `$color` is "green", and will output "Neither" if `$color` is neither "red" nor "green".
+
 ```PHP
 switch ($color) {
     case "red":
@@ -202,14 +207,13 @@ switch ($color) {
 
 ## Loops
 
-
 * while - loops through a block of code as long as the specified condition is true
 * do...while - loops through a block of code once, and then repeats the loop as long as the specified condition is true
 * for - loops through a block of code a specified number of times
 * foreach - loops through a block of code for each element in an array
 
-
 > Output `$i` as long as `$i` is less than 6.
+
 ```PHP
 $i = 1;
 while ($i < 6) {
@@ -227,6 +231,7 @@ do {
 ```
 
 > Loop that runs from 0 to 9.
+
 ```PHP
 for ($i = 0; $i < 10; $i++) {
     echo $i;
@@ -234,6 +239,7 @@ for ($i = 0; $i < 10; $i++) {
 ```
 
 > Loop through items in the `$colors` array
+
 ```PHP
 $colors = array("red", "green", "blue", "yellow");
 foreach ($colors as $x) {
@@ -250,6 +256,7 @@ foreach ($colors as $x) {
   * The strict declaration can make code easier to read, and it forces things to be used in the intended way.
 
 > Create a function named `myFunction` and call (execute) it
+
 ```PHP
 function myFunction() {
     echo "Hello World!";
@@ -259,6 +266,7 @@ myFunction();
 ```
 
 > Function with two parameters, print the first parameter and return the second value
+
 ```PHP
 function myFunction($fname, $lname) {
     echo $fname;
@@ -269,12 +277,14 @@ function myFunction($fname, $lname) {
 ## Arrays
 
 > Output the number of items in an array
+
 ```PHP
 $fruits = array("Apple", "Banana" "Orange");
 echo count($fruits);
 ```
 
 > Output the second item in the `$fruits` array
+
 ```PHP
 $fruits = array("Apple", "Banana" "Orange");
 echo $fruits[1];
@@ -282,12 +292,14 @@ echo $fruits[1];
 
 > Create an associative array containing the age of Peter, Ben and Joe
 > Output Ben's age
+
 ```PHP
 $age = array ("Peter"=>"35", "Ben"=>"37", "Joe"=>"43");
 echo "Ben is " . $age['Ben'] . " years old.";
 ```
 
 > Loop through an associative array and output the key and the value.
+
 ```PHP
 foreach($age as $x => $y) {
     echo "Key=" . $x . ", Value=" . $y;
@@ -295,18 +307,21 @@ foreach($age as $x => $y) {
 ```
 
 > Sort `$colors` array alphabetically
+
 ```PHP
 $colors = array("red", "green", "blue", "yellow");
 sort ($colors);
 ```
 
 > Sort `$colors` array descending alphabetically
+
 ```PHP
 $colors = array("red", "green", "blue", "yellow");
 rsort ($colors);
 ```
 
 > Sort `$age` array according to the values
+
 ```PHP
 $age = array("Peter"=>"35", "Ben"=>"37", "Joe"=>"43");
 asort($age);
@@ -326,6 +341,7 @@ asort($age);
     </body>
 </html>
 ```
+
 ```PHP
 <html>
     <body>
@@ -366,7 +382,6 @@ asort($age);
 | `setcookie("username", "Kyle", time() + (86400 * 30), "/");`                                                              | Create a cookie named 'username'                              |
 | `session_start();`<br>`$_SESSION['favcolor'] = 'green';`                                                                  | Create a session variable named 'favcolor'                    |
 | `echo $_SESSION["favcolor"];`                                                                                             | Output the value of the session variable 'favcolor'           |
-
 
 ## References
 

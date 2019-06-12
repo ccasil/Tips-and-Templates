@@ -10,7 +10,6 @@
 | `succ`          | Takes anything that has a defined successor and returns that successor                                                                                          |
 | `min` and `max` | The functions min and max take two things that can be put in an order (like numbers!). min returns the one that's lesser and max returns the one that's greater |
 
-
 ## Resources
 
 **[Learn you a Haskell](learnyouahaskell.com/)**

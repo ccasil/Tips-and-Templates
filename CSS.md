@@ -77,7 +77,7 @@ Property Shortcut
 | vmax | Relative to 1% of viewport's* larger dimension                                            |
 | %    | Relative to the parent element                                                            |
 
-* Viewport = the browser window size. If the viewport is 50cm wide, 1vw = 0.5cm.
+\* Viewport = the browser window size. If the viewport is 50cm wide, 1vw = 0.5cm.
 
 ## Font Size
 
@@ -87,7 +87,6 @@ Property Shortcut
 2. Pixels (px): Pixels are fixed-size units that are used in screen media (i.e. to be read on the computer screen). One pixel is equal to one dot on the computer screen (the smallest division of your screen’s resolution). Many web designers use pixel units in web documents in order to produce a pixel-perfect representation of their site as it is rendered in the browser. One problem with the pixel unit is that it does not scale upward for visually-impaired readers or downward to fit mobile devices.
 3. Points (pt): Points are traditionally used in print media (anything that is to be printed on paper, etc.). One point is equal to 1/72 of an inch. Points are much like pixels, in that they are fixed-size units and cannot scale in size.
 4. Percent (%): The percent unit is much like the “em” unit, save for a few fundamental differences. First and foremost, the current font-size is equal to 100% (i.e. 12pt = 100%). While using the percent unit, your text remains fully scalable for mobile devices and for accessibility.
-
 
 ## References
 

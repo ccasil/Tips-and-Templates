@@ -34,6 +34,7 @@ where n/b means either ⌊n/b⌋or ⌈n/b⌉
 * a ≥ 1 is the number of subproblems
 * b ≥ 2is the factor by which the subproblem size decreases
 * f(n) ≥ 0 is the work to divide and combine subproblems  
+
 >Case 1: If c < log<sub>b</sub>a, then T(n) = Θ(n<sup>log<sub>b</sub>a</sup>)  
 >Case 2: If c = log<sub>b</sub>a, then T(n) = Θ(n<sup>c</sup>log n)  
 >Case 3: If c > log<sub>b</sub>a,then T(n) = Θ(n<sup>c</sup>)
@@ -87,12 +88,11 @@ def binarySearch (arr, l, r, x):
     # Function call 
     result = binarySearch(arr, 0, len(arr)-1, x) 
 
-if result != -1: 
-    print "Element is present at index % d" % result 
-else: 
+if result != -1:
+    print "Element is present at index % d" % result
+else:
     print "Element is not present in array"
 ```
-
 
 ## References
 

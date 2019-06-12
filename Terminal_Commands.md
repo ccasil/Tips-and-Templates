@@ -52,8 +52,8 @@ cp [OPTION] SOURCE DIRECTORY
 
 ## Other Commands
 
-| Command | Use                                                                                                                                                                                | Notes |
-| ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----- |
+| Command | Use                                                                                                                                                                                |
+| ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `ssh`   | Secure login on remote machine                                                                                                                                                     |
 | `scp`   | Secure file copy from or to machine                                                                                                                                                |
 | `find`  | Look for file                                                                                                                                                                      |
@@ -62,7 +62,7 @@ cp [OPTION] SOURCE DIRECTORY
 | `>`     | Takes the standard output of the command on the left, and redirects it to the file on the right                                                                                    |
 | `>>`    | Takes the standard output of the command on the left and appends (adds) it to the file on the right                                                                                |
 | `<`     | Takes the standard input from the file on the right and inputs it into the program on the left                                                                                     |
-| `|`     | The \| takes the standard output of the command on the left, and pipes it as standard input to the command on the right. You can think of this as “command to command” redirection |
+| `\|`    | The \| takes the standard output of the command on the left, and pipes it as standard input to the command on the right. You can think of this as “command to command” redirection |
 
 ## Editors and publishing
 

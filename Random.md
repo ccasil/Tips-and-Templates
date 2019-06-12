@@ -43,7 +43,6 @@
 | Pedal                 | * Toe Clip                                                                                     |
 | Crank Arm             |
 
-
 ## References
 
 **[How Things Fly](https://howthingsfly.si.edu/flight-dynamics/roll-pitch-and-yaw)**  
