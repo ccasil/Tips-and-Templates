@@ -145,7 +145,7 @@ It can be modified by:
 ## Aggregate Operations
 
 * NULLs are ignored in any aggregation
-  * They do not contribute to the SUM, AVG, COUNT, MIN, MAX of an attribute. 
+  * They do not contribute to the SUM, AVG, COUNT, MIN, MAX of an attribute.
 
 | Query                 | Function                                                      |
 | --------------------- | ------------------------------------------------------------- |
@@ -165,8 +165,8 @@ If pattern does not contain percent signs or underscores, then the pattern only 
 
 ### s is a string, p is a pattern
 
->s LIKE p  
-s NOT LIKE p
+> s LIKE p  
+> s NOT LIKE p
 
 | Example                     | Result                                                                                         |
 | --------------------------- | ---------------------------------------------------------------------------------------------- |

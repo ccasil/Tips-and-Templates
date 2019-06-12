@@ -1,6 +1,6 @@
 # Algorithm Analysis
 
-## Algorithms
+## [Sorting Algorithms](SortingAlgorithms.md)
 
 | Algorithm      | Description | Run Time |
 | -------------- | ----------- | -------- |
@@ -10,6 +10,30 @@
 | Bubble Sort    |
 | Insertion Sort |
 | Selection Sort |
+
+## Search Algorithms
+
+| Algorithm                  | Description | Run Time |
+| -------------------------- | ----------- | -------- |
+| Binary Search              |
+| Depth/Breadth First Search |
+
+## Hashing
+
+* Hash lookup is currently the most widely used technique to find appropriate data by key or ID. We access data by its index.
+* The data structure is referred as Hash-Map or Hash-Table or Dictionary that maps keys to values, efficiently. We can perform value lookups using keys. Idea is to use an appropriate hash function which does the key -> value mapping.
+
+## Exponentiation by Squaring
+
+* Exponentiation by squaring or Binary exponentiation is a general method for fast computation of large positive integer powers of a number in O(log2N). Not only this, the method is also used for computation of powers of polynomials and square matrices.
+
+## String Matching and Parsing
+
+* Pattern matching/searching is one of the most important problem in Computer Science.
+* KMP Algorithm (String Matching)
+  * Knuth-Morris-Pratt algorithm is used in cases where we have to match a short pattern in a long string. For instance, when we Ctrl+F a keyword in a document, we perform pattern matching in the whole document.
+* Regular Expression (String Parsing)
+  * Many a times we have to validate a string by parsing over a predefined restriction. It is heavily used in web development for URL parsing and matching.
 
 ## Orders of Growth
 

@@ -2,9 +2,9 @@
 
 **[MongoDB Official Site](https://www.mongodb.com/)**
 
-# Windows
+## Windows
 
-## Setup on Windows
+### Setup on Windows
 
 1. Locate the root directory ('/')  
     `cd C:/`
@@ -29,8 +29,8 @@
     * Open a Windows command prompt/interpreter (cmd.exe) as an Administrator  
     * Run the following command: `sc.exe delete MongoDB`
 
-# MacOS
+## MacOS
 
-## Start the Mongo Server
+### Start the Mongo Server
 
 * `sudo mongod`

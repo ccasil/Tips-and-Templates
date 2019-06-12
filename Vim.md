@@ -20,7 +20,7 @@
 
 ## Example .vimrc
 
-```text
+```AsciiDoc
 ## General
 set number          # Show line numbers
 set linebreak       # Break lines at word (requires Wrap lines)

@@ -22,7 +22,7 @@
 
 ### Rename a File
 
-```
+```Bash
 mv (option) filename1.ext filename2.ext
 ```
 
@@ -36,13 +36,13 @@ mv (option) filename1.ext filename2.ext
 
 ### Move a File
 
-```
+```Bash
 mv (option) source destination
 ```
 
 ### Copy a File
 
-```
+```Bash
 cp SOURCE DEST
 cp SOURCE DIRECTORY
 cp SOURCE1 SOURCE2 SOURCE3 SOURCEn DIRECTORY
