@@ -19,6 +19,7 @@ References, guides, and random tips
   * [PostgreSQL](PostgreSQL.md)
   * [XML](XML.md)
 * [Data Structures](DataStructures.md)
+* [Excel](Excel.md)
 * Front-End [MEN Boilerplate](https://github.com/ccasil/MEN_Boilerplate)
   * Angular [Website](https://angular.io/)
     * [Angular 5](Angular5.md)

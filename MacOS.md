@@ -1,6 +1,6 @@
 # MacOS
 
-| ---                            | Shortcut                                                                           |
+| Shortcut                       | ---                                                                                |
 | ------------------------------ | ---------------------------------------------------------------------------------- |
 | Command + Tab                  | Cycle through open applications                                                    |
 | Command + Spacebar             | Opens spotlight search                                                             |
