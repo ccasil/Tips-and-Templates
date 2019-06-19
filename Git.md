@@ -1,5 +1,7 @@
 # Git
 
+**[GitHub Guides](https://guides.github.com/)**
+
 * [Syncing a Fork](https://help.github.com/articles/syncing-a-fork/)
 
 Git is a version control system for managing your source code history.

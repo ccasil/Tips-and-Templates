@@ -39,7 +39,7 @@ References, guides, and random tips
   * Binary
   * [Important Terms](Terms.md)
   * [LaTeX](LaTeX.md)
-  * [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
+  * Markdown Cheatsheet [[1](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)][[2](https://guides.github.com/features/mastering-markdown/)]
   * [Math Symbols](Math.md)
   * [npm](npm.md)
   * [Random](Random.md)
