@@ -44,6 +44,7 @@ References, guides, and random tips
   * [npm](npm.md)
   * [Random](Random.md)
   * [Regular Expressions](Regex.md)
+  * [Resume](Resume.md)
   * [Rubik's Cube](Rubiks.md)
   * [Search Engine Optimization](SEO.md)
 * [Operating Systems](OperatingSystems.md)
