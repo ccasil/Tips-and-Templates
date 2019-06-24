@@ -10,6 +10,9 @@ References, guides, and random tips
 
 ## Table of Contents
 
+* [Algorithms](Algorithms.md)
+  * [Data Structures](DataStructures.md)
+  * [Sorting Algorithms](SortingAlgorithms.md)
 * C
   * [Makefile](Makefile.md)
 * [Databases](Database.md)
@@ -18,7 +21,6 @@ References, guides, and random tips
   * MySQL
   * [PostgreSQL](PostgreSQL.md)
   * [XML](XML.md)
-* [Data Structures](DataStructures.md)
 * [Excel](Excel.md)
 * Front-End [MEN Boilerplate](https://github.com/ccasil/MEN_Boilerplate)
   * Angular [Website](https://angular.io/)
@@ -35,9 +37,7 @@ References, guides, and random tips
 * [JavaScript (ES6)](JavaScript.md)
   * [jQuery](jQuery.md)
 * Miscellaneous
-  * [Algorithms](Algorithms.md)
-  * Binary
-  * [Important Terms](Terms.md)
+  * [Binary](Binary.md)
   * [LaTeX](LaTeX.md)
   * Markdown Cheatsheet [[1](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)][[2](https://guides.github.com/features/mastering-markdown/)]
   * [Math Symbols](Math.md)
@@ -56,10 +56,11 @@ References, guides, and random tips
   * [Django](Django.md)
 * Swift 4/5 [Website](https://developer.apple.com/swift/)
 * Terminal
-  * [Commands](Terminal_Commands.md)
+  * [Commands](TerminalCommands.md)
   * [Shell Scripts](ShellScripts.md)
   * [Vim](Vim.md)
 
-[TOOLS](Tools.md)
+**[Select Terms](Terms.md)**  
+**[Tools](Tools.md)**
 
 © 2018 - 2019 Cesar Kyle Casil

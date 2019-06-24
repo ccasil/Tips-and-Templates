@@ -2,14 +2,21 @@
 
 ## [Sorting Algorithms](SortingAlgorithms.md)
 
-| Algorithm      | Description | Run Time |
-| -------------- | ----------- | -------- |
-| Mergesort      |
-| Quicksort      |             |
-| Heapsort       |
-| Bubble Sort    |
-| Insertion Sort |
-| Selection Sort |
+* Simple sorts
+  * Insertion sort
+  * Selection sort
+* Efficient sorts
+  * Merge sort
+  * Heapsort
+  * Quicksort
+  * Shellsort
+* Bubble sort and variants
+  * Bubble sort
+  * Comb sort
+* Distribution sort
+  * Counting sort
+  * Bucket sort
+  * Radix sort
 
 ## Search Algorithms
 
