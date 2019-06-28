@@ -42,6 +42,7 @@ References, guides, and random tips
   * Markdown Cheatsheet [[1](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)][[2](https://guides.github.com/features/mastering-markdown/)]
   * [Math Symbols](Math.md)
   * [npm](npm.md)
+  * [Package Managers](PackageManagers.md)
   * [Random](Random.md)
   * [Regular Expressions](Regex.md)
   * [Resume](Resume.md)

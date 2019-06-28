@@ -7,3 +7,7 @@
 | `npm start`    | Runs command specified in package's 'start' property of its scripts |
 | `npm whoami`   | Prints username config to standard output                           |
 | `npm install`  | (When in package dir) Installs package-lock                         |
+
+## Resources
+
+**[npm cheatsheet](https://devhints.io/npm)**
