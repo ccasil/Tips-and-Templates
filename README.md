@@ -39,10 +39,11 @@ References, guides, and random tips
 * Miscellaneous
   * [Binary](Binary.md)
   * [LaTeX](LaTeX.md)
-  * Markdown Cheatsheet [[1](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)][[2](https://guides.github.com/features/mastering-markdown/)]
+  * Markdown Cheatsheet [[1](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)][[2](https://guides.github.com/features/mastering-markdown/)][[3](https://www.markdownguide.org/)]
   * [Math Symbols](Math.md)
-  * [npm](npm.md)
   * [Package Managers](PackageManagers.md)
+    * [npm](npm.md)
+    * [yum](yum.md)
   * [Random](Random.md)
   * [Regular Expressions](Regex.md)
   * [Resume](Resume.md)
@@ -58,6 +59,7 @@ References, guides, and random tips
 * Swift 4/5 [Website](https://developer.apple.com/swift/)
 * Terminal
   * [Commands](TerminalCommands.md)
+  * [cmd](cmd.md)
   * [Shell Scripts](ShellScripts.md)
   * [Vim](Vim.md)
 

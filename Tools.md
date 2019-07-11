@@ -6,6 +6,7 @@
 | [Font Awesome](https://fontawesome.com/)                                                | Vector and social logos for websites |
 | [w3c Color Palettes](https://www.w3schools.com/colors/colors_palettes.asp)              |
 | [w3c Color Picker](https://www.w3schools.com/colors/colors_picker.asp)                  |
+| [w3c Markup Validation Service](https://validator.w3.org/)                              | HTML Validator                       |
 | [Materialize Color](https://materializecss.com/color.html)                              |
 | [Google Fonts](https://fonts.google.com/)                                               |
 | [Emoji Cheatsheet](https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md) |
