@@ -6,7 +6,7 @@ References, guides, and random tips
 
 [Portfolio](https://cesarkylecasil.me/)  
 [Resume](https://cesarkylecasil.me/cesar-kyle-casil-resume.pdf)  
-[LinkedIn](https://cesarkylecasil.me/cesar-kyle-casil-resume.pdf)
+[LinkedIn](https://www.linkedin.com/in/ckcasil/)
 
 ## Table of Contents
 
