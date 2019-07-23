@@ -44,3 +44,7 @@
 * Degrees Celsius = 5/9 X (degrees F - 32)
 * Area of a Circle = 3.1416 X radius2
 * Volume of a cylinder = 3.1416 X radius2X height
+
+## Resources
+
+**[Common Conversions](https://www.angelo.edu/dept/agriculture/faculty/scott_conversions.php)**

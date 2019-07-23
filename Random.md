@@ -12,7 +12,6 @@
 | Weight | The force caused by gravity. It acts in a downward direction—toward the center of the Earth.                                                                                                                                          |
 | Lift   | The force that holds an airplane in the air. The wings create most of the lift used by airplanes. Drag is caused by friction and differences in air pressure.                                                                         |
 
-
 ## Ship Directions
 
 | Term         | Definition                                                                          |
