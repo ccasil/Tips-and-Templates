@@ -34,6 +34,7 @@ References, guides, and random tips
   * React [Website](https://reactjs.org/)
     * [React Deployment](ReactDeployment.md)
 * [Git](Git.md)
+* [Google](Google.md)
 * [Haskell](Haskell.md)
 * [JavaScript (ES6)](JavaScript.md)
   * [jQuery](jQuery.md)
