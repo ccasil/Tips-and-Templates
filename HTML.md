@@ -36,6 +36,15 @@
 | body |     |
 | div  |     |
 
+## Definitions
+
+### Map/Area
+
+https://imagemap.org/
+
+* `<area>`: https://www.w3schools.com/tags/att_area_coords.asp
+* `<map>`: https://www.w3schools.com/tags/tag_map.asp
+
 ## Symbols
 
 | Symbol      | Number   | Entity     | Description                     |
