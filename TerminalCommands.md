@@ -1,5 +1,13 @@
 # Terminal-Shell Commands
 
+## Find WiFi Password on Connected Network (Windows)
+
+1. Run Command Prompt as Administrator
+2. `NETSH WLAN SHOW PROFILE`
+3. Look up network name of which you want to explore
+4. `NETSH WLAN SHOW PROFILE WIFI KEY=CLEAR` (WIFI = network name)
+5. Check for 'Key Content' field
+
 ## General and File Manipulation Commands
 
 | Command                              | Use                                                                                                                                                                                                                                                                               | Notes |
