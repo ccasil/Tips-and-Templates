@@ -129,3 +129,4 @@ Property Shortcut
 **[w3schools](https://www.w3schools.com/css/)**  
 **[Approximate Conversion from pt to px](https://reeddesign.co.uk/test/points-pixels.html)**  
 **[Font Size](https://kyleschaeffer.com/css-font-size-em-vs-px-vs-pt-vs-percent)**
+**[Fluid Typography](https://css-tricks.com/snippets/css/fluid-typography/)**
