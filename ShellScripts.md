@@ -4,7 +4,7 @@
 
 ```Bash
 #!/bin/bash
-clear 
+clear
 echo -e "33[1m Hello World"
 # bold effect
 echo -e "33[5m Blink"

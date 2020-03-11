@@ -48,3 +48,8 @@
 | Begin with a vowel (aeiouAEIOU)<br>any length consisting of only letters<br>start and end with a word boundary                                                                                                   | `var Regex_Pattern = /\b[aeiouAEIOU][A-Za-z]*\b/;`                 |
 | Should have 3 or more consecutive repetitions of `ok`                                                                                                                                                            | `var Regex_Pattern = /(ok){3,}/;`                                  |
 Must start with Mr., Mrs., Ms., Dr. or Er<br>The rest of the string must contain only one or more English alphabetic letters (upper and lowercase) | `var Regex_Pattern = /^(Mr\|Mrs\|Ms\|Dr\|Er)\.[a-zA-Z]+$/;`
+The problem description contains at least 2 words | `(/\w(\s+|[;,:])\w(.*)/)` or `[a-zA-Z0-9_]([\r\n\t\f\v ]|[;,:])[a-zA-Z0-9_](.*)`
+
+## Resources
+
+**[Regex 101](https://regex101.com/)**

@@ -30,6 +30,7 @@ References, guides, and random tips
     * [Angular Deployment](AngularDeployment.md)
   * Bootstrap 4 [Website](https://getbootstrap.com/)
   * [CSS](CSS.md)
+  * [SCSS](SCSS.md)
   * [HTML](HTML.md)
   * React [Website](https://reactjs.org/)
     * [React Deployment](ReactDeployment.md)
@@ -60,6 +61,9 @@ References, guides, and random tips
 * [Programming Languages](Programming.md)
 * [Python](Python.md)
   * [Django](Django.md)
+* Server
+  * [Apache Tomcat](ApacheTomcat.md)
+  * NGINX
 * Swift 4/5 [Website](https://developer.apple.com/swift/)
 * Terminal
   * [Commands](TerminalCommands.md)
