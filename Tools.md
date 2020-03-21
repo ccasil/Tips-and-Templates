@@ -9,6 +9,21 @@
 | [Materialize Color](https://materializecss.com/color.html)                              |
 | [Google Fonts](https://fonts.google.com/)                                               |
 | [Emoji Cheatsheet](https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md) |
+| [HTML5 Boilerplate](https://html5boilerplate.com/)                                      |
+| [LESS](http://lesscss.org/)                                                             |
+| [SASS](https://sass-lang.com/)                                                          |
+| [Normalize.css](https://necolas.github.io/normalize.css)                                |
+| [Adobe Color](https://color.adobe.com/create/color-wheel/)                              |
+| [Color Scheme Designer](http://paletton.com/#uid=1440u0kllllIeAmsSrzdOf76g8T)           |
+| [Nu HTML Checker](https://validator.w3.org/nu/)                                         |
+| [W3C CSS Validation](https://jigsaw.w3.org/css-validator/)                              |
+
+## CDN
+| Tool        | version | Link                                                                         | script                                                                                                                                                                                                    |
+| ----------- | ------- | ---------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Bootstrap   | 4.4     | https://getbootstrap.com/docs/4.4/getting-started/introduction/              |
+| fontawesome | 5.12.1  | https://fontawesome.com/how-to-use/on-the-web/setup/upgrading-from-version-4 | ```<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" integrity="sha384-v8BU367qNbs/aIZIxuivaU55N5GPF89WBerHoGA4QTcbUjYiLQtKdrfXnqAcXyTv" crossorigin="anonymous">``` |
+| jquery      | 3.4.1   | https://code.jquery.com/                                                     |
 
 ## Textbook References
 
