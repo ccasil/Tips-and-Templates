@@ -17,6 +17,7 @@
 | [Color Scheme Designer](http://paletton.com/#uid=1440u0kllllIeAmsSrzdOf76g8T)           |
 | [Nu HTML Checker](https://validator.w3.org/nu/)                                         |
 | [W3C CSS Validation](https://jigsaw.w3.org/css-validator/)                              |
+| [CSS Section Separator](https://wweb.dev/resources/css-separator-generator)                              |
 
 ## CDN
 | Tool        | version | Link                                                                         | script                                                                                                                                                                                                    |
