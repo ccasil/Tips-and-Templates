@@ -2,9 +2,39 @@
 
 ## General
 
-| Term | Definition | Link |
-| ---- | ---------- | ---- |
-|
+https://www.timothysykes.com/blog/trading-terms-you-need-to-know/
+
+| Term                          | Definition | Link |
+| ----------------------------- | ---------- | ---- |
+| Bear Market                   |            |
+| Bull Market                   |            |
+| Blue Chip Stocks              |            |
+| Bid                           |            |
+| Close                         |            |
+| Day Trading                   |            |
+| Dividend                      |            |
+| High                          |            |
+| Index                         |            |
+| Initial Public Offering (IPO) |            |
+| Margin                        |            |
+| Open                          |            |
+| Order                         |            |
+| Sector                        |            |
+| Short Selling                 |            |
+| Volatility                    |            |
+| Volume                        |            |
+| Yield                         |            |
+| Market Capitlization          |            |
+| After Hours                   |            |
+| Buy Rating                    |            |
+|                               |            |
+|                               |            |
+|                               |            |
+|                               |            |
+
+## Candlestick Analysis
+
+## Options
 
 ## Chart Analysis
 
@@ -15,9 +45,17 @@
 | RSI             | **Relative Strength**. RSI looks at the strength of price relative to its closing price. It measures a security’s speed and the change in its price movements. A 10-period RSI will look at the prevailing closing price relative to the closing price of the prior 10 days. Like stochastics, RSI has overbought/oversold threshold levels—70 and 30, by default.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | SMA             | **Simple Moving Average**. It’s the line that goes through prices to show the general price movement. An average of past closing prices. So, if you use a 50-day SMA, you’re looking at the average of the past 50 days. If you use a 20-week SMA, you’re seeing the average of the last 20 weeks.<br><br>The SMA’s main objective is to identify if price is in a possible trend and the trend’s direction. A quick glance at a chart can help answer those questions. In figure 1, it’s clear when a trend is going up or down. Remember, a trend can reverse at any time without notice.                                                                                                                                                                                                                                                                                                                                         |
 
-
-## Reading Charts
+### Reading Charts
 
 * To see how this all works, suppose you select an indicator from each category—MACD for trend, RSI for momentum, and Bollinger Bands for trend reversal.
+
+## Images
+
+![Options](./assets/optionsgreeks.png)
+![bullbear](./assets/bullbearpatterns.png)
+![chart](./assets/Chart-Patterns.png)
+![Options](./assets/candlestickpatterns.png)
+
+## Resources
 
 [chart indicators](https://tickertape.tdameritrade.com/trading/three-indicators-to-check-before-the-trade-16986)
