@@ -43,6 +43,7 @@ References, guides, and random tips
 * Miscellaneous
   * [Binary](Binary.md)
   * [Common Conversions](Conversions.md)
+  * [Finance](Finance.md)
   * [LaTeX](LaTeX.md)
   * Markdown Cheatsheet [[1](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)][[2](https://guides.github.com/features/mastering-markdown/)][[3](https://www.markdownguide.org/)]
   * [Math Symbols](Math.md)
