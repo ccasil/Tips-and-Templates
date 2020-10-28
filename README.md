@@ -14,6 +14,7 @@ References, guides, and random tips
 * [Algorithms](Algorithms.md)
   * [Data Structures](DataStructures.md)
   * [Sorting Algorithms](SortingAlgorithms.md)
+* [Cron](Cron.md)
 * C
   * [Makefile](Makefile.md)
 * [Databases](Database.md)
