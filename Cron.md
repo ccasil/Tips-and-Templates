@@ -11,6 +11,13 @@ The software utility cron also known as cron job is a time-based job scheduler i
 | @hourly                | Run once an hour at the beginning of the hour              | 0 * * * *     |
 | @reboot                | Run at startup                                             | N/A           |
 
+## Useful Commands
+
+| Command    | Action                                         |
+| ---------- | ---------------------------------------------- |
+| crontab -l | View cronjobs                                  |
+| crontab -d | Remove all cronjobs directly without prompting |
+| crontab -e | Edit crontab mode                              |
 
 ## Resources
 
