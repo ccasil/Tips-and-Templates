@@ -17,6 +17,7 @@ References, guides, and random tips
 * [Cron](Cron.md)
 * C
   * [Makefile](Makefile.md)
+* [C++](Cpp.md)
 * [Databases](Database.md)
   * [JSON](JSON.md)
   * [MongoDB](MongoDB.md)
