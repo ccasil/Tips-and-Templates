@@ -40,10 +40,10 @@
 
 ## Miscellaneous
 
-* Degrees Fahrenheit = (9/5 X degrees C) + 32
-* Degrees Celsius = 5/9 X (degrees F - 32)
-* Area of a Circle = 3.1416 X radius2
-* Volume of a cylinder = 3.1416 X radius2X height
+* Degrees Fahrenheit = (9/5 * degrees C) + 32
+* Degrees Celsius = 5/9 * (degrees F - 32)
+* Area of a Circle = pi * radius^2
+* Volume of a cylinder = pi * radius^2 * height
 
 ## Resources
 
