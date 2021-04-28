@@ -25,6 +25,7 @@ References, guides, and random tips
   * [PostgreSQL](PostgreSQL.md)
   * [XML](XML.md)
 * [Excel](Excel.md)
+* [Flutter](Flutter.md)
 * Front-End [MEN Boilerplate](https://github.com/ccasil/MEN_Boilerplate)
   * Angular [Website](https://angular.io/)
     * [Angular 5](Angular5.md)
