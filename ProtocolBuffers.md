@@ -70,6 +70,16 @@ When you're defining a message type, you might want one of its fields to only ha
 
 You can define aliases by assigning the same value to different enum constants. To do this you need to set the `allow_alias` option to `true`, otherwise protocol compiler will generate an error message when aliases are found.
 
+### Reserved Values
+
+You can use other message types as field types.
+
+### Importing Definitions
+
+You can use definitions from other .proto files by importing them. To import another .proto's definitions, you add an import statement to the top of your file:
+
+`import "myproject/other_protos.proto";`
+
 ## Resources
 
 * [Protocol Buffers Overview](https://developers.google.com/protocol-buffers/docs/overview)
