@@ -63,6 +63,7 @@ References, guides, and random tips
   * [Windows Shortcuts](Windows.md)
 * [PHP](PHP.md)
 * [Programming Languages](Programming.md)
+* [Protocol Buffers](ProtocolBuffers.md)
 * [Python](Python.md)
   * [Django](Django.md)
 * Server
