@@ -86,3 +86,5 @@ class MyApp extends StatelessWidget {
 * [Flutter.dev](https://flutter.dev/docs/codelabs)
 * [Cookbook](https://flutter.dev/docs/cookbook)
 * [Samples](https://flutter.github.io/samples/#)
+* [Icons](https://fonts.google.com/icons?selected=Material+Icons)
+* [Material Design](https://material.io/)
