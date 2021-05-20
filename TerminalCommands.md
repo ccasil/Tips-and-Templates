@@ -32,6 +32,7 @@
 | `kill PID`                           | Kill a process, given its process ID.                                                                                                                                                                                                                                             |
 | `pgrep firefox`                      | Given a search term, pgrep returns the process IDs that match it.                                                                                                                                                                                                                 |
 | `pkill firefox` or `killall firefox` | The pkill and killall commands can kill a process, given its name. Use either command to kill Firefox:                                                                                                                                                                            |
+`lsof -t -i:4200` | List process ID of applications using port `:4200`
 
 ### Rename a File
 
