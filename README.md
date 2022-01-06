@@ -36,6 +36,7 @@ References, guides, and random tips
   * [SCSS](SCSS.md)
   * [HTML](HTML.md)
   * React [Website](https://reactjs.org/)
+    * [React](React.md)
     * [React Deployment](ReactDeployment.md)
 * [Git](Git.md)
   * [.gitignore](gitignore.md)
