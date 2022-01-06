@@ -23,7 +23,8 @@ npm install --save react react-dom
 ```
 ├── your-app // notable files highlighted
     ├── public
-    │   └── index.html // contains entry-point DOM node
+    │   ├── index.html // contains entry-point DOM node
+    │   └── images
     ├── src // your react code will go here
     │   └── index.js // ReactDOM.render() call goes here
     └── node_modules
@@ -46,7 +47,7 @@ npm install --save react react-dom
 
 1. Delete contents of ./src
 2. 
-```JavaScript
+```JSX
 import ReactDom from 'react-dom';
 import React from 'react';
 // babel
@@ -68,14 +69,14 @@ ReactDom.render(<Element2 />, document.getElementById("root"));
 
 * A component is just a function that takes data and returns UI.
 
-```JavaScript
+```JSX
 function(data) {
     // Logic that reads data and prepares the UI to return
     return UI
 }
 ```
 
-```JavaScript
+```JSX
 const HeaderComponent = (props) => {
     return <h1>Hello World!</h1>;
      
@@ -91,7 +92,7 @@ const HeaderComponent = (props) => {
 * First, we will need to use a "div" element - or some other HTML element that is nestable ("ul", "header", etc) - as the parent container.
 * Second, we will need to wrap the entire JSX expression in parens.
 
-```JavaScript
+```JSX
 // import React, ReactDOM statements
 copy
 
@@ -112,7 +113,7 @@ ReactDOM.render(<App />, document.getElementById("root"));
 
 At the bottom of your component files, you will want to add a default export ComponentName statement. 
 
-```JS
+```JSX
 // /src/TestModule.js
 import React from 'react';
 const TestModule = (props) => {
@@ -125,7 +126,7 @@ export default TestModule;
 
 To import a module, you will use an import statement at the top of your file. This is much like how you are importing the React library. 
 
-```JS
+```JSX
 // /src/App.js
 import React from 'react';
  
@@ -149,7 +150,7 @@ export default App;
 
 props is how data flows from a parent to child component in React. 
 
-```JS
+```JSX
 // /src/index.js
 import ReactDom from 'react';
  
@@ -163,7 +164,7 @@ ReactDom.reder(TestModule(props), document.getElementbyId("root"));
 ReactDom.reder(<TestModule title="React" description="New Description" />, document.getElementbyId("root"));
 ```
 
-```JS
+```JSX
 // /src/TestModule.js
 import React from 'react';
 const TestModule = (props) => {
@@ -177,7 +178,7 @@ export default TestModule;
 ```
 
 example:
-```JS
+```JSX
 const Title = (props) => {
     const fWeight = (props.isImportant) ? ="string from-rainbow">"bold" : "normal";
      
@@ -198,6 +199,67 @@ const App = (props) => {
     )
 }
 ```
+
+## Handling Events
+
+```JSX
+const ButtonOne = (props) => {
+    return <button onClick={function(){alert("You clicked me!")}}>Click Me!</button>;
+}
+// Note the anonymous event handler: You will commonly see this done using ES6 arrow syntax
+const ButtonTwo = (props) => {
+    return <button onClick={()=> alert("You clicked me!")}>Click Me!</button>;
+}
+// We may also define the handler as a function inside our component
+const ButtonThree = (props) => {
+    function handleClick() {
+        alert("You clicked me!");
+    }
+    return <button onClick={handleClick}>Click Me!</button>;
+}
+```
+
+## State
+
+State refers to a collection of data that:
+* can change over time
+* our code needs to reference to decide what should show up on the screen
+
+![Stateless Components](./assets/stateful_components.png)
+
+```JSX
+class App extends React.Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            count: 0
+        }
+    }
+    updateCount() {
+    	this.setState(prevState => ({
+    		count: prevState.count + 1
+    	}));
+    }
+    render(){
+        return (
+            <div>
+                <h1>{this.state.count}</h1>
+                <button
+                    onClick={ () => this.updateCount() } >
+                    +
+                </button>
+            </div>
+        )
+    }
+}
+```
+
+
+* One of the most important things you can ask yourself as you're developing an app is: What data belongs in state?
+* Every stateful component must have a render method, and every render method must return markup (or null)
+* In React, native HTML elements always start with a lowercase letter whereas React component names always start with an uppercase letter
+* You should always treat your state object as immutable, using setState() as the only means to updating your component's state.
+
 
 ## Resources
 
