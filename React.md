@@ -254,12 +254,120 @@ class App extends React.Component {
 }
 ```
 
-
 * One of the most important things you can ask yourself as you're developing an app is: What data belongs in state?
 * Every stateful component must have a render method, and every render method must return markup (or null)
 * In React, native HTML elements always start with a lowercase letter whereas React component names always start with an uppercase letter
 * You should always treat your state object as immutable, using setState() as the only means to updating your component's state.
 
+## Component Callbacks
+
+```JSX
+// /src/App.js
+import React from 'react';
+import Animal from './Animal';
+class App extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = { message: "" };
+    }
+    // custom method for handling callback
+    handleMessage(name) {
+        const newMessage = `You just pet the ${name}!`;
+        this.setState({message: newMessage});
+    }
+    render() {
+        return (
+            <div>
+                <h1>Petting Zoo!</h1>
+                <h3>{this.state.message}</h3>
+                <Animal name="Horse" onPetAnimal={(name) => this.handleMessage(name)} />
+                <Animal name="Goat" />
+                <Animal name="Sheep" />
+            </div>
+        )
+    }
+}
+export default App;
+
+```
+```JSX
+// /src/Animal.js
+import React from 'react';
+const Animal = (props) => {
+    return (
+        <div>
+            <h2>{props.name}</h2>
+            <hr/>
+            // we can invoke our props.onPetAnimal callback function when this button is clicked
+            // by passing the props.name as an argument, we can send that data back to App
+            <button onClick={() => props.onPetAnimal(props.name)}>{`Pet the ${props.name}`}</button>
+        </div>
+    )
+}
+
+export default Animal;
+```
+
+## Component Lifecycle
+
+* Before it first renders
+* Right after it first renders
+* When it gets new properties from a parent
+
+As for Ajax calls from a component, there’s really no better time to reach out to a server than right after the component renders (ComponentWillMount)
+
+```JSX
+class App extends Component {
+	constructor(props) {
+  		super(props);
+		this.state = {
+	  		time: new Date().toLocaleTimeString()
+		}    	
+  	}
+    
+  	componentWillMount(){
+		setTimeout(()=>{
+			this.setState({time: new Date().toLocaleTimeString()})
+		}, 2000);
+	}
+    
+  	render(){
+		return (
+			<div>
+				<h1>{this.state.text}</h1>
+			</div>
+		)
+	}
+}
+```
+
+## List and Keys
+
+With an array of HTML elements we can render the list.
+
+### keys
+
+Keys help React identify which items have changed, are added, or are removed. The list will still render without using a key, but if the list of users is updated, updating that list will run much slower. 
+
+
+```JSX
+render(){
+let users = ["eddy", "brendan", "goose", "eli", "marcos"];
+// how to make <li> items dynamically
+let userList = this.props.users.map((user, index) => {
+    return <li key={index}>{user}</li>
+}) 
+let userList = [`<li>eddy</li>`,`<li>brendan</li>`,`<li>goose</li>`,`<li>eli</li>`, `<li>marcos</li>`];
+    return(
+        <div className="container">
+            <List users={users} />
+        </div>
+        <ul>
+            {userList}
+        </ul>
+    )
+}
+```
 
 ## Resources
 
