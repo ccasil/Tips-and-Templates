@@ -372,3 +372,4 @@ let userList = [`<li>eddy</li>`,`<li>brendan</li>`,`<li>goose</li>`,`<li>eli</li
 ## Resources
 
 **[React](https://reactjs.org/docs/create-a-new-react-app.html)**  
+**[Conditional Rendering](https://reactjs.org/docs/conditional-rendering.html)**  
