@@ -369,7 +369,100 @@ let userList = [`<li>eddy</li>`,`<li>brendan</li>`,`<li>goose</li>`,`<li>eli</li
 }
 ```
 
+## Controlled Components
+ With React, we wish to use our components to maintain state - rather than the DOM. For this to occur, we will use React to "control" the state of the input, and use handlers to update the component state when changes occur. Components utilizing this pattern are referred to as Controlled Components.
+
+ We'll create a component called SimpleForm, which takes a single input for a user's name. This component will have a piece of state that "controls" the value attribute of the input, and when the input sees a change (onChange) we will update state to reflect that change. At any point, we will know the value of the form by looking at our component's state. Therefore, when the user submits, we don't have to look to the DOM for the value - we have it already handy from within the component.
+
+ 
+```JSX
+// /src/SimpleForm.js
+class SimpleForm extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            text: ""
+        };
+    }
+    // we can use es6 arrow functions to "bind" the callback method
+    onInputChange = (event) => {
+        this.setState({text: event.target.value});
+    }
+    onFormSubmit = (event) => {
+        event.preventDefault();
+        alert(`${this.state.text} was submitted!`);
+        this.setState({text: ""});
+    }
+    render() {
+        return (
+            <form onSubmit={this.onFormSubmit}>
+                <input type="text"
+                    // value is "controlled" by state
+                    value={this.state.text} 
+                    // we will fire a callback when input changes
+                    onChange={this.onInputChange}/>
+                <button>Submit</button>
+            </form>
+        )
+    }
+}
+```
+
+## AJAX Calls
+
+Many React applications rely on a backend API for supplying its data, this means you will need some way to make network requests from somewhere in your React code. 
+
+1. Install Axios
+`npm install --save axios`
+2. Import Axios ./src/App.js
+```JSX
+import React from 'react';
+import axios from 'axios';
+```
+3. Handling AJAX in your Component
+
+The componentWillMount event is the ideal place to make this request. Before the component renders, we will make a call to our API, and then use the result of the request to update a piece of state in our component. We can then use this peice of state to update the component's UI, or even render out new components.
+```JSX
+import React, { Component } from 'react';
+import axios from 'axios';
+ 
+class App extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            // initially, we can set this to an empty array
+            pokemon: []
+        };
+    }
+     
+    componentWillMount() {
+        axios.get("https://pokeapi.co/api/v2/pokemon/")
+        // when we get a response, we will update state with the results of the request
+            .then((response) => (
+                this.setState({pokemon: response.data.results})
+            ));
+    }
+     
+    render() {
+        // we can then map over our pokemon array in state to produce some application UI
+        return (
+            <div>
+                <h2>Available Pokemon</h2>
+                <ul>
+                    {this.state.pokemon.map((pokemon, idx) => {
+                        return <li key={idx}>{pokemon.name}</li>;
+                    })}
+                </ul>
+            </div>
+        );
+    }
+}
+export default App;
+
+```
+
 ## Resources
 
 **[React](https://reactjs.org/docs/create-a-new-react-app.html)**  
 **[Conditional Rendering](https://reactjs.org/docs/conditional-rendering.html)**  
+**[Forms](https://reactjs.org/docs/forms.html)**
