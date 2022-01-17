@@ -12,7 +12,7 @@ The entries in this file can also follow a matching pattern.
 
 This is an example of what the .gitignore file could look like:
 
-```
+```sh
 # Ignore Mac system files
 .DS_store
 
@@ -27,6 +27,21 @@ node_modules
 
 # Ignore SASS config files
 .sass-cache
+
+# ignores any file named "secret.txt"
+secret.txt
+# ignores any directory named "secrets"
+secrets/
+# ignores a file named "hidden.txt" located at the root of your working directory
+/hidden.txt
+# ignores a directory called "node_modules" located at the root of your working directory
+/node_modules/
+# ignores any file with a .png extension
+*.png
+# ignores any file or directory that begins in "cache", such as cache-file-01, cached_assets/, etc.
+cache*
+# ignores any file or directory that ends in "data", such as project_data/, big_file_of_data
+*data
 ```
 
 To add or change your global .gitignore file, run the following command:

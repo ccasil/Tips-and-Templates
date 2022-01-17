@@ -458,8 +458,180 @@ class App extends Component {
     }
 }
 export default App;
+```
+
+## Routing
+
+React Router will let us render specific components based on the URL. Using Javascript, we'll be swapping components in and out of the DOM based on the current URL. This will make it possible for us to create a SINGLE-PAGE APPLICATION. Single-Page Applications (SPAs) are Web apps that load a single HTML page (./build/index.html) and dynamically update that page as the user interacts with the app. SPAs use AJAX to create fluid and responsive Web apps, without constant page reloads.
 
 ```
+npm install react-router react-router-dom --save
+```
+
+```JSX
+// src/app.js
+import "react-router";
+import { BrowserRouter, Route, Link } from 'react-router-dom'
+```
+
+```JSX
+<Route path="/prop" component={Prop} />
+```
+
+### Link
+
+When using an \<a> tag, we're creating a link that is supposed to make a request to a server, but that is not what we want to do. We want React to handle all of the routing of our application. By using the Link component instead of an \<a> tag, we're making sure that React will handle going from one page to another.
+
+```JSX
+<Link to="/prop">Prop</Link>
+```
+
+### Browser Router
+
+ Inside of our App component, the first thing we'll do is add the BrowserRouter component, remember this component will always wrap all of our Route components. The BrowserRouter can only have one child, so we'll wrap all of our Route and Link components in a div.
+
+ ```JSX
+// src/app.js
+     render(){
+        return (
+            <BrowserRouter>
+                <div>
+                    {/* Our links and routes will go in here */}
+                    {/* This is our Navigation Menu*/}
+                    <ul>
+                        <li><Link to="/">State</Link></li>
+                        <li><Link to="/prop">Prop</Link></li>
+                        <li><Link to="/event">Event</Link></li>
+                    </ul>
+                    {/* This is how we define what components should render based off of the url */}
+                    <Route exact path="/" component={State} />
+                    <Route path="/prop" component={Prop} />                    
+                    <Route path="/event" component={Event} />
+                </div>
+            </BrowserRouter>
+        )
+    }
+ ```
+
+ ### Routing with Data
+
+ ```JSX
+ <Link to="/params/Bansky">Params</Link>
+ ```
+
+ ```JSX
+ // src/App.js
+ <Route path="/params/:name" component={Params} />
+ ```
+
+ Updating your route to what we have above, makes it so you can pass anything after "/params/" and it will render the Params component. Not only that, but we'll also have access to whatever is passed in after "/params/".
+
+ ### The Component
+
+ React takes care of attaching the url data to `this.props`
+ All of the data associated with the request being made is stored in `this.props.match`.In addition to the params being sent over the url, the following data can be found within match.
+
+ ```JSX
+ // src/Components/Params/Params.js
+import React from "react";
+import "./Params.css";
+import {Link} from "react-router-dom"
+class Params extends React.Component{
+    render(){
+        return(
+            <div>
+                <p><Link to="/params/Barney">Barney</Link></p>
+                <p><Link to="/params/Frank">Frank</Link></p>
+                <p><Link to="/params/Goose">Goose</Link></p>
+                <h1>Params Component | Name: {this.props.match.params.name}</h1>
+            </div>
+        )
+    }
+}
+export default Params;
+ ```
+
+ ### Match Object
+
+ ```JSX
+ {
+    path: "/params/:name", 
+    url: "/params/Bansky", 
+    isExact: true, 
+    params: {
+        name: "Bansky"
+    }
+}
+```
+
+## Nested Routes
+
+```JSX
+// src/Components/Nested/nestedComponents.js
+import React from "react";
+class Assignments extends React.Component{
+    render(){
+        return (
+            <div id="assignments" className="col-lg-9 col-sm-9 col-xs-8 main-content">
+                <h3>Assignments</h3>
+                <h5>This is a list of all of the assignment that have to be completed by tomorrow.</h5>
+            </div>
+        )
+    }
+}
+class Lectures extends React.Component{
+    render(){
+        return (
+            <div id="lectures" className="col-lg-9 col-sm-9 col-xs-8 main-content">
+                <h3>Lectures</h3>
+                <h5>This is a list of all of the lecture material that has to be completed by tomorrow.</h5>
+            </div>
+        )
+    }
+}
+class Events extends React.Component{
+    render(){
+        return (
+            <div id="events" className="col-lg-9 col-sm-9 col-xs-8 main-content">
+                <h3>Events</h3>
+                <h5>This is a list of all of the events that we will be having this week.</h5>
+            </div>
+        )
+    }
+}
+export {Assignments, Lectures, Events}
+```
+```JSX
+// src/Components/Nested/Nested.js
+import React from "react";
+import "./Nested.css";
+import {Route, Link} from 'react-router-dom'
+import {Assignments, Lectures, Events} from "./nestedComponents.js"
+class Nested extends React.Component{
+    render(){
+        return(
+            <div>
+                <div id="sub-menu" className="col-lg-3 col-sm-3 col-xs-4">
+                    <h2>React Course</h2>
+                    <h4>Nested Routes</h4>
+                    <hr />
+                    <p><Link to={`${this.props.match.url}`} >Assignments</Link></p>
+                    <p><Link to={`${this.props.match.url}/Lectures`} >Lectures</Link></p>
+                    <p><Link to={`${this.props.match.url}/Events`} >Events</Link></p>
+                </div>
+                <Route exact path={`${this.props.match.url}`} component={Assignments}/>
+                <Route path={`${this.props.match.url}/Lectures`} component={Lectures}/>
+                <Route path={`${this.props.match.url}/Events`} component={Events}/>
+            </div>
+        )
+    }
+}
+export default Nested;
+```
+
+`path='/Lectures'` : If we would have just used that as our path, this component will render when the url matches `localhost:3000/Lectures`. That's not correct, we want our Lectures component to be rendered when the url matches `localhost:3000/nested/Lectures`.
+
+If you take a look at the value stored in the url property of match, you'll see that it is "/nested". Whenever you create sub-routes you'll have to use an approach like we've shown above.
 
 ## Resources
 
