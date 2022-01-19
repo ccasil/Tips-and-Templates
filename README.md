@@ -5,7 +5,7 @@ References, guides, and random tips
 *If you see any errors or would like to contribute, feel free to submit a pull request!*  
 
 [Portfolio](https://cesarkylecasil.me/)  
-[Resume1](https://cesarkylecasil.me/cesar-kyle-casil-resume.pdf) / [Resume2](https://cesarkylecasil.me/cesar-kyle-casil-resume-latex.pdf)  
+[Resume1](https://cesarkylecasil.me/assets/cesar-kyle-casil-resume.pdf) / [Resume2](https://cesarkylecasil.me/assets/cesar-kyle-casil-resume-latex.pdf)  
 [LinkedIn](https://www.linkedin.com/in/ckcasil/)  
 [UCSC CS Course List](https://raw.githubusercontent.com/ccasil/UCSC_BSOE/master/README.txt)
 
