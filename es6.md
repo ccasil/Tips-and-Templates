@@ -278,6 +278,272 @@ login({});
 login();
 // Now the default object, which has no properties, is supplied to the destructuring assignment, which then uses the default values for email, password and username. Pretty useful.
 ```
-```JS
 
+## Objects
+
+```JS
+var name = 'Forrest';
+var height = '5ft 8in';
+var email = 'forrest@gump.com';
+// old
+var forrest = {
+  name: name,
+  email: email,
+  height: height,
+};
+// new
+// You have variables containing various data and assign those variables to object properties, often using the same name. This repetition is no longer necessary in ES6.
+const forrest = {
+  name,
+  email,
+  height,
+};
+```
+```JS
+function sayHello(name) {
+  console.log(`Hello ${name}!`);
+}
+const forrest = {
+  name,
+  email,
+  height,
+  sayHello,
+};
+// or (function when creating object (omit function keyword))
+const forrest = {
+  name,
+  email,
+  height,
+  sayHello(name) {
+    console.log(`Hello ${name}`);
+  },
+};
+```
+
+### Dynamic Properties
+
+```JS
+const skill = 'run';
+const skillDescription = 'I like running';
+const name = 'forrest';
+const height = '5ft 8in';
+const email = 'forrest@gump.com';
+const forrest = {
+  name: name,
+  email: email,
+  height: height,
+  [skill]: skillDescription,
+};
+// {
+//   ...
+//   run: 'I like running'
+// }
+```
+```JS
+var keys = ['level1', 'level2', 'level3', 'level4', 'level5'];
+var value = 'content to insert';
+function nest(array, insert) {
+  var obj = insert;
+  
+  for (var index = array.length -1; index >= 0; index--) {
+    obj = {};
+    obj[array[index]] = insert;
+    insert = obj;
+  }
+  
+  return obj;
+}
+var nested = nest(keys, value);
+console.log(nested);
+/*
+  {
+    level1: {
+      level2: {
+        level3: {
+          level4: {
+            level5: 'content to insert'
+          }
+        }
+      }
+    }
+  }
+*/
+// OR
+function nest(array, insert) {
+  let obj = insert;
+  array.reverse().forEach(key => {
+    obj = { [key]: insert };
+    insert = obj;
+  });
+  return obj;
+}
+const nested = nest(keys, value);
+// OR
+function nest(array, insert) {
+  return array.reduceRight(function(accumulator, key) {
+    return {
+      [key]: accumulator
+    }
+  }, insert);
+}
+```
+
+## Class
+
+## Arrow Functions
+
+1. example
+```JS
+var sayHello = function(name) {
+  console.log('Hello ' + name);
+};
+// Utilizing ES6 arrow functions, colloquially fat arrow functions, we can rewrite as such:
+const sayHello = (name) => {
+  console.log(`Hello ${name}`);
+};
+// For simple methods we can refine this example further. Single parameters don't need parenthesis and with the function body being a single statement we can remove the curly braces. 
+const sayHello = name => console.log(`Hello ${name}`);
+```
+
+2. example
+```JS
+var square = function(n) {
+  return n * n;
+};
+// turns into 
+const square = n => n * n;
+
+const multiplyThrice = x => y => z => x * y * z;
+multiplyThrice(2)(4)(6);
+// => 48
+// es5
+var multiplyThrice = function(x) {
+  return function(y) {
+    return function(z) {
+      return x * y * z;
+    };
+  };
+};
+```
+
+### Context
+
+## Promise Callbacks
+
+* A Promise is a container for handling the results of an asynchronous operation. You can think of it as a receipt for future content. Promise libraries have been around for awhile, but with the release of ES6 they are now natively part the EcmaScript specification. 
+
+### Asynchronous and Synchronous
+
+* Synchronous runs in real time, right now, and has control of the thread in the event loop
+* Asynchronous is code that will run at some unknown time in the future. We typically communicate with our future code through callbacks. 
+
+### Promise Syntax
+
+```JS
+const promise = new Promise((resolve, reject) => {
+});
+console.log(promise);
+// => Promise { <pending> }
+```
+A promise has three states: `pending`, `fulfilled` and `rejected`. Pending is our current state and it will eventually transition into one of the other states. It simply means that the promise has not resolved or reject yet. A fulfilled state means that resolve has been called and the promise is complete. Rejected indicates the promise operation failed. 
+
+### Handling Data
+
+ Other than initialization a promise will haves two methods to interact with and handle responses: then and catch. When the promise is successful, or resolves, it will call then, its success handler. If there is a problem and it rejects, it will call catch. 
+
+```JS
+const paint = new Promise((resolve, reject) => {
+  orderSupplies('paint', resolve);
+});
+const brush = new Promise((resolve, reject) => {
+  orderSupplies('brush', resolve);
+});
+
+paint
+  .then(item => {
+    // handle item(paint)
+    receivedItem(item);
+    return brush;
+  })
+  .then(item => {
+    // handle item(brush)
+    receivedItem(item);
+  });
+  .catch(error => {
+    // handle error
+    console.log(error.message);
+  });
+```
+```JS
+function orderSupplies(item) {
+  let warehouse; //undefined
+  const deliveryTime = Math.random() * 3000;
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      warehouse = {
+        paint: {
+          product: 'Neon Green Paint',
+          directions: () => 'mix it!'
+        },
+        brush: {
+          product: 'Horsehair brush',
+          directions: () => 'start painting!'
+        },
+        tarp: {
+          product: 'A large tarp',
+          directions: () => 'cover the floor!',
+        }
+      };
+      resolve(warehouse[item]);
+    }, deliveryTime);
+  });
+}
+const tarp = orderSupplies('tarp');
+const paint = orderSupplies('paint');
+const brush = orderSupplies('brush');
+tarp
+  .then(receivedItem)
+  .then(() => paint)
+  .then(receivedItem)
+  .then(() => brush)
+  .then(receivedItem)
+  .catch(error => console.log(error.message));
+```
+
+### Error handling
+
+How about if we order something from our warehouse that it doesn't have? 
+
+```JS
+return new Promise((resolve, reject) => {
+  setTimeout(() => {
+    warehouse = {
+      paint: {
+        product: 'Neon Green Paint',
+        directions: () => 'mix it!'
+      },
+      brush: {
+        product: 'Horsehair brush',
+        directions: () => 'start painting!'
+      },
+      tarp: {
+        product: 'A large tarp',
+        directions: () => 'cover the floor!',
+      }
+    };
+    if (item in warehouse) {
+      resolve(warehouse[item]);
+    } else {
+      reject(new Error(`Item '${item}' is out of stock!`));
+    }
+  }, deliveryTime);
+  const roller = orderSupplies('roller');
+roller
+  .then(receivedItem)
+  .catch(error => console.log(error.message));
+// => Item 'roller' is out of stock!
+Promise.all([tarp, paint, brush, roller])
+  .then(items => items.forEach(receivedItem))
+  .catch(error => console.log(error.message));
+// => Item 'roller' is out of stock!
 ```
