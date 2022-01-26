@@ -43,6 +43,7 @@ References, guides, and random tips
 * [Google](Google.md)
 * [Haskell](Haskell.md)
 * [JavaScript (ES6)](JavaScript.md)
+  * [ES6](es6.md)
   * [jQuery](jQuery.md)
 * Miscellaneous
   * [Binary](Binary.md)
