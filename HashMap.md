@@ -39,3 +39,25 @@ for(var i=0; i<dino.length; i++){
 ```
 
 3. Key-value pairs work by hashing the key into a hash code. That means we turn the string that we are using as a key into a number. The hashing algorithm is very reliable and will always produce the same number for a given key, but it will be unique to that string. No other string could produce the same number. What this means is that we can use this number as an index position in an array! We no longer need to loop through the array. We simply hash the key to find out which index to go to!
+
+   1.  If we want to use the key "role", hash it first. The hashing algorithm will return a unique number. 
+   2. If we get the number 3506294 from hashing "role", then we know we can store the value at this index in our array.
+   3. Anytime we want to look up the value associated with "role", we just hash "role" and use the hash code to look up the value in the array.
+
+    The problem is that the hashing algorithm will give insanely big numbers, and now we will have huge, unwieldy arrays to work with.
+
+4. To solve this, we'll decide how big we will allow our array to get. Call this the capacity. We will then use our hash and mod it, or translate it into a number that fits within the capacity. We will then store our value at this index in the array. However, this introduces the problem of collisions. While the hashing algorithm guarantees that our hashes will be unique for each key, once we start modding them, we are no longer guaranteed unique numbers.
+
+```JS
+var dino = [
+            [["role", "pet"], ["creator", "Hanna-Barbera"]],
+            [["type", "dinosaur"]],
+            [["owner", "Fred Flintstone"], ["species", "Snorkasaurus"]]
+           ];
+// hash the key "role", which will give a unique number
+// mod the hash by the capacity we set for our array, which will give us a number within the capacity
+// in this case, modding the hash gives us the number 0
+// at position 0, we have a nested array
+// loop through the array at position 0 to find the array with the  key "role" at index 0
+// the value is in that array at position 1
+```
