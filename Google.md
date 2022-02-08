@@ -15,3 +15,9 @@
 ## References
 
 **[Google](www.google.com)**
+**[Google Web Tools](https://developers.google.com/web/tools)**
+**[Google Web Fundamentals](https://developers.google.com/web/fundamentals)**
+**[Google Search Console](https://search.google.com/search-console?resource_id=sc-domain%3Aerniereyescampbell.com)**
+**[Google Web Measure](https://web.dev/measure/)**
+**[Google Analytics](https://analytics.google.com/analytics/web/#/home/)**
+**[Google PageSpeed](https://pagespeed.web.dev/)**
